@@ -1,6 +1,6 @@
 # Skinny Bitches — In Kilo Veritas
 
-Statische Website fürs Herzinfarkt-Duo und seine Coaches. Kein Build, kein Framework,
+Statische Website fürs Duo-Herzinfarkt und seine Coaches. Kein Build, kein Framework,
 keine Ausreden. Reines HTML/CSS/JS — du änderst **eine Datei** pro Woche und pushst.
 
 🌐 Später live unter **https://www.skinny-bitches.ch**

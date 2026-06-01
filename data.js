@@ -63,7 +63,7 @@ window.SKINNY = {
       role: "trainee",
       weightTrend: "down",
       heightCm: 183,                         // ⚠️ PLATZHALTER — echte Grösse fehlt
-      birthYear: 1988,                       // ⚠️ PLATZHALTER — Jahrgang fehlt
+      birthYear: 1998,
       bio: "Nennt sich Rocket-Man und lief am ersten Montag gleich anderthalb Runden. Die Zündstufe ist gestartet.",
       history: [
         // 1,5 Runden am 1.6. -> 2.79 × 1.5 = 4.18 km
@@ -79,7 +79,7 @@ window.SKINNY = {
       role: "coach",
       weightTrend: "down",
       heightCm: 181,                         // ⚠️ PLATZHALTER — echte Grösse fehlt
-      birthYear: 1992,                       // ⚠️ PLATZHALTER — Jahrgang fehlt
+      birthYear: 1999,
       bio: "Zweitletzter Sohn eines Bergbauern. Hat das Formhalten im steilen Gelände gelernt, lang bevor es Fitness-Apps gab. Allseits begehrt, selten zu fassen.",
       history: [
         { date: "2026-06-01", weightKg: 74.0, km: 2.79 }    // ⚠️ weightKg PLATZHALTER
@@ -92,7 +92,7 @@ window.SKINNY = {
       role: "coach",
       weightTrend: "up",   // erbt die Kilos der anderen — seine Kurve darf steigen
       heightCm: 179,                         // ⚠️ PLATZHALTER — echte Grösse fehlt
-      birthYear: 1995,                       // ⚠️ PLATZHALTER — Jahrgang fehlt
+      birthYear: 1997,
       bio: "Boltigens berüchtigtster Bruder. Steigt erst noch ein — um die verlorenen Kilos der anderen zu erben und endlich ein zweites Hobby neben der Trinkerei zu haben.",
       // ⚠️ Mika war am 1.6. noch nicht dabei. Erster Eintrag kommt, sobald er mitläuft:
       //    { date: "2026-06-XX", weightKg: 0, km: 0 }

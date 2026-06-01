@@ -193,7 +193,7 @@ a { color: inherit; }
   width: min(440px, 82vw);
   height: auto;
   margin: 4px auto 8px;
-  mix-blend-mode: multiply; /* lässt den Papier-Hintergrund des PNG verschwinden */
+  /* Logo ist freigestellt (transparenter Aussenrand) — kein Blend-Mode nötig */
 }
 .hero__claim {
   font-family: var(--f-western);
