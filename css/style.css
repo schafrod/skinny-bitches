@@ -46,6 +46,17 @@ body {
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 
+/* Nur für Screenreader sichtbar (semantisches H1 ohne sichtbare Wiederholung) */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ---- Papier-Grain-Overlay über allem ---- */
 .grain {
   position: fixed;
@@ -357,6 +368,11 @@ a { color: inherit; }
   color: var(--ink-soft);
   text-align: center;
 }
+
+/* Karte einer Person, die noch keine Messung hat (z. B. später eingestiegen) */
+.card--idle .portrait { opacity: 0.5; }
+.card--idle .card__name,
+.card--idle .specs { opacity: 0.72; }
 
 /* ===================== STRECKE / OGI-WEG ===================== */
 .strecke { max-width: 920px; margin: 0 auto; }

@@ -5,66 +5,69 @@
    WÖCHENTLICHES UPDATE (jeden Donnerstag):
    ---------------------------------------------------------------------------
    1. Trag bei "lastUpdate" das heutige Datum ein (Format: "JJJJ-MM-TT").
-   2. Häng bei JEDER Person im "history"-Array EINEN neuen Eintrag UNTEN an:
-            { "date": "2026-06-04", "weightKg": 103.4, "km": 5.2 }
+   2. Häng bei JEDER Person im "history"-Array UNTEN EINEN neuen Eintrag an:
+            { date: "2026-06-04", weightKg: 163.1, km: 5.58 }
         - date     = Datum der Messung
-        - weightKg = aktuelles Gewicht in kg (Komma als PUNKT: 103.4 nicht 103,4)
-        - km       = total gelaufene Kilometer bis und mit heute (kumuliert!)
+        - weightKg = aktuelles Gewicht in kg (Komma als PUNKT: 163.1 nicht 163,1)
+        - km       = TOTAL gelaufene Kilometer bis und mit heute (kumuliert!)
    3. Speichern, committen, pushen. Fertig. Der Rest rechnet sich von selbst:
         - BMI                -> aus Grösse + neuestem Gewicht
         - Fortschritt        -> neuestes Gewicht minus Startgewicht
         - Kurven & Ranking   -> aus der ganzen history
 
-   NICHT anfassen musst du: BMI, Differenzen, Charts, Hall of Shame.
-   Die Maschine im Hintergrund frisst die Zahlen und kotzt die Wahrheit aus.
+   KILOMETER-LOGIK: alle laufen dieselbe Runde (2,79 km). Eine Runde = +2.79.
+   (Severin lief am 1.6. ausnahmsweise 1,5 Runden = 4.18 km.)
 
-   ⚠️  ACHTUNG: Alle Zahlen unten sind PLATZHALTER (frei erfunden, plausibel).
-        Ersetz sie durch die echten Werte, sobald du sie hast.
+   STAND DER ZAHLEN:
+        ✅ echt:        Strecke, Namen, Nicks, Christian komplett, alle km vom 1.6.
+        ⚠️  Platzhalter: Grösse / Jahrgang / Gewicht von Severin, Lars und Mika.
    ============================================================================ */
 
 window.SKINNY = {
 
-  // Datum des letzten Updates (erscheint im Footer als "Stand: ...")
+  // Datum des letzten Updates (erscheint als "Stand: ...")
   lastUpdate: "2026-06-01",
 
-  // Die Teststrecke. ⚠️ km & Höhenmeter sind Platzhalter — echte Werte eintragen.
+  // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
-    name: "Ogi-Weg",
-    laenge_km: 5.2,        // ⚠️ PLATZHALTER: Länge einer Runde in km
-    hoehenmeter: 180,      // ⚠️ PLATZHALTER: Höhenmeter pro Runde
-    start: "Boltigen"
+    name: "Ogi-Weg",          // lokaler Name; offiziell "Skinny-Bitch-Track"
+    laenge_km: 2.79,          // eine Runde (2787 m)
+    hoehenmeter: 159,         // Höhenmeter Aufstieg pro Runde
+    hoehe_max: 855,           // höchster Punkt (m ü. M.)
+    orte: ["Schinti", "Reidenbach", "Boltigen"]   // Start · via · Ziel
   },
 
   // Die vier. role: "trainee" (die Dicken) | "coach" (die Schlanken).
-  // weightTrend: "down" = Ziel abnehmen | "up" = soll zunehmen (Mikas Kilo-Erbe).
+  // weightTrend: "down" = abnehmen | "up" = zunehmen (Mikas Kilo-Erbe).
   people: [
 
     /* ----- DIE DICKEN (Trainees) ----- */
     {
       id: "christian",
-      name: "Christian Schafroth",          // ⚠️ Name korrekt?
-      nick: "Der Copywriter mit Hubraum",   // ⚠️ Spitzname frei wählbar
+      name: "Christian Schafroth",
+      nick: "El Gordo",
       role: "trainee",
       weightTrend: "down",
-      heightCm: 178,                         // ⚠️ PLATZHALTER
-      birthYear: 1985,                       // ⚠️ PLATZHALTER (Jahrgang)
-      bio: "Tippt schneller, als er rennt. Sein BMI hatte mehr Hubraum als der Rest des Tals — bis zu diesem Montag.",
+      heightCm: 187,
+      birthYear: 1983,
+      bio: "El Gordo tippt schneller, als er rennt. Sein BMI hat mehr Hubraum als das halbe Tal — noch.",
       // history: ältester Eintrag zuoberst, neuester zuunterst.
       history: [
-        { date: "2026-06-01", weightKg: 104.0, km: 5.2 }   // ⚠️ PLATZHALTER (1. Lauf)
+        { date: "2026-06-01", weightKg: 165.3, km: 2.79 }
       ]
     },
     {
       id: "severin",
-      name: "Severin Nachname",              // ⚠️ Nachname fehlt mir
-      nick: "Die zweite Hälfte des Herzinfarkt-Duos",  // ⚠️ Spitzname frei wählbar
+      name: "Severin Matti",
+      nick: "Rocket-Man",
       role: "trainee",
       weightTrend: "down",
-      heightCm: 183,                         // ⚠️ PLATZHALTER
-      birthYear: 1988,                       // ⚠️ PLATZHALTER
-      bio: "Trägt mehr Gewicht mit sich rum als ein Bergbauer Heu im August. Will da runter. Wir helfen nach.",
+      heightCm: 183,                         // ⚠️ PLATZHALTER — echte Grösse fehlt
+      birthYear: 1988,                       // ⚠️ PLATZHALTER — Jahrgang fehlt
+      bio: "Nennt sich Rocket-Man und lief am ersten Montag gleich anderthalb Runden. Die Zündstufe ist gestartet.",
       history: [
-        { date: "2026-06-01", weightKg: 112.0, km: 5.2 }   // ⚠️ PLATZHALTER
+        // 1,5 Runden am 1.6. -> 2.79 × 1.5 = 4.18 km
+        { date: "2026-06-01", weightKg: 112.0, km: 4.18 }   // ⚠️ weightKg PLATZHALTER
       ]
     },
 
@@ -75,25 +78,25 @@ window.SKINNY = {
       nick: "Mr. Sexybless",
       role: "coach",
       weightTrend: "down",
-      heightCm: 181,                         // ⚠️ PLATZHALTER
-      birthYear: 1992,                       // ⚠️ PLATZHALTER
+      heightCm: 181,                         // ⚠️ PLATZHALTER — echte Grösse fehlt
+      birthYear: 1992,                       // ⚠️ PLATZHALTER — Jahrgang fehlt
       bio: "Zweitletzter Sohn eines Bergbauern. Hat das Formhalten im steilen Gelände gelernt, lang bevor es Fitness-Apps gab. Allseits begehrt, selten zu fassen.",
       history: [
-        { date: "2026-06-01", weightKg: 74.0, km: 5.2 }    // ⚠️ PLATZHALTER
+        { date: "2026-06-01", weightKg: 74.0, km: 2.79 }    // ⚠️ weightKg PLATZHALTER
       ]
     },
     {
       id: "mika",
       name: "Mika Klossner",
-      nick: "Milf-Hunter No. 1",
+      nick: "Mother²-Mikl",
       role: "coach",
       weightTrend: "up",   // erbt die Kilos der anderen — seine Kurve darf steigen
-      heightCm: 179,                         // ⚠️ PLATZHALTER
-      birthYear: 1995,                       // ⚠️ PLATZHALTER
-      bio: "Boltigens berüchtigtster Bruder. Ist dabei, um die verlorenen Kilos der anderen zu erben und endlich ein zweites Hobby neben der Trinkerei zu haben.",
-      history: [
-        { date: "2026-06-01", weightKg: 70.0, km: 5.2 }    // ⚠️ PLATZHALTER
-      ]
+      heightCm: 179,                         // ⚠️ PLATZHALTER — echte Grösse fehlt
+      birthYear: 1995,                       // ⚠️ PLATZHALTER — Jahrgang fehlt
+      bio: "Boltigens berüchtigtster Bruder. Steigt erst noch ein — um die verlorenen Kilos der anderen zu erben und endlich ein zweites Hobby neben der Trinkerei zu haben.",
+      // ⚠️ Mika war am 1.6. noch nicht dabei. Erster Eintrag kommt, sobald er mitläuft:
+      //    { date: "2026-06-XX", weightKg: 0, km: 0 }
+      history: []
     }
 
   ]

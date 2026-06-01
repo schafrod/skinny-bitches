@@ -74,4 +74,4 @@ python3 -m http.server 8080
 
 ---
 
-*Wenn die Vernunft siegt, hat das Leben verloren.*
+*Ein bisschen dick ist nicht so slim.*
