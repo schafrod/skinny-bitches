@@ -294,7 +294,7 @@ a { color: inherit; }
 
 .portrait {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 4;   /* = Format der Porträts, damit nichts ungleich beschnitten wird */
   margin: 0 auto 16px;
   border: 2px solid var(--ink);
   box-shadow: 3px 3px 0 var(--ink);
@@ -316,7 +316,7 @@ a { color: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 14%;
+  object-position: center;
   /* dezenter Vintage-Stich, damit die Comic-Porträts zur Holzschnitt-Welt passen */
   filter: grayscale(0.2) sepia(0.18) contrast(1.05) brightness(1.02);
 }
