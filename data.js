@@ -44,6 +44,7 @@ window.SKINNY = {
     /* ----- DIE DICKEN (Trainees) ----- */
     {
       id: "christian",
+      photo: "assets/christian.jpg",
       name: "Christian Schafroth",
       nick: "El Gordo",
       role: "trainee",
@@ -58,6 +59,7 @@ window.SKINNY = {
     },
     {
       id: "severin",
+      photo: "assets/severin.jpg",
       name: "Severin Matti",
       nick: "Rocket-Man",
       role: "trainee",
@@ -74,6 +76,7 @@ window.SKINNY = {
     /* ----- DIE COACHES ----- */
     {
       id: "lars",
+      photo: "assets/lars.jpg",
       name: "Lars Klossner",
       nick: "Mr. Sexybless",
       role: "coach",
@@ -87,6 +90,7 @@ window.SKINNY = {
     },
     {
       id: "mika",
+      photo: "assets/mika.jpg",
       name: "Mika Klossner",
       nick: "Mother²-Mikl",
       role: "coach",

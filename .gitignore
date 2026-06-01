@@ -5,5 +5,8 @@ Thumbs.db
 # Original-Logo-Quelle (identische Kopie liegt in assets/logo.png)
 ChatGPT Image*.png
 
+# Porträt-Quellen (optimierte JPGs liegen in assets/)
+Portraits/
+
 # Lokale Preview-Config
 .claude/
