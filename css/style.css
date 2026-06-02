@@ -452,7 +452,7 @@ a { color: inherit; }
 .profile__yaxis { position: relative; width: 44px; flex: none; font-family: var(--f-mono); font-size: 10px; color: var(--ink-faint); }
 .profile__yaxis span { position: absolute; right: 2px; transform: translateY(-50%); white-space: nowrap; }
 .profile__svgwrap { position: relative; flex: 1 1 auto; min-width: 0; }
-.profile__svg { width: 100%; height: clamp(150px, 26vw, 230px); display: block; }
+.profile__svg { width: 100%; height: clamp(88px, 11vw, 120px); display: block; }
 .profile__grid { stroke: var(--ink-faint); stroke-width: 1; stroke-dasharray: 2 4; opacity: 0.45; vector-effect: non-scaling-stroke; }
 .profile__fill { fill: url(#hatch); opacity: 0.5; }
 .profile__line { fill: none; stroke: var(--ink); stroke-width: 2.5; vector-effect: non-scaling-stroke; }
