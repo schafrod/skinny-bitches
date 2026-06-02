@@ -138,6 +138,8 @@
       const el = $(sel);
       if (el && orte[i]) el.textContent = orte[i];
     });
+    const link = $("#strecke-link");
+    if (link && r.url) link.href = r.url;
   }
 
   /* ===================== CHARTS (custom SVG) ===================== */

@@ -429,6 +429,21 @@ a { color: inherit; }
 }
 .profile__cap strong { color: var(--ink); }
 
+.strecke__more { text-align: center; margin: 26px 0 0; }
+.strecke__link {
+  display: inline-block;
+  font-family: var(--f-mono);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--blood);
+  text-decoration: none;
+  border-bottom: 2px solid var(--blood);
+  padding-bottom: 3px;
+  transition: color .18s, border-color .18s;
+}
+.strecke__link:hover { color: var(--ink); border-color: var(--ink); }
+
 /* ===================== CHARTS ===================== */
 .charts {
   display: grid;

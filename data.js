@@ -34,7 +34,8 @@ window.SKINNY = {
     laenge_km: 2.79,          // eine Runde (2787 m)
     hoehenmeter: 159,         // Höhenmeter Aufstieg pro Runde
     hoehe_max: 855,           // höchster Punkt (m ü. M.)
-    orte: ["Schinti", "Reidenbach", "Boltigen"]   // Start · via · Ziel
+    orte: ["Reidenbach", "Boltigen", "Schinti"],  // Start · via · Ziel
+    url: "https://schweizmobil.ch/de/tour/372593981"   // Strecke auf SchweizMobil
   },
 
   // Die vier. role: "trainee" (die Dicken) | "coach" (die Schlanken).
