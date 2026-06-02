@@ -43,7 +43,7 @@ body {
   overflow-x: hidden;
 }
 
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 
 /* Nur für Screenreader sichtbar (semantisches H1 ohne sichtbare Wiederholung) */
@@ -231,24 +231,26 @@ a { color: inherit; }
 .section--strecke { background: var(--paper); border-top: var(--border); }
 .section--kurven { background: var(--paper-deep); border-top: var(--border); }
 .section--shame { background: var(--ink); color: var(--paper); border-top: var(--border); }
-.section--ziel { background: var(--ink); color: var(--paper); border-top: var(--border); }
+.section--ziel { background: var(--paper-deep); border-top: var(--border); }
 
-/* DAS ZIEL — Vision-Foto, gerahmt auf dunklem Grund */
-.ziel { max-width: 520px; margin: 0 auto; text-align: center; }
+/* DAS ZIEL — Vision-Foto, gerahmt (heller Grund, dunkle Schrift = immer lesbar) */
+.ziel { max-width: 480px; margin: 0 auto; text-align: center; }
 .ziel__img {
+  display: block;
   width: 100%;
   height: auto;
-  border: 3px solid var(--paper);
-  box-shadow: 12px 12px 0 rgba(0,0,0,0.45);
-  filter: grayscale(0.15) sepia(0.10) contrast(1.03);
+  aspect-ratio: 896 / 1195;   /* Verhältnis bleibt auch ohne geladene Bilddaten */
+  border: 3px solid var(--ink);
+  box-shadow: 10px 10px 0 var(--ink);
+  filter: grayscale(0.12) sepia(0.08) contrast(1.03);
 }
 .ziel__cap {
-  margin: 24px 0 0;
+  margin: 22px 0 0;
   font-family: var(--f-mono);
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--paper-deep);
+  color: var(--ink-faint);
   line-height: 1.7;
 }
 
