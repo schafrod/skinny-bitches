@@ -231,6 +231,26 @@ a { color: inherit; }
 .section--strecke { background: var(--paper); border-top: var(--border); }
 .section--kurven { background: var(--paper-deep); border-top: var(--border); }
 .section--shame { background: var(--ink); color: var(--paper); border-top: var(--border); }
+.section--ziel { background: var(--ink); color: var(--paper); border-top: var(--border); }
+
+/* DAS ZIEL — Vision-Foto, gerahmt auf dunklem Grund */
+.ziel { max-width: 520px; margin: 0 auto; text-align: center; }
+.ziel__img {
+  width: 100%;
+  height: auto;
+  border: 3px solid var(--paper);
+  box-shadow: 12px 12px 0 rgba(0,0,0,0.45);
+  filter: grayscale(0.15) sepia(0.10) contrast(1.03);
+}
+.ziel__cap {
+  margin: 24px 0 0;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--paper-deep);
+  line-height: 1.7;
+}
 
 /* ===================== MISSION / PROSE ===================== */
 .prose {
@@ -246,6 +266,13 @@ a { color: inherit; }
   padding: 4px 0 4px 22px;
   margin-top: 2em !important;
 }
+.prose a {
+  color: var(--blood);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--blood);
+  transition: color .15s, border-color .15s;
+}
+.prose a:hover { color: var(--ink); border-color: var(--ink); }
 .prose__sig {
   font-family: var(--f-western);
   font-size: 1.35rem;
