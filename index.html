@@ -144,7 +144,7 @@
               d="M0,170 C70,160 110,120 170,118 C230,116 250,150 320,140 C380,132 410,70 470,60 C540,48 560,30 640,40 C710,49 760,90 800,86" />
           </svg>
           <figcaption class="profile__cap">
-            <span>Start: <strong id="profile-o1">Reidenbach</strong></span>
+            <span>Start: <strong id="profile-o1">Schinti</strong></span>
             <span>via <strong id="profile-o2">Boltigen</strong></span>
             <span>Ziel: <strong id="profile-o3">Schinti</strong></span>
           </figcaption>
@@ -230,7 +230,8 @@
     </div>
   </footer>
 
-  <script src="data.js"></script>
+  <!-- data.js immer frisch laden (Zeitstempel umgeht den Browser-Cache bei Wochen-Updates) -->
+  <script>document.write('\x3Cscript src="data.js?t=' + Date.now() + '">\x3C/script>');</script>
   <script src="js/main.js?v=2"></script>
 </body>
 </html>
