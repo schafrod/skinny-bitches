@@ -246,8 +246,7 @@ a { color: inherit; }
 .ziel__img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 896 / 1195;   /* Verhältnis bleibt auch ohne geladene Bilddaten */
+  height: auto;          /* + width/height-Attribute im HTML -> proportional, staucht nie */
   border: 3px solid var(--ink);
   box-shadow: 10px 10px 0 var(--ink);
   filter: grayscale(0.12) sepia(0.08) contrast(1.03);
