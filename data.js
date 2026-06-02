@@ -81,11 +81,11 @@ window.SKINNY = {
       nick: "Mr. Sexybless",
       role: "coach",
       weightTrend: "down",
-      heightCm: 181,                         // ⚠️ PLATZHALTER — echte Grösse fehlt
+      heightCm: 176,
       birthYear: 1999,
       bio: "Zweitletzter Sohn eines Bergbauern. Hat das Formhalten im steilen Gelände gelernt, lang bevor es Fitness-Apps gab. Allseits begehrt, selten zu fassen.",
       history: [
-        { date: "2026-06-01", weightKg: 74.0, km: 2.79 }    // ⚠️ weightKg PLATZHALTER
+        { date: "2026-06-01", weightKg: 83.0, km: 2.79 }
       ]
     },
     {
