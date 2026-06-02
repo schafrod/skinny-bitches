@@ -14,6 +14,7 @@
   --ink-faint:   #6e6354;
   --blood:       #8e2b1c;
   --blood-bright:#ab3621;
+  --hero-dark:   #26211c;  /* warmes Espresso-Dunkel für den Hero */
 
   /* Schriften */
   --f-display: "Ultra", Georgia, serif;       /* fette Slab — wie das Logo-Lettering */
@@ -171,7 +172,14 @@ a { color: inherit; }
 /* ===================== HERO ===================== */
 .hero {
   text-align: center;
-  padding: clamp(36px, 7vw, 80px) var(--gut) clamp(40px, 7vw, 88px);
+  background: var(--hero-dark);
+  color: var(--paper);
+  padding: clamp(24px, 4vw, 52px) var(--gut) clamp(32px, 5vw, 64px);
+  min-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 .hero__rule {
@@ -190,10 +198,10 @@ a { color: inherit; }
   margin: 28px 0 8px;
 }
 .hero__logo {
-  width: min(440px, 82vw);
+  width: min(400px, 76vw);
   height: auto;
-  margin: 4px auto 8px;
-  /* Logo ist freigestellt (transparenter Aussenrand) — kein Blend-Mode nötig */
+  margin: 0 auto 14px;
+  /* helles Lineart (logo-hell.png) auf dunklem Grund */
 }
 .hero__claim {
   font-family: var(--f-western);
@@ -206,10 +214,10 @@ a { color: inherit; }
 .hero__sub {
   font-family: var(--f-body);
   font-style: italic;
-  font-size: clamp(1.05rem, 2.4vw, 1.4rem);
-  max-width: 40ch;
-  margin: 0 auto 30px;
-  color: var(--ink-soft);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  max-width: 42ch;
+  margin: 6px auto 32px;
+  color: var(--paper);
 }
 .hero__stamp {
   display: inline-block;
@@ -218,8 +226,8 @@ a { color: inherit; }
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-size: 12px;
-  color: var(--blood);
-  border: 2px solid var(--blood);
+  color: var(--blood-bright);
+  border: 2px solid var(--blood-bright);
   padding: 7px 16px;
   transform: rotate(-2.5deg);
 }
