@@ -30,6 +30,7 @@
   const fmt = (n) => (Number.isInteger(n) ? String(n) : (Math.round(n * 10) / 10).toFixed(1));
   const de = (s) => String(s).replace(".", ",");           // Schweizer Komma
   const num = (n) => de(fmt(n));
+  const kmFmt = (n) => de(String(Math.round(n * 100) / 100));  // echte Präzision: 2.79 -> "2,79", 0 -> "0"
   const bmiOf = (w, h) => w / Math.pow(h / 100, 2);
   const first = (full) => full.trim().split(/\s+/)[0];
   const hist = (p) => Array.isArray(p.history) ? p.history : [];
@@ -90,7 +91,7 @@
         ? `<img class="portrait" src="${p.photo}" alt="${p.name}">`
         : `<div class="portrait" role="img" aria-label="${p.name}"><span class="portrait__initial">${initials}</span></div>`;
 
-      const km = has ? num(c.km) + " km" : "—";
+      const km = has ? kmFmt(c.km) + " km" : "—";
       const gew = has ? `<strong>${num(c.weightKg)}</strong> kg` : "—";
       const bmi = b != null ? `<strong>${num(b)}</strong>` : "—";
 
@@ -120,7 +121,7 @@
     if (host) {
       host.innerHTML = `
         <div class="stat">
-          <div class="stat__num">${num(r.laenge_km ?? 0)}<span class="unit"> km</span></div>
+          <div class="stat__num">${kmFmt(r.laenge_km ?? 0)}<span class="unit"> km</span></div>
           <div class="stat__label">Eine Runde</div>
         </div>
         <div class="stat">
