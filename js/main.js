@@ -84,7 +84,7 @@
       }
 
       const roleCls = p.role === "coach" ? "card__role--coach" : "card__role--trainee";
-      const roleTxt = p.role === "coach" ? "Coach" : "Trainee";
+      const roleTxt = p.role === "coach" ? "Coach" : "Opfer";
       const initials = p.name.split(/\s+/).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
       const portrait = p.photo
         ? `<img class="portrait" src="${p.photo}" alt="${p.name}">`

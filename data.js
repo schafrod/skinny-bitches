@@ -18,9 +18,7 @@
    KILOMETER-LOGIK: alle laufen dieselbe Runde (2,79 km). Eine Runde = +2.79.
    (Severin lief am 1.6. ausnahmsweise 1,5 Runden = 4.18 km.)
 
-   STAND DER ZAHLEN:
-        ✅ echt:        Strecke, Namen, Nicks, Christian komplett, alle km vom 1.6.
-        ⚠️  Platzhalter: Grösse / Jahrgang / Gewicht von Severin, Lars und Mika.
+   STAND DER ZAHLEN: Alle vier komplett mit echten Werten (Stand 1.6.2026).
    ============================================================================ */
 
 window.SKINNY = {
@@ -46,7 +44,7 @@ window.SKINNY = {
     {
       id: "christian",
       photo: "assets/christian.jpg",
-      name: "Christian Schafroth",
+      name: "Chrigu Schafroth",
       nick: "El Gordo",
       role: "trainee",
       weightTrend: "down",
