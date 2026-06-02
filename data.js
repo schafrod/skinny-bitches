@@ -65,12 +65,12 @@ window.SKINNY = {
       nick: "Rocket-Man",
       role: "trainee",
       weightTrend: "down",
-      heightCm: 183,                         // ⚠️ PLATZHALTER — echte Grösse fehlt
+      heightCm: 185,
       birthYear: 1998,
       bio: "Nennt sich Rocket-Man und lief am ersten Montag gleich anderthalb Runden. Die Zündstufe ist gestartet.",
       history: [
         // 1,5 Runden am 1.6. -> 2.79 × 1.5 = 4.18 km
-        { date: "2026-06-01", weightKg: 112.0, km: 4.18 }   // ⚠️ weightKg PLATZHALTER
+        { date: "2026-06-01", weightKg: 149.0, km: 4.18 }
       ]
     },
 
@@ -96,12 +96,13 @@ window.SKINNY = {
       nick: "Mother²-Mikl",
       role: "coach",
       weightTrend: "up",   // erbt die Kilos der anderen — seine Kurve darf steigen
-      heightCm: 179,                         // ⚠️ PLATZHALTER — echte Grösse fehlt
+      heightCm: 182,
       birthYear: 1997,
-      bio: "Boltigens berüchtigtster Bruder. Steigt erst noch ein — um die verlorenen Kilos der anderen zu erben und endlich ein zweites Hobby neben der Trinkerei zu haben.",
-      // ⚠️ Mika war am 1.6. noch nicht dabei. Erster Eintrag kommt, sobald er mitläuft:
-      //    { date: "2026-06-XX", weightKg: 0, km: 0 }
-      history: []
+      bio: "Boltigens berüchtigtster Bruder. Erbt die Kilos der anderen, statt selber welche zu lassen — und hat neben der Trinkerei endlich ein zweites Hobby. Beim Auftakt fehlte er; die Kilometer holt er nach.",
+      // am 1.6. gewogen, aber nicht mitgelaufen -> 0 km
+      history: [
+        { date: "2026-06-01", weightKg: 81.0, km: 0 }
+      ]
     }
 
   ]
