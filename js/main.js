@@ -74,7 +74,7 @@
         progTxt = "Beim Auftakt gefehlt";
       } else if (!moved) {
         progCls = "progress--flat";
-        progTxt = "Noch sitzt der Speck";
+        progTxt = p.role === "coach" ? "Noch sieht man die Knochen" : "Noch sitzt der Speck";
       } else if (success) {
         progCls = "progress--down";
         progTxt = (wantsUp ? "+" : "−") + num(Math.abs(d)) + " kg " + (wantsUp ? "geerbt" : "weg");
