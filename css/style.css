@@ -241,6 +241,7 @@ a { color: inherit; }
 .section--shame { background: var(--ink); color: var(--paper); border-top: var(--border); }
 .section--ziel { background: var(--paper-deep); border-top: var(--border); }
 .section--sponsoren { background: var(--paper); border-top: var(--border); }
+.section--faq { background: var(--paper-deep); border-top: var(--border); }
 
 /* DAS ZIEL — Vision-Foto, gerahmt (heller Grund, dunkle Schrift = immer lesbar) */
 .ziel { max-width: 480px; margin: 0 auto; text-align: center; }
@@ -757,6 +758,41 @@ a { color: inherit; }
   max-width: 46ch;
   margin: 0 auto 24px;
 }
+
+/* ===================== FAQ ===================== */
+.faq { max-width: 760px; margin: 0 auto; }
+.faq__item {
+  border-top: 1px solid var(--ink-faint);
+  padding: 22px 4px;
+}
+.faq__item:last-child { border-bottom: 1px solid var(--ink-faint); }
+.faq__q {
+  font-family: var(--f-mono);
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+.faq__q::before {
+  content: "?";
+  font-family: var(--f-display);
+  color: var(--blood);
+  margin-right: 10px;
+}
+.faq__a {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.faq__a em { font-style: italic; color: var(--blood); }
+.faq__a a {
+  color: var(--blood);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--blood);
+  transition: color .15s, border-color .15s;
+}
+.faq__a a:hover { color: var(--ink); border-color: var(--ink); }
 
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 900px) {

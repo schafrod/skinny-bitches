@@ -25,15 +25,106 @@
   <meta name="twitter:description" content="Zwei Schwergewichte, zwei Coaches, ein Massband und der Ogi-Weg. Boltigen, Simmental." />
   <meta name="twitter:image" content="https://www.skinny-bitches.ch/assets/og-image.jpg?v=1" />
 
-  <link rel="icon" href="assets/logo.png" />
-  <link rel="canonical" href="https://www.skinny-bitches.ch" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png" />
+  <link rel="canonical" href="https://www.skinny-bitches.ch/" />
 
   <!-- Fonts: Ultra (Slab-Display), Rye (Western-Akzent), Special Elite (Typewriter), Spectral (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Ultra&family=Rye&family=Special+Elite&family=Spectral:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=11" />
+  <!-- Structured Data: hilft Google + macht die Seite für KI-Antworten zitierbar -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.skinny-bitches.ch/#org",
+        "name": "Skinny Bitches",
+        "alternateName": "Skinny Bitches Boltigen",
+        "url": "https://www.skinny-bitches.ch/",
+        "logo": "https://www.skinny-bitches.ch/assets/og-image.jpg",
+        "image": "https://www.skinny-bitches.ch/assets/og-image.jpg",
+        "slogan": "In Kilo Veritas",
+        "email": "info@simmental.digital",
+        "description": "Zwei Schwergewichte, zwei Coaches, ein Massband und der Ogi-Weg. Jeden Montag wird gelitten, jeden Donnerstag die Wahrheit gewogen. Boltigen, Simmental.",
+        "areaServed": "Simmental, Berner Oberland",
+        "location": {
+          "@type": "Place",
+          "name": "Boltigen, Simmental",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Boltigen",
+            "addressRegion": "Bern",
+            "postalCode": "3766",
+            "addressCountry": "CH"
+          }
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.skinny-bitches.ch/#website",
+        "url": "https://www.skinny-bitches.ch/",
+        "name": "Skinny Bitches",
+        "inLanguage": "de-CH",
+        "publisher": { "@id": "https://www.skinny-bitches.ch/#org" }
+      },
+      {
+        "@type": "SportsTeam",
+        "name": "Skinny Bitches",
+        "url": "https://www.skinny-bitches.ch/",
+        "sport": "Laufen / Gewichtsabnahme",
+        "memberOf": { "@id": "https://www.skinny-bitches.ch/#org" },
+        "member": [
+          { "@type": "Person", "name": "Chrigu", "alternateName": "El Gordo", "jobTitle": "Opfer" },
+          { "@type": "Person", "name": "Severin", "alternateName": "Rocket-Man", "jobTitle": "Opfer" },
+          { "@type": "Person", "name": "Lars", "alternateName": "Mr. Sexybless", "jobTitle": "Coach" },
+          { "@type": "Person", "name": "Mika", "alternateName": "Mother²-Mikl", "jobTitle": "Coach" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.skinny-bitches.ch/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Was sind die Skinny Bitches?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Zwei Schwergewichte aus dem Simmental, die abnehmen wollen — und zwei Coaches, die dafür sorgen, dass es weh tut. Jede Woche frisch gewogen, jede Zahl echt. Boltigen, Berner Oberland." }
+          },
+          {
+            "@type": "Question",
+            "name": "Was ist der Skinny Bitch Monday?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Jeden Montag wird gelaufen: der Ogi-Weg, ein Rundkurs ab Schinti durch Boltigen. Die wöchentliche Tortur, freiwillig und gnadenlos." }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie oft wird gewogen?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Jeden Donnerstag. Ohne Ausrede, ohne Tricks. Gewicht, BMI und Kilometer rechnen sich auf der Seite aus den echten Werten." }
+          },
+          {
+            "@type": "Question",
+            "name": "Sind die Zahlen echt?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ja. Gewicht, Kilometer und BMI sind echt und werden wöchentlich aktualisiert. Kein Photoshop, kein Schönreden. In Kilo Veritas." }
+          },
+          {
+            "@type": "Question",
+            "name": "Kann ich mitlaufen?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Klar — wer sich traut, läuft am Montag mit. Schreib uns: info@simmental.digital." }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie werde ich Sponsor?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Du willst dein Logo bei den Skinny Bitches? Schreib an info@simmental.digital. Wir suchen Partner für Gesöff, Ausrüstung, Pulver und Medien." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css?v=12" />
 </head>
 <body>
 
@@ -51,6 +142,7 @@
       <a href="#shame">Hall of Shame</a>
       <a href="#ziel">Das Ziel</a>
       <a href="#sponsoren">Sponsoren</a>
+      <a href="#faq">FAQ</a>
     </nav>
   </header>
 
@@ -300,6 +392,41 @@
       <div class="sponsors__cta">
         <p class="sponsors__cta-line">Logo hier reinhängen? Mitlaufen, lästern, was springen lassen?</p>
         <a class="btn btn--blood" href="mailto:info@simmental.digital?subject=Sponsoring%20Skinny%20Bitches">Schreib uns &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section section--faq" id="faq">
+    <div class="wrap">
+      <p class="overline overline--center">Fragen, die im Tal kursieren</p>
+      <h2 class="section__title">Häufig gefragt</h2>
+
+      <div class="faq">
+        <div class="faq__item">
+          <h3 class="faq__q">Was sind die Skinny Bitches?</h3>
+          <p class="faq__a">Zwei Schwergewichte aus dem Simmental, die abnehmen wollen — und zwei Coaches, die dafür sorgen, dass es weh tut. Jede Woche frisch gewogen, jede Zahl echt. Boltigen, Berner Oberland.</p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__q">Was ist der Skinny Bitch Monday?</h3>
+          <p class="faq__a">Jeden Montag wird gelaufen: der Ogi-Weg, ein Rundkurs ab Schinti durch Boltigen. Die wöchentliche Tortur, freiwillig und gnadenlos.</p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__q">Wie oft wird gewogen?</h3>
+          <p class="faq__a">Jeden Donnerstag. Ohne Ausrede, ohne Tricks. Gewicht, BMI und Kilometer rechnen sich auf der Seite aus den echten Werten.</p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__q">Sind die Zahlen echt?</h3>
+          <p class="faq__a">Ja. Gewicht, Kilometer und BMI sind echt und werden wöchentlich aktualisiert. Kein Photoshop, kein Schönreden. <em>In Kilo Veritas.</em></p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__q">Kann ich mitlaufen?</h3>
+          <p class="faq__a">Klar — wer sich traut, läuft am Montag mit. Schreib uns: <a href="mailto:info@simmental.digital?subject=Mitlaufen%20Skinny%20Bitches">info@simmental.digital</a>.</p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__q">Wie werde ich Sponsor?</h3>
+          <p class="faq__a">Du willst dein Logo bei den Skinny Bitches? Schreib an <a href="mailto:info@simmental.digital?subject=Sponsoring%20Skinny%20Bitches">info@simmental.digital</a>. Wir suchen Partner für Gesöff, Ausrüstung, Pulver und Medien.</p>
+        </div>
       </div>
     </div>
   </section>
