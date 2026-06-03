@@ -774,10 +774,9 @@ a { color: inherit; }
   margin: 0 0 10px;
 }
 .faq__q::before {
-  content: "?";
-  font-family: var(--f-display);
-  color: var(--blood);
+  content: "🍔";
   margin-right: 10px;
+  font-size: 0.95em;
 }
 .faq__a {
   margin: 0;
