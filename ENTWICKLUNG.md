@@ -13,7 +13,9 @@ Statische Vintage-Website (HTML/CSS/JS, **kein Build, kein Framework**) für das
 - **Lokal ansehen:** `python3 -m http.server 8000` im Projektordner → http://localhost:8000
 
 ## Aufbau
-`index.html` (Struktur + Texte) · `css/style.css` (Stil) · `js/main.js` (rendert aus den Daten) · `data.js` (**die Wochen-Datei**) · `assets/` (Logo, freigestellte Porträts, Ziel-Foto).
+`index.html` (Struktur + Texte, inkl. JSON-LD Structured Data im `<head>`) · `css/style.css` (Stil) · `js/main.js` (rendert aus den Daten) · `data.js` (**die Wochen-Datei**) · `assets/` (Logo, freigestellte Porträts, Ziel-Foto, `og-image.jpg` für Social-Vorschau, `favicon-32/180.png`) · `robots.txt` + `sitemap.xml` (SEO).
+
+Seiten-Reihenfolge endet jetzt mit: … → Sponsoren → **FAQ** → Footer. Social-Vorschaubild (Open Graph) `assets/og-image.jpg` (1200×630, absolute URL in den Meta-Tags). Bei Bild-Änderung den `?v=N` an der og:image-URL erhöhen, damit WhatsApp/Facebook den Cache neu zieht.
 
 Seiten-Reihenfolge: Hero (dunkel) → Mission → Crew (4 Karten) → Ogi-Weg (Strecke + echtes Höhenprofil) → Kurven → Hall of Shame → Das Ziel → Footer.
 
@@ -25,7 +27,7 @@ In `data.js` bei jeder Person unten im `history`-Array einen Eintrag anhängen:
 (Komma als **Punkt**; `km` = Total kumuliert, +2.79 pro Runde.) Oben `lastUpdate` setzen. Dann committen + pushen. BMI, Fortschritt, Charts, Ranking rechnen sich selbst. `data.js` wird per Zeitstempel geladen → Updates sofort sichtbar (kein Cache-Problem).
 
 ## Wichtig bei Design-Änderungen
-CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=11`, `main.js?v=5`). **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
+CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=12`, `main.js?v=5`). **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
 
 ## Die Crew (alle Werte echt)
 | Person | Nick | Rolle | Grösse | Jg. | Start-kg |
