@@ -96,7 +96,7 @@ window.SKINNY = {
       weightTrend: "up",   // erbt die Kilos der anderen — seine Kurve darf steigen
       heightCm: 182,
       birthYear: 1997,
-      bio: "Boltigens berüchtigtster Bruder. Erbt die Kilos der anderen, statt selber welche zu lassen — und hat neben der Trinkerei endlich ein zweites Hobby. Beim Auftakt fehlte er; die Kilometer holt er nach.",
+      bio: "Boltigens berüchtigtster Bruder. Erbt die Kilos der anderen, statt selber welche zu lassen — und hat endlich ein Zweithobby. Beim Auftakt fehlte er; die Kilometer holt er nach.",
       // am 1.6. gewogen, aber nicht mitgelaufen -> 0 km
       history: [
         { date: "2026-06-01", weightKg: 81.0, km: 0 }
