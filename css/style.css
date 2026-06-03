@@ -240,6 +240,7 @@ a { color: inherit; }
 .section--kurven { background: var(--paper-deep); border-top: var(--border); }
 .section--shame { background: var(--ink); color: var(--paper); border-top: var(--border); }
 .section--ziel { background: var(--paper-deep); border-top: var(--border); }
+.section--sponsoren { background: var(--paper); border-top: var(--border); }
 
 /* DAS ZIEL — Vision-Foto, gerahmt (heller Grund, dunkle Schrift = immer lesbar) */
 .ziel { max-width: 480px; margin: 0 auto; text-align: center; }
@@ -593,32 +594,175 @@ a { color: inherit; }
 
 /* ===================== FOOTER ===================== */
 .footer {
-  background: var(--paper);
+  background: var(--hero-dark);
+  color: var(--paper);
   border-top: var(--border);
   text-align: center;
   padding: clamp(40px, 6vw, 70px) 0;
 }
-.footer__claim { font-family: var(--f-display); font-size: 1.5rem; margin: 0 0 14px; }
+.footer__claim { font-family: var(--f-display); font-size: 1.5rem; margin: 0 0 14px; color: var(--paper); }
 .footer__meta {
   font-family: var(--f-mono);
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--ink-faint);
+  color: var(--paper-deep);
   line-height: 1.8;
   margin: 0 0 18px;
 }
 .footer__law {
   font-family: var(--f-western);
   font-size: 1.1rem;
-  color: var(--blood);
+  color: var(--blood-bright);
   margin: 0;
+}
+.footer__credit {
+  margin: 22px 0 0;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--paper-deep);
+}
+.footer__credit a {
+  color: var(--blood-bright);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--blood-bright);
+  transition: color .15s, border-color .15s;
+}
+.footer__credit a:hover { color: var(--paper); border-color: var(--paper); }
+
+/* ===================== SPONSOREN ===================== */
+.sponsor {
+  background: var(--paper);
+  border: var(--border);
+  position: relative;
+}
+/* feiner Innenrahmen wie bei den Crew-Karten */
+.sponsor::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--ink);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* --- Der erste, echte Sponsor: gross & gerahmt --- */
+.sponsor--feature {
+  max-width: 680px;
+  margin: 0 auto;
+  box-shadow: 8px 8px 0 var(--ink);
+  padding: clamp(28px, 5vw, 44px) clamp(24px, 5vw, 48px) clamp(26px, 4vw, 40px);
+  text-align: center;
+}
+.sponsor__cat {
+  display: inline-block;
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+  color: var(--blood);
+  border: 1.5px solid var(--blood);
+  padding: 5px 12px;
+  margin: 0 0 22px;
+}
+.sponsor__logolink {
+  display: block;
+  margin: 0 auto 22px;
+  max-width: 420px;
+  transition: transform .15s ease;
+}
+.sponsor__logolink:hover { transform: translateY(-2px); }
+.sponsor__logo { width: 100%; height: auto; }
+.sponsor__text {
+  max-width: 52ch;
+  margin: 0 auto;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.sponsor__aside {
+  max-width: 52ch;
+  margin: 12px auto 0;
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--ink-faint);
+}
+.sponsor__text a, .sponsor__line a, .sponsor__aside a {
+  color: var(--blood);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--blood);
+  transition: color .15s, border-color .15s;
+}
+.sponsor__text a:hover, .sponsor__line a:hover, .sponsor__aside a:hover { color: var(--ink); border-color: var(--ink); }
+
+/* --- Noch zu vergeben: Platzhalter-Slots --- */
+.sponsors__more-label {
+  text-align: center;
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 12px;
+  color: var(--ink-faint);
+  margin: clamp(48px, 7vw, 80px) 0 26px;
+}
+.sponsors__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2.2vw, 26px);
+}
+.sponsor--open {
+  border: 2px dashed var(--ink-faint);
+  box-shadow: none;
+  padding: 24px 20px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.sponsor--open::after {
+  inset: 5px;
+  border: 1px dashed var(--ink-faint);
+  opacity: 0.4;
+}
+.sponsor--open .sponsor__cat {
+  color: var(--ink-faint);
+  border-color: var(--ink-faint);
+  margin-bottom: 18px;
+}
+.sponsor__mark {
+  font-family: var(--f-display);
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--paper-edge);
+  margin: 4px 0 16px;
+}
+.sponsor__line {
+  font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: auto 0 0;
+}
+
+/* --- Sponsor-werden / Kontakt-CTA --- */
+.sponsors__cta { text-align: center; margin-top: clamp(44px, 6vw, 72px); }
+.sponsors__cta-line {
+  font-family: var(--f-body);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 46ch;
+  margin: 0 auto 24px;
 }
 
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 900px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
   .charts { grid-template-columns: 1fr; }
+  .sponsors__grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 720px) {
   body { font-size: 17px; }
@@ -627,6 +771,7 @@ a { color: inherit; }
 }
 @media (max-width: 540px) {
   .cards { grid-template-columns: 1fr; }
+  .sponsors__grid { grid-template-columns: 1fr; }
   .strecke__stats { grid-template-columns: 1fr; }
   .stat + .stat { border-left: none; border-top: var(--border); }
   .btn { box-shadow: 4px 4px 0 var(--ink); }

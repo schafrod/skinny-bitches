@@ -44,7 +44,7 @@ window.SKINNY = {
     {
       id: "christian",
       photo: "assets/christian.jpg",
-      name: "Chrigu Schafroth",
+      name: "Chrigu",
       nick: "El Gordo",
       role: "trainee",
       weightTrend: "down",
@@ -59,7 +59,7 @@ window.SKINNY = {
     {
       id: "severin",
       photo: "assets/severin.jpg",
-      name: "Severin Matti",
+      name: "Severin",
       nick: "Rocket-Man",
       role: "trainee",
       weightTrend: "down",
@@ -76,7 +76,7 @@ window.SKINNY = {
     {
       id: "lars",
       photo: "assets/lars.jpg",
-      name: "Lars Klossner",
+      name: "Lars",
       nick: "Mr. Sexybless",
       role: "coach",
       weightTrend: "down",
@@ -90,7 +90,7 @@ window.SKINNY = {
     {
       id: "mika",
       photo: "assets/mika.jpg",
-      name: "Mika Klossner",
+      name: "Mika",
       nick: "Mother²-Mikl",
       role: "coach",
       weightTrend: "up",   // erbt die Kilos der anderen — seine Kurve darf steigen
