@@ -759,30 +759,51 @@ a { color: inherit; }
   margin: 0 auto 24px;
 }
 
-/* ===================== FAQ ===================== */
+/* ===================== FAQ (Akkordeon) ===================== */
 .faq { max-width: 760px; margin: 0 auto; }
-.faq__item {
-  border-top: 1px solid var(--ink-faint);
-  padding: 22px 4px;
-}
+.faq__item { border-top: 1px solid var(--ink-faint); }
 .faq__item:last-child { border-bottom: 1px solid var(--ink-faint); }
+
 .faq__q {
+  cursor: pointer;
+  list-style: none;             /* Standard-Dreieck weg (Firefox) */
   font-family: var(--f-mono);
   font-size: 1.05rem;
   line-height: 1.4;
   color: var(--ink);
-  margin: 0 0 10px;
+  margin: 0;
+  padding: 20px 40px 20px 4px;  /* rechts Platz fürs +/- */
+  position: relative;
+  transition: color .15s;
 }
+.faq__q::-webkit-details-marker { display: none; }  /* Standard-Dreieck weg (Safari/Chrome) */
+.faq__q:hover { color: var(--blood); }
 .faq__q::before {
   content: "🍔";
   margin-right: 10px;
   font-size: 0.95em;
 }
+.faq__q::after {                 /* Auf-/Zu-Indikator */
+  content: "+";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--f-display);
+  color: var(--blood);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.faq__item[open] .faq__q { color: var(--blood); }
+.faq__item[open] .faq__q::after { content: "\2013"; }  /* – (en dash) wenn offen */
+
 .faq__a {
   margin: 0;
+  padding: 0 4px 24px 4px;
   font-size: 1.02rem;
   line-height: 1.7;
   color: var(--ink-soft);
+  animation: faqReveal .22s ease;
 }
 .faq__a em { font-style: italic; color: var(--blood); }
 .faq__a a {
@@ -792,6 +813,7 @@ a { color: inherit; }
   transition: color .15s, border-color .15s;
 }
 .faq__a a:hover { color: var(--ink); border-color: var(--ink); }
+@keyframes faqReveal { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
 
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 900px) {
@@ -816,4 +838,5 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .btn { transition: none; }
+  .faq__a { animation: none; }
 }
