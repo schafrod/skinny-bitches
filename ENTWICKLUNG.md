@@ -27,7 +27,7 @@ In `data.js` bei jeder Person unten im `history`-Array einen Eintrag anhängen:
 (Komma als **Punkt**; `km` = Total kumuliert, +2.79 pro Runde.) Oben `lastUpdate` setzen. Dann committen + pushen. BMI, Fortschritt, Charts, Ranking rechnen sich selbst. `data.js` wird per Zeitstempel geladen → Updates sofort sichtbar (kein Cache-Problem).
 
 ## Wichtig bei Design-Änderungen
-CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=14`, `main.js?v=5`). **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
+CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=15`, `main.js?v=5`). **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
 
 ## Die Crew (alle Werte echt)
 | Person | Nick | Rolle | Grösse | Jg. | Start-kg |
