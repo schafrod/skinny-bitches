@@ -264,6 +264,32 @@
     }).join("");
   }
 
+  /* ===================== LOGBUCH ===================== */
+  function renderLog() {
+    const host = $("#logbuch-list");
+    if (!host) return;
+    const entries = Array.isArray(D.log) ? D.log.slice() : [];
+    if (!entries.length) {
+      host.innerHTML = `<p class="log__empty">Noch nichts protokolliert. Der erste Montag kommt bestimmt.</p>`;
+      return;
+    }
+    // neuester Eintrag zuoberst
+    entries.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+    host.innerHTML = entries.map((e) => {
+      const isLauf = e.typ === "lauf";
+      const tag = isLauf ? "Lauf" : "Wägung";
+      const tagCls = isLauf ? "log__tag--lauf" : "log__tag--waage";
+      return `
+      <article class="log__entry">
+        <div class="log__meta">
+          <time class="log__date" datetime="${e.date}">${longDate(e.date)}</time>
+          <span class="log__tag ${tagCls}">${tag}</span>
+        </div>
+        <p class="log__text">${e.text || ""}</p>
+      </article>`;
+    }).join("");
+  }
+
   /* ===================== INIT ===================== */
   function init() {
     renderStand();
@@ -271,6 +297,7 @@
     renderStrecke();
     renderCharts();
     renderShame();
+    renderLog();
   }
   if (document.readyState !== "loading") init();
   else document.addEventListener("DOMContentLoaded", init);

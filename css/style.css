@@ -238,6 +238,7 @@ a { color: inherit; }
 .section--crew { background: var(--paper-deep); border-top: var(--border); }
 .section--strecke { background: var(--paper); border-top: var(--border); }
 .section--kurven { background: var(--paper-deep); border-top: var(--border); }
+.section--logbuch { background: var(--paper); border-top: var(--border); }
 .section--shame { background: var(--ink); color: var(--paper); border-top: var(--border); }
 .section--ziel { background: var(--paper-deep); border-top: var(--border); }
 .section--sponsoren { background: var(--paper); border-top: var(--border); }
@@ -757,6 +758,63 @@ a { color: inherit; }
   color: var(--ink-soft);
   max-width: 46ch;
   margin: 0 auto 24px;
+}
+
+/* ===================== LOGBUCH (Timeline) ===================== */
+.log {
+  max-width: 700px;
+  margin: 0 auto;
+  border-left: 2px solid var(--ink);
+  padding-left: 30px;
+}
+.log__entry { position: relative; padding-bottom: 32px; }
+.log__entry:last-child { padding-bottom: 0; }
+.log__entry::before {            /* Timeline-Knoten (Rhombus, Letterpress-Marke) */
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 5px;
+  width: 11px;
+  height: 11px;
+  background: var(--blood);
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 4px var(--paper);
+}
+.log__meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 9px;
+}
+.log__date {
+  font-family: var(--f-mono);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+.log__tag {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  padding: 3px 10px;
+  border: 1.5px solid currentColor;
+}
+.log__tag--lauf { color: var(--ink); }
+.log__tag--waage { color: var(--blood); }
+.log__text {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.72;
+  color: var(--ink-soft);
+}
+.log__empty {
+  text-align: center;
+  font-family: var(--f-western);
+  font-size: 1.2rem;
+  color: var(--ink-faint);
 }
 
 /* ===================== FAQ (Akkordeon) ===================== */

@@ -129,7 +129,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="css/style.css?v=15" />
+  <link rel="stylesheet" href="css/style.css?v=16" />
 </head>
 <body>
 
@@ -144,6 +144,7 @@
       <a href="#crew">Die Crüe</a>
       <a href="#strecke">Ogi-Weg</a>
       <a href="#kurven">Kurven</a>
+      <a href="#logbuch">Logbuch</a>
       <a href="#shame">Hall of Shame</a>
       <a href="#ziel">Das Ziel</a>
       <a href="#sponsoren">Sponsoren</a>
@@ -297,6 +298,21 @@
           <div class="chart" id="chart-km"><!-- JS rendert SVG --></div>
           <div class="legend" id="legend-km"></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LOGBUCH ===================== -->
+  <section class="section section--logbuch" id="logbuch">
+    <div class="wrap">
+      <p class="overline overline--center">Protokoll der Leiden</p>
+      <h2 class="section__title">Logbuch</h2>
+      <p class="section__lead">
+        Montags gelaufen, donnerstags gewogen — und immer kommentiert.
+        Was die Kurven nicht erzählen, steht hier.
+      </p>
+      <div class="log" id="logbuch-list">
+        <!-- JS rendert die Einträge (neuester zuoberst) -->
       </div>
     </div>
   </section>
@@ -458,6 +474,6 @@
 
   <!-- data.js immer frisch laden (Zeitstempel umgeht den Browser-Cache bei Wochen-Updates) -->
   <script>document.write('\x3Cscript src="data.js?t=' + Date.now() + '">\x3C/script>');</script>
-  <script src="js/main.js?v=6"></script>
+  <script src="js/main.js?v=7"></script>
 </body>
 </html>
