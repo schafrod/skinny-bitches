@@ -145,7 +145,7 @@
   }
 
   /* ===================== CHARTS (custom SVG) ===================== */
-  function buildChart(valueKey, fromZero) {
+  function buildChart(valueKey, fromZero, unit) {
     const people = D.people;
     const dateSet = new Set();
     people.forEach((p) => hist(p).forEach((h) => dateSet.add(h.date)));
@@ -196,15 +196,16 @@
       const h = hist(p);
       if (!h.length) return;
       const st = SERIES_STYLES[si % SERIES_STYLES.length];
-      const pts = h.map((row) => ({ x: xFor(idxOf(row.date)), y: yFor(row[valueKey]) }));
+      const pts = h.map((row) => ({ x: xFor(idxOf(row.date)), y: yFor(row[valueKey]), v: row[valueKey], date: row.date }));
       if (pts.length >= 2) {
         const dAttr = pts.map((pt, i) => (i ? "L" : "M") + pt.x.toFixed(1) + "," + pt.y.toFixed(1)).join(" ");
         svg += `<path class="pline" d="${dAttr}" stroke="${st.color}"${st.dash ? ` stroke-dasharray="${st.dash}"` : ""}/>`;
       }
       pts.forEach((pt) => {
+        const label = `${first(p.name)}, ${shortDate(pt.date)}: ${p.estimated ? "≈ " : ""}${num(pt.v)} ${unit}`;
         svg += p.estimated
-          ? `<circle r="3.4" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" fill="${PAPER}" stroke="${st.color}" stroke-width="1.6"/>`
-          : `<circle r="3.6" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" fill="${st.color}"/>`;
+          ? `<circle r="3.4" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" fill="${PAPER}" stroke="${st.color}" stroke-width="1.6"><title>${label}</title></circle>`
+          : `<circle r="3.6" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" fill="${st.color}"><title>${label}</title></circle>`;
       });
     });
 
@@ -229,9 +230,9 @@
 
   function renderCharts() {
     const w = $("#chart-weight");
-    if (w) { const r = buildChart("weightKg", false); w.innerHTML = r.svg; renderLegend("#legend-weight", r.n); }
+    if (w) { const r = buildChart("weightKg", false, "kg"); w.innerHTML = r.svg; renderLegend("#legend-weight", r.n); }
     const k = $("#chart-km");
-    if (k) { const r = buildChart("km", true); k.innerHTML = r.svg; renderLegend("#legend-km", r.n); }
+    if (k) { const r = buildChart("km", true, "km"); k.innerHTML = r.svg; renderLegend("#legend-km", r.n); }
   }
 
   /* ===================== HALL OF SHAME ===================== */
@@ -242,13 +243,17 @@
     // Gewertet wird der Fortschritt Richtung EIGENES Ziel:
     // Opfer (down) zählt das Abgenommene, Coaches (up) das Zugenommene ("erben").
     const rows = D.people.filter((p) => hist(p).length).map((p) => {
-      const d = curr(p).weightKg - start(p).weightKg;   // < 0 = abgenommen
+      const s0 = start(p).weightKg;
+      const d = curr(p).weightKg - s0;            // < 0 = abgenommen
+      const pct = s0 ? (d / s0) * 100 : 0;        // vorzeichenbehaftet, % vom Ausgangsgewicht
       const wantsUp = p.weightTrend === "up";
-      return { name: p.name, nick: p.nick, role: p.role, d, wantsUp, score: wantsUp ? d : -d };
+      // Wertung = Fortschritt Richtung Ziel, relativ zum Ausgangsgewicht
+      return { name: p.name, nick: p.nick, role: p.role, d, pct, wantsUp, score: wantsUp ? pct : -pct };
     }).sort((a, b) => b.score - a.score);
 
     const maxScore = Math.max(...rows.map((r) => Math.abs(r.score)), 0);
-    if (!rows.length || maxScore < 0.05) {
+    const movedAny = rows.some((r) => Math.abs(r.d) >= 0.05);
+    if (!rows.length || !movedAny) {
       host.innerHTML = `<p class="shame__empty">Noch hat keiner was bewegt ausser der Würde.<br>Komm am Donnerstag wieder.</p>`;
       return;
     }
@@ -276,7 +281,7 @@
           <div class="shame__sub">${r.nick || ""}</div>
           <div class="shame__bar"><span style="width:${w}%"></span></div>
         </div>
-        <div class="shame__delta">${sign}${num(Math.abs(r.d))} kg<small>${tag}</small></div>
+        <div class="shame__delta">${sign}${num(Math.abs(r.pct))} %<small>${sign}${num(Math.abs(r.d))} kg · ${tag}</small></div>
       </div>`;
     }).join("");
   }

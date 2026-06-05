@@ -125,7 +125,7 @@ window.SKINNY = {
     {
       date: "2026-06-04",
       typ: "waage",
-      text: "Erste Wägung, erste Wahrheit. Chrigu lässt 1,2 Kilo im Tal. Severin ein halbes. Lars meldet 84.1, frisch nach dem Stuhlgang gemessen, jedes Gramm zählt. Und Mika? Erbt brav: +0,2. Wobei er sein Gewicht nur schätzen kann. Er hat noch keine Waage. Es läuft. Im wahrsten Sinn noch nicht, aber es läuft."
+      text: "Erste Wägung, erste Wahrheit. Chrigu lässt 1,2 Kilo im Tal. Severin ein halbes. Lars meldet 84.1, frisch nach dem Stuhlgang gemessen. Und Mika? Erbt brav: +0,2. Wobei er sein Gewicht nur schätzen kann. Er hat noch keine Waage. Es läuft. Im wahrsten Sinn noch nicht, aber es läuft."
     }
   ]
 };
