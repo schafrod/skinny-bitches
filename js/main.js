@@ -239,31 +239,44 @@
     const host = $("#shame");
     if (!host) return;
 
+    // Gewertet wird der Fortschritt Richtung EIGENES Ziel:
+    // Opfer (down) zählt das Abgenommene, Coaches (up) das Zugenommene ("erben").
     const rows = D.people.filter((p) => hist(p).length).map((p) => {
-      const d = curr(p).weightKg - start(p).weightKg;  // < 0 abgenommen
-      return { name: p.name, nick: p.nick, role: p.role, lost: -d }; // lost > 0 = abgenommen
-    }).sort((a, b) => b.lost - a.lost);
+      const d = curr(p).weightKg - start(p).weightKg;   // < 0 = abgenommen
+      const wantsUp = p.weightTrend === "up";
+      return { name: p.name, nick: p.nick, role: p.role, d, wantsUp, score: wantsUp ? d : -d };
+    }).sort((a, b) => b.score - a.score);
 
-    const maxAbs = Math.max(...rows.map((r) => Math.abs(r.lost)), 0);
-    if (!rows.length || maxAbs < 0.05) {
-      host.innerHTML = `<p class="shame__empty">Noch hat keiner was verloren ausser der Würde.<br>Komm am Donnerstag wieder.</p>`;
+    const maxScore = Math.max(...rows.map((r) => Math.abs(r.score)), 0);
+    if (!rows.length || maxScore < 0.05) {
+      host.innerHTML = `<p class="shame__empty">Noch hat keiner was bewegt ausser der Würde.<br>Komm am Donnerstag wieder.</p>`;
       return;
     }
 
+    let prevRole = null;
     host.innerHTML = rows.map((r, i) => {
       const lead = i === 0 ? " shame__row--lead" : "";
-      const w = maxAbs ? Math.round(Math.abs(r.lost) / maxAbs * 100) : 0;
-      const sign = r.lost > 0.05 ? "−" : (r.lost < -0.05 ? "+" : "±");
-      const tag = r.lost > 0.05 ? "abgenommen" : (r.lost < -0.05 ? "draufgepackt" : "nada");
-      return `
+      const w = maxScore ? Math.max(0, Math.round(r.score / maxScore * 100)) : 0;
+      const sign = r.d < -0.05 ? "−" : (r.d > 0.05 ? "+" : "±");
+      const tag = r.wantsUp
+        ? (r.d > 0.05 ? "geerbt" : (r.d < -0.05 ? "Erben misslingt" : "nix geerbt"))
+        : (r.d < -0.05 ? "abgenommen" : (r.d > 0.05 ? "draufgepackt" : "nada"));
+      const roleTxt = r.role === "coach" ? "Coach" : "Opfer";
+      // Lager-Trenner: Label vor dem ersten Eintrag und bei jedem Rollenwechsel
+      const showLabel = (i === 0) || (prevRole !== r.role);
+      prevRole = r.role;
+      const divider = showLabel
+        ? `<div class="shame__divider"><span>${r.role === "coach" ? "die Erber" : "die Abnehmer"}</span></div>`
+        : "";
+      return `${divider}
       <div class="shame__row${lead}">
         <div class="shame__rank">${i + 1}</div>
         <div class="shame__who">
-          <div class="shame__name">${r.name}</div>
-          <div class="shame__sub">${r.nick || r.role}</div>
+          <div class="shame__name">${r.name} <span class="shame__role">${roleTxt}</span></div>
+          <div class="shame__sub">${r.nick || ""}</div>
           <div class="shame__bar"><span style="width:${w}%"></span></div>
         </div>
-        <div class="shame__delta">${sign}${num(Math.abs(r.lost))} kg<small>${tag}</small></div>
+        <div class="shame__delta">${sign}${num(Math.abs(r.d))} kg<small>${tag}</small></div>
       </div>`;
     }).join("");
   }

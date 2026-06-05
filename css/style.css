@@ -567,6 +567,36 @@ a { color: inherit; }
 }
 .shame__who { min-width: 0; }
 .shame__name { font-family: var(--f-display); font-size: 1.15rem; }
+.shame__role {
+  font-family: var(--f-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--paper-deep);
+  border: 1px solid rgba(233,224,205,.4);
+  padding: 1px 6px;
+  margin-left: 8px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.shame__divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0 8px;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--blood-bright);
+}
+.shame__divider:first-child { margin-top: 0; }
+.shame__divider::before, .shame__divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(233,224,205,.25);
+}
 .shame__sub {
   font-family: var(--f-mono);
   font-size: 11px;
