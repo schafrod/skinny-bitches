@@ -120,12 +120,12 @@ window.SKINNY = {
     {
       date: "2026-06-01",
       typ: "lauf",
-      text: "Auftakt. Erste Runde Ogi-Weg, der Schinti hoch — Severin gibt gleich anderthalb Runden, der Rest schnauft wie alte Lokomotiven. Mika fehlt (natürlich), die Kilometer bleibt er schuldig. Startgewichte sind im Kasten, die Waage hat gelacht."
+      text: "Auftakt. Erste Runde Ogi-Weg. Severin legt gleich anderthalb Runden vor - dieses Tier! Coach Lars kennt keine Gnade, lässt die Dicken hinter sich und kümmert sich nebenbei um den Weg-Unterhalt. Zudem missbraucht er seine Hinterherläufer zur statischen Kontrolle der Brüggleni. Sie halten dem Gewicht stand (zumindest besser als die Kniescheiben der Herzbuben). Mika fehlt natürlich, die Kilometer bleibt er schuldig (in Flüssigeinheiten). Startgewichte sind im Kasten, die Waage weint bittere Tränen."
     },
     {
       date: "2026-06-04",
       typ: "waage",
-      text: "Erste Wägung, erste Wahrheit. Chrigu lässt 1,2 Kilo im Tal — sauber. Severin ein halbes. Lars meldet 84.1, frisch nach dem Stuhlgang gemessen, jedes Gramm zählt. Und Mika? Erbt brav: +0,2. Es läuft. Im wahrsten Sinn noch nicht, aber es läuft."
+      text: "Erste Wägung, erste Wahrheit. Chrigu lässt 1,2 Kilo im Tal. Severin ein halbes. Lars meldet 84.1, frisch nach dem Stuhlgang gemessen, jedes Gramm zählt. Und Mika? Erbt brav: +0,2. Wobei er sein Gewicht nur schätzen kann. Er hat noch keine Waage. Es läuft. Im wahrsten Sinn noch nicht, aber es läuft."
     }
   ]
 };
