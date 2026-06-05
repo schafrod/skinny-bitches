@@ -269,7 +269,7 @@
 
   /* ===================== HALL OF SHAME ===================== */
   function renderShame() {
-    const host = $("#shame");
+    const host = $("#shame-list");
     if (!host) return;
 
     // Gewertet wird der Fortschritt Richtung EIGENES Ziel:
