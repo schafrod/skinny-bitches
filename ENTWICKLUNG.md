@@ -29,17 +29,19 @@ In `data.js` bei jeder Person unten im `history`-Array einen Eintrag anhängen:
 **Logbuch:** nach jedem Lauf (Mo) und jeder Wägung (Do) unten im `log`-Array einen Eintrag anhängen: `{ date: "JJJJ-MM-TT", typ: "lauf" | "waage", text: "dein Kommentar" }`. Neuester erscheint zuoberst. Das ist der erzählerische Teil — kurz, frech, mit Zahlen.
 
 ## Wichtig bei Design-Änderungen
-CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=16`, `main.js?v=7`). **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
+CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=17`, `main.js?v=8`). **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
 
 ## Die Crew (alle Werte echt)
 | Person | Nick | Rolle | Grösse | Jg. | Start-kg |
 |---|---|---|---|---|---|
 | Chrigu Schafroth | El Gordo | Opfer | 187 | 1983 | 165,3 |
 | Severin Matti | Rocket-Man | Opfer | 185 | 1998 | 149 |
-| Lars Klossner | Mr. Sexybless | Coach | 176 | 1999 | 84,5 |
+| Lars Klossner | Mr. Sexybless | Coach (erbt auch) | 176 | 1999 | 84,5 |
 | Mika Klossner | Mother²-Mikl | Coach (nimmt zu) | 182 | 1997 | 81 |
 
 Mika war am 1.6. nicht beim Lauf (km 0). „Opfer" = Trainee-Rolle. Auf der Seite werden nur Vornamen gezeigt. (Lars-Start am 4.6. von 83 auf **84,5** korrigiert.)
+
+**Daten-Flags in `data.js`:** `weightTrend` `"up"` = soll/darf zunehmen (Mika **und neu Lars** — „Erben"; abnehmen liest dann als „Erben misslingt"). `estimated: true` bei Mika (keine Waage) → Karte zeigt „≈" vor Gewicht/BMI, Notiz „Schätzung", und im Chart hohle statt volle Punkte (`main.js` nutzt `PAPER`).
 
 ## Stand der Zahlen
 Erste Wägung **Do 4.6.2026**: Chrigu 164,1 (−1,2) · Severin 148,5 (−0,5) · Lars 84,1 (−0,4) · Mika 81,2 (+0,2, erbt brav). Kilometer unverändert (kein Lauf seit Mo 1.6.).

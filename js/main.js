@@ -17,6 +17,7 @@
   /* ---- Tinten (müssen zu den CSS-Variablen passen) ---- */
   const INK = "#1c1a17";
   const BLOOD = "#8e2b1c";
+  const PAPER = "#e9e0cd";
   // Linienstil pro Person, in Reihenfolge von data.people:
   const SERIES_STYLES = [
     { color: BLOOD, dash: "" },     // 1 — Christian
@@ -91,8 +92,8 @@
         : `<div class="portrait" role="img" aria-label="${p.name}"><span class="portrait__initial">${initials}</span></div>`;
 
       const km = has ? num(c.km) + " km" : "—";
-      const gew = has ? `<strong>${num(c.weightKg)}</strong> kg` : "—";
-      const bmi = b != null ? `<strong>${num(b)}</strong>` : "—";
+      const gew = has ? `${p.estimated ? "≈ " : ""}<strong>${num(c.weightKg)}</strong> kg` : "—";
+      const bmi = b != null ? `${p.estimated ? "≈ " : ""}<strong>${num(b)}</strong>` : "—";
 
       return `
       <article class="card${has ? "" : " card--idle"}">
@@ -108,6 +109,7 @@
           <li><span class="k">BMI</span><span class="dots"></span><span class="v">${bmi}</span></li>
         </ul>
         <div class="progress ${progCls}"><b>${progTxt}</b></div>
+        ${p.estimated ? '<p class="card__note">Schätzung – Mika hat noch keine Waage</p>' : ""}
         ${p.bio ? `<p class="card__bio">${p.bio}</p>` : ""}
       </article>`;
     }).join("");
@@ -200,7 +202,9 @@
         svg += `<path class="pline" d="${dAttr}" stroke="${st.color}"${st.dash ? ` stroke-dasharray="${st.dash}"` : ""}/>`;
       }
       pts.forEach((pt) => {
-        svg += `<circle r="3.6" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" fill="${st.color}"/>`;
+        svg += p.estimated
+          ? `<circle r="3.4" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" fill="${PAPER}" stroke="${st.color}" stroke-width="1.6"/>`
+          : `<circle r="3.6" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" fill="${st.color}"/>`;
       });
     });
 

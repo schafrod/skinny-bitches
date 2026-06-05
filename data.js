@@ -85,7 +85,7 @@ window.SKINNY = {
       name: "Lars",
       nick: "Mr. Sexybless",
       role: "coach",
-      weightTrend: "down",
+      weightTrend: "up",   // erbt jetzt auch Kilos von Chrigu & Severin
       heightCm: 176,
       birthYear: 1999,
       bio: "Zweitletzter Sohn eines Bergbauern. Hat das Formhalten im steilen Gelände gelernt, lang bevor es Fitness-Apps gab. Allseits begehrt, selten zu fassen.",
@@ -103,6 +103,7 @@ window.SKINNY = {
       weightTrend: "up",   // erbt die Kilos der anderen — seine Kurve darf steigen
       heightCm: 182,
       birthYear: 1997,
+      estimated: true,   // keine Waage — Gewicht geschätzt
       bio: "Boltigens berüchtigtster Bruder. Erbt die Kilos der anderen, statt selber welche zu lassen — und hat endlich ein Zweithobby. Beim Auftakt fehlte er; die Kilometer holt er nach.",
       // am 1.6. gewogen, aber nicht mitgelaufen -> 0 km
       history: [
