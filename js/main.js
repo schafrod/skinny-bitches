@@ -206,6 +206,8 @@
         svg += p.estimated
           ? `<circle r="3.4" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" fill="${PAPER}" stroke="${st.color}" stroke-width="1.6"><title>${label}</title></circle>`
           : `<circle r="3.6" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" fill="${st.color}"><title>${label}</title></circle>`;
+        // unsichtbare, grosse Trefferfläche für Hover/Tap
+        svg += `<circle class="hit" r="13" cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" data-label="${label}"/>`;
       });
     });
 
@@ -233,6 +235,36 @@
     if (w) { const r = buildChart("weightKg", false, "kg"); w.innerHTML = r.svg; renderLegend("#legend-weight", r.n); }
     const k = $("#chart-km");
     if (k) { const r = buildChart("km", true, "km"); k.innerHTML = r.svg; renderLegend("#legend-km", r.n); }
+    wireChartTooltips();
+  }
+
+  // Interaktive Tooltips auf den Diagramm-Punkten (Hover + Tap)
+  function wireChartTooltips() {
+    document.querySelectorAll(".chart-card").forEach((card) => {
+      const chart = card.querySelector(".chart");
+      if (!chart) return;
+      let tip = card.querySelector(".charttip");
+      if (!tip) { tip = document.createElement("div"); tip.className = "charttip"; card.appendChild(tip); }
+      const show = (el, cx, cy) => {
+        const label = el.getAttribute("data-label");
+        if (!label) return;
+        tip.textContent = label;
+        const r = card.getBoundingClientRect();
+        tip.style.left = (cx - r.left) + "px";
+        tip.style.top = (cy - r.top) + "px";
+        tip.classList.add("is-on");
+      };
+      const hide = () => tip.classList.remove("is-on");
+      chart.addEventListener("pointermove", (e) => {
+        const el = e.target.closest("[data-label]");
+        if (el) show(el, e.clientX, e.clientY); else hide();
+      });
+      chart.addEventListener("pointerleave", hide);
+      chart.addEventListener("click", (e) => {
+        const el = e.target.closest("[data-label]");
+        if (el) show(el, e.clientX, e.clientY); else hide();
+      });
+    });
   }
 
   /* ===================== HALL OF SHAME ===================== */
