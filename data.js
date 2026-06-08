@@ -58,7 +58,8 @@ window.SKINNY = {
       // history: ältester Eintrag zuoberst, neuester zuunterst.
       history: [
         { date: "2026-06-01", weightKg: 165.3, km: 2.79 },
-        { date: "2026-06-04", weightKg: 164.1, km: 2.79 }
+        // 8.6. Anaconda-Loop (3.41 km) solo gelaufen -> km im letzten Eintrag erhöht, kein neuer Diagramm-Punkt
+        { date: "2026-06-04", weightKg: 164.1, km: 6.20 }
       ]
     },
     {
