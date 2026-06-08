@@ -31,6 +31,7 @@
   const fmt = (n) => (Number.isInteger(n) ? String(n) : (Math.round(n * 10) / 10).toFixed(1));
   const de = (s) => String(s).replace(".", ",");           // Schweizer Komma
   const num = (n) => de(fmt(n));
+  const escAttr = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   const bmiOf = (w, h) => w / Math.pow(h / 100, 2);
   const first = (full) => full.trim().split(/\s+/)[0];
   const hist = (p) => Array.isArray(p.history) ? p.history : [];
@@ -341,6 +342,14 @@
         .split(/\n{2,}/)
         .map((para) => `<p class="log__text">${para.replace(/\n/g, "<br>")}</p>`)
         .join("");
+      let photos = "";
+      if (Array.isArray(e.photos) && e.photos.length) {
+        const dir = e.photoDir ? e.photoDir.replace(/\/+$/, "") + "/" : "";
+        photos = `<div class="log__photos">` + e.photos.map((ph) => {
+          const cap = escAttr(ph.caption || "");
+          return `<button type="button" class="log__photo" data-full="${dir}${ph.file}.jpg" data-cap="${cap}"><img src="${dir}${ph.file}-t.jpg" alt="${cap}" loading="lazy"></button>`;
+        }).join("") + `</div>`;
+      }
       return `
       <article class="log__entry">
         <div class="log__meta">
@@ -348,8 +357,37 @@
           <span class="log__tag ${tagCls}">${tag}</span>
         </div>
         ${body}
+        ${photos}
       </article>`;
     }).join("");
+
+    wireLightbox(host);
+  }
+
+  // Schlichtes Lightbox-Overlay für die Lauf-Fotos (Hover/Klick/Tap, Esc schliesst)
+  function wireLightbox(host) {
+    let box = document.getElementById("lightbox");
+    if (!box) {
+      box = document.createElement("div");
+      box.id = "lightbox";
+      box.className = "lightbox";
+      box.innerHTML = '<button type="button" class="lightbox__close" aria-label="Schliessen">&times;</button>' +
+        '<figure class="lightbox__fig"><img class="lightbox__img" alt=""><figcaption class="lightbox__cap"></figcaption></figure>';
+      document.body.appendChild(box);
+      const hide = () => box.classList.remove("is-on");
+      box.addEventListener("click", (e) => { if (e.target === box || e.target.closest(".lightbox__close")) hide(); });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") hide(); });
+    }
+    const img = box.querySelector(".lightbox__img");
+    const cap = box.querySelector(".lightbox__cap");
+    host.querySelectorAll(".log__photo").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        img.src = btn.getAttribute("data-full");
+        const c = btn.getAttribute("data-cap") || "";
+        img.alt = c; cap.textContent = c;
+        box.classList.add("is-on");
+      });
+    });
   }
 
   /* ===================== INIT ===================== */

@@ -8,5 +8,8 @@ ChatGPT Image*.png
 # Porträt-Quellen (optimierte JPGs liegen in assets/)
 Portraits/
 
+# Lauf-Foto-Quellen (optimierte Versionen liegen in assets/runs/)
+Fotos/
+
 # Lokale Preview-Config
 .claude/
