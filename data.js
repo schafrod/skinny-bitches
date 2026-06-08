@@ -18,6 +18,11 @@
    KILOMETER-LOGIK: alle laufen dieselbe Runde (2,79 km). Eine Runde = +2.79.
    (Severin lief am 1.6. ausnahmsweise 1,5 Runden = 4.18 km.)
 
+   MONTAG (Lauf) vs. DONNERSTAG (Wägung): An einem reinen Lauftag (Mo) wird NICHT
+   gewogen — dann nur einen Eintrag MIT km, OHNE weightKg machen, z.B.
+   { date: "2026-06-08", km: 6.20 }. So entsteht ein km-Punkt, aber kein falscher
+   Wäge-Punkt in der Gewichtskurve. Am Donnerstag normal weightKg + km.
+
    LOGBUCH: Nach jedem Lauf (Mo) und jeder Wägung (Do) unten im "log"-Array EINEN
    Eintrag anhängen: { date: "JJJJ-MM-TT", typ: "lauf" | "waage", text: "Kommentar" }.
    Der neueste Eintrag erscheint auf der Seite zuoberst.
@@ -28,7 +33,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-06-04",
+  lastUpdate: "2026-06-08",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -58,8 +63,9 @@ window.SKINNY = {
       // history: ältester Eintrag zuoberst, neuester zuunterst.
       history: [
         { date: "2026-06-01", weightKg: 165.3, km: 2.79 },
-        // 8.6. Anaconda-Loop (3.41 km) solo gelaufen -> km im letzten Eintrag erhöht, kein neuer Diagramm-Punkt
-        { date: "2026-06-04", weightKg: 164.1, km: 6.20 }
+        { date: "2026-06-04", weightKg: 164.1, km: 2.79 },
+        // 8.6. Skinny Bitch Monday: Anaconda-Loop (3.41 km) solo gelaufen, keine Wägung -> nur km
+        { date: "2026-06-08", km: 6.20 }
       ]
     },
     {

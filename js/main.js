@@ -36,6 +36,9 @@
   const hist = (p) => Array.isArray(p.history) ? p.history : [];
   const curr = (p) => hist(p).length ? hist(p)[hist(p).length - 1] : null;
   const start = (p) => hist(p).length ? hist(p)[0] : null;
+  // letzter / erster Eintrag MIT Gewicht (Lauf-Tage können nur km haben)
+  const currW = (p) => { const h = hist(p); for (let i = h.length - 1; i >= 0; i--) if (h[i].weightKg != null) return h[i]; return null; };
+  const startW = (p) => { const h = hist(p); for (let i = 0; i < h.length; i++) if (h[i].weightKg != null) return h[i]; return null; };
 
   function longDate(iso) {
     const d = new Date(iso + "T00:00:00");
@@ -60,11 +63,12 @@
     const year = parseInt(String(D.lastUpdate).slice(0, 4), 10);
 
     host.innerHTML = D.people.map((p) => {
-      const c = curr(p), s0 = start(p);
-      const has = !!c;
+      const cw = currW(p), s0 = startW(p);   // Gewicht/BMI/Fortschritt
+      const ck = curr(p);                    // letzter Eintrag (für km)
+      const has = !!cw;
       const age = p.birthYear ? year - p.birthYear : null;
-      const b = (has && p.heightCm) ? bmiOf(c.weightKg, p.heightCm) : null;
-      const d = has ? c.weightKg - s0.weightKg : 0;       // < 0 = abgenommen
+      const b = (has && p.heightCm) ? bmiOf(cw.weightKg, p.heightCm) : null;
+      const d = has ? cw.weightKg - s0.weightKg : 0;       // < 0 = abgenommen
       const moved = Math.abs(d) >= 0.05;
       const wantsUp = p.weightTrend === "up";
       const success = wantsUp ? d > 0.05 : d < -0.05;
@@ -91,8 +95,8 @@
         ? `<img class="portrait" src="${p.photo}" alt="${p.name}">`
         : `<div class="portrait" role="img" aria-label="${p.name}"><span class="portrait__initial">${initials}</span></div>`;
 
-      const km = has ? num(c.km) + " km" : "—";
-      const gew = has ? `${p.estimated ? "≈ " : ""}<strong>${num(c.weightKg)}</strong> kg` : "—";
+      const km = ck ? num(ck.km) + " km" : "—";
+      const gew = has ? `${p.estimated ? "≈ " : ""}<strong>${num(cw.weightKg)}</strong> kg` : "—";
       const bmi = b != null ? `${p.estimated ? "≈ " : ""}<strong>${num(b)}</strong>` : "—";
 
       return `
@@ -148,13 +152,13 @@
   function buildChart(valueKey, fromZero, unit) {
     const people = D.people;
     const dateSet = new Set();
-    people.forEach((p) => hist(p).forEach((h) => dateSet.add(h.date)));
+    people.forEach((p) => hist(p).forEach((h) => { if (h[valueKey] != null) dateSet.add(h.date); }));
     const dates = [...dateSet].sort();
     const n = dates.length;
     const idxOf = (d) => dates.indexOf(d);
 
     const vals = [];
-    people.forEach((p) => hist(p).forEach((h) => vals.push(h[valueKey])));
+    people.forEach((p) => hist(p).forEach((h) => { if (h[valueKey] != null) vals.push(h[valueKey]); }));
     if (!vals.length) vals.push(0, 1); // Sicherheitsnetz, falls noch gar nichts da ist
 
     let yMin = fromZero ? 0 : Math.min(...vals);
@@ -193,7 +197,7 @@
 
     // Linien + Punkte (Personen ohne Messung tragen nichts bei)
     people.forEach((p, si) => {
-      const h = hist(p);
+      const h = hist(p).filter((row) => row[valueKey] != null);
       if (!h.length) return;
       const st = SERIES_STYLES[si % SERIES_STYLES.length];
       const pts = h.map((row) => ({ x: xFor(idxOf(row.date)), y: yFor(row[valueKey]), v: row[valueKey], date: row.date }));
@@ -274,9 +278,9 @@
 
     // Gewertet wird der Fortschritt Richtung EIGENES Ziel:
     // Opfer (down) zählt das Abgenommene, Coaches (up) das Zugenommene ("erben").
-    const rows = D.people.filter((p) => hist(p).length).map((p) => {
-      const s0 = start(p).weightKg;
-      const d = curr(p).weightKg - s0;            // < 0 = abgenommen
+    const rows = D.people.filter((p) => currW(p)).map((p) => {
+      const s0 = startW(p).weightKg;
+      const d = currW(p).weightKg - s0;            // < 0 = abgenommen
       const pct = s0 ? (d / s0) * 100 : 0;        // vorzeichenbehaftet, % vom Ausgangsgewicht
       const wantsUp = p.weightTrend === "up";
       // Wertung = Fortschritt Richtung Ziel, relativ zum Ausgangsgewicht

@@ -26,10 +26,12 @@ In `data.js` bei jeder Person unten im `history`-Array einen Eintrag anhängen:
 ```
 (Komma als **Punkt**; `km` = Total kumuliert, +2.79 pro Runde — an einem reinen Wäge-Donnerstag ohne Lauf bleibt km gleich.) Oben `lastUpdate` setzen. Dann committen + pushen. BMI, Fortschritt, Charts, Ranking rechnen sich selbst. `data.js` wird per Zeitstempel geladen → Updates sofort sichtbar (kein Cache-Problem).
 
+**Montag = Lauftag (km-only):** An einem reinen Lauftag NICHT wägen → Eintrag mit `km`, **ohne** `weightKg`, z.B. `{ date: "2026-06-08", km: 6.20 }`. `main.js` behandelt das sauber (km-Punkt im km-Chart, kein Punkt im Gewichts-Chart; Karte nimmt Gewicht/BMI aus dem letzten Wäge-Eintrag via `currW`/`startW`). Nur Läufer kriegen einen Eintrag. `lastUpdate` darf auch auf einen Montag gesetzt werden (Stand = letzte Datenänderung).
+
 **Logbuch:** nach jedem Lauf (Mo) und jeder Wägung (Do) unten im `log`-Array einen Eintrag anhängen: `{ date: "JJJJ-MM-TT", typ: "lauf" | "waage", text: "dein Kommentar" }`. Neuester erscheint zuoberst. Das ist der erzählerische Teil — kurz, frech, mit Zahlen.
 
 ## Wichtig bei Design-Änderungen
-CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=19`, `main.js?v=12`). **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
+CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=19`, `main.js?v=13`). **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
 
 ## Die Crew (alle Werte echt)
 | Person | Nick | Rolle | Grösse | Jg. | Start-kg |
