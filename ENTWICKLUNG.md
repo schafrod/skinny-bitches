@@ -28,10 +28,10 @@ In `data.js` bei jeder Person unten im `history`-Array einen Eintrag anhängen:
 
 **Montag = Lauftag (km-only):** An einem reinen Lauftag NICHT wägen → Eintrag mit `km`, **ohne** `weightKg`, z.B. `{ date: "2026-06-08", km: 6.20 }`. `main.js` behandelt das sauber (km-Punkt im km-Chart, kein Punkt im Gewichts-Chart; Karte nimmt Gewicht/BMI aus dem letzten Wäge-Eintrag via `currW`/`startW`). Nur Läufer kriegen einen Eintrag. `lastUpdate` darf auch auf einen Montag gesetzt werden (Stand = letzte Datenänderung).
 
-**Logbuch:** nach jedem Lauf (Mo) und jeder Wägung (Do) unten im `log`-Array einen Eintrag anhängen: `{ date: "JJJJ-MM-TT", typ: "lauf" | "waage", text: "dein Kommentar" }`. Neuester erscheint zuoberst. Das ist der erzählerische Teil — kurz, frech, mit Zahlen.
+**Logbuch:** nach jedem Lauf (Mo) und jeder Wägung (Do) unten im `log`-Array einen Eintrag anhängen: `{ date: "JJJJ-MM-TT", typ: "lauf" | "waage", text: "dein Kommentar" }`. Neuester erscheint zuoberst. Das ist der erzählerische Teil — kurz, frech, mit Zahlen. Längere Einträge: Absätze mit `\n\n` im `text` trennen (renderLog macht daraus mehrere `<p>`).
 
 ## Wichtig bei Design-Änderungen
-CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=19`, `main.js?v=13`). **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
+CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=20`, `main.js?v=14`). **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
 
 ## Die Crew (alle Werte echt)
 | Person | Nick | Rolle | Grösse | Jg. | Start-kg |

@@ -337,13 +337,17 @@
       const isLauf = e.typ === "lauf";
       const tag = isLauf ? "Lauf" : "Wägung";
       const tagCls = isLauf ? "log__tag--lauf" : "log__tag--waage";
+      const body = String(e.text || "").trim()
+        .split(/\n{2,}/)
+        .map((para) => `<p class="log__text">${para.replace(/\n/g, "<br>")}</p>`)
+        .join("");
       return `
       <article class="log__entry">
         <div class="log__meta">
           <time class="log__date" datetime="${e.date}">${longDate(e.date)}</time>
           <span class="log__tag ${tagCls}">${tag}</span>
         </div>
-        <p class="log__text">${e.text || ""}</p>
+        ${body}
       </article>`;
     }).join("");
   }

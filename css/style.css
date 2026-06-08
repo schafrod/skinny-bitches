@@ -868,6 +868,7 @@ a { color: inherit; }
   line-height: 1.72;
   color: var(--ink-soft);
 }
+.log__text + .log__text { margin-top: 0.85em; }
 .log__empty {
   text-align: center;
   font-family: var(--f-western);
