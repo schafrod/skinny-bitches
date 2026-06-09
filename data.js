@@ -65,7 +65,9 @@ window.SKINNY = {
         { date: "2026-06-01", weightKg: 165.3, km: 2.79 },
         { date: "2026-06-04", weightKg: 164.1, km: 2.79 },
         // 8.6. Skinny Bitch Monday: Anaconda-Loop (3.41 km) solo gelaufen, keine Wägung -> nur km
-        { date: "2026-06-08", km: 6.20 }
+        { date: "2026-06-08", km: 6.20 },
+        // 9.6. Skinny Bitch Tuesday: Ogi + Anaconda-Loop (+3.41 km)
+        { date: "2026-06-09", km: 9.61 }
       ]
     },
     {
@@ -81,7 +83,9 @@ window.SKINNY = {
       history: [
         // 1,5 Runden am 1.6. -> 2.79 × 1.5 = 4.18 km
         { date: "2026-06-01", weightKg: 149.0, km: 4.18 },
-        { date: "2026-06-04", weightKg: 148.5, km: 4.18 }
+        { date: "2026-06-04", weightKg: 148.5, km: 4.18 },
+        // 9.6. Ogi + Anaconda-Loop (+3.41 km)
+        { date: "2026-06-09", km: 7.59 }
       ]
     },
 
@@ -98,7 +102,9 @@ window.SKINNY = {
       bio: "Zweitletzter Sohn eines Bergbauern. Hat das Formhalten im steilen Gelände gelernt, lang bevor es Fitness-Apps gab. Allseits begehrt, selten zu fassen.",
       history: [
         { date: "2026-06-01", weightKg: 84.5, km: 2.79 },
-        { date: "2026-06-04", weightKg: 84.1, km: 2.79 }
+        { date: "2026-06-04", weightKg: 84.1, km: 2.79 },
+        // 9.6. Ogi + Anaconda-Loop (+3.41 km)
+        { date: "2026-06-09", km: 6.20 }
       ]
     },
     {
@@ -115,7 +121,9 @@ window.SKINNY = {
       // am 1.6. gewogen, aber nicht mitgelaufen -> 0 km
       history: [
         { date: "2026-06-01", weightKg: 81.0, km: 0 },
-        { date: "2026-06-04", weightKg: 81.2, km: 0 }
+        { date: "2026-06-04", weightKg: 81.2, km: 0 },
+        // 9.6. erster Lauf (Mikls Debüt): Ogi + Anaconda-Loop (+3.41 km)
+        { date: "2026-06-09", km: 3.41 }
       ]
     }
 
@@ -153,7 +161,12 @@ window.SKINNY = {
     {
       date: "2026-06-09",
       typ: "lauf",
-      text: "Skinny Bitch Tuesday: Mikl war das erste Mal dabei und erschien im olympischen Trainingsjäggli, das er in Bormio beim Jassen gewonnen hat - wenn's was nützt. Lars „die Lücke“ Klossner — die Zahnlücke versucht er auf dem Foto zu vereiteln — kassierte von Fat Chris eine Abreibung für die Unterhaltsbüetz von gestern: Bäume quer über der Strecke, das Sägemehl einfach liegen gelassen. Diesmal behob er die Mängel im Vorbeigang, notabene ausserhalb der Arbeitszeit (Vorschlag zur Ehrung verdienter Gemeindebürger ist raus).\n\nEingeschüchtert vom Gepruste des Ältesten fassten die Coaches einen Plan: den Defibrillator vor dem Volg klauen und auf halber Strecke beim Bänkli montieren. In der Bahnhofstrasse braucht's ihn eh nicht — der offenen Feierabend-Szene dort fehlt nichts ausser Stühle und ein Stammtisch.\n\nAbschnitt des Tages: die „Riviera“, vom Dicken angepriesen, als plane er ein Trump-Resort. In Wahrheit sind's rund 50 Meter direkt an der Simme — ideal zum Fische füttern oder karisieren.\n\nSportlich teilte sich Rocket-Man die Kräfte ein und überrollte Gordo nach Punkten. Der war so unendlich blöd, den anderen ausgerechnet den Anaconda-Loop als Extra anzudrehen — den Friedhof der Kuscheltiere, den er tags zuvor schon solo gemacht hatte. Nach dieser Tortur hätte das 3,5-Tönnerli einen Regenerationstag verdient gehabt; prompt ging ihm im steilen Treppen-Aufstieg zurück in die Todeszone die Puste aus. Er jammerte, die wässerigen Beine seien viel zu schwer. Mikl bemerkte, das seien auch Ueli Stecks letzte Worte gewesen — und die einzige Todeszone sei das Viszeralfett zwischen den Innereien des adipösen Lappens.\n\nDafür wusste der Ernährungsberater, was das Duo-Herzinfarkt nach dem Drill braucht: 8 Dosen White Claw Hard Seltzer auf seinen Nacken. Damit wäre der Gesöff-Partner aufgeboten (ruft an, wir brauchen euch). Low-Carb-Alkohol ist das Einzige, was er uns noch durchgehen lässt — Bier hat uns schliesslich dick gemacht. Und Cheeseburger. Verdammte Cheeseburger. Am Donnerstag sagt die Waage, ob's ein Fehler war. Möge uns Ronald MaDonald beistehen."
+      text: "Skinny Bitch Tuesday: Mikl war das erste Mal dabei und erschien im olympischen Trainingsjäggli, das er in Bormio beim Jassen gewonnen hat - wenn's was nützt. Lars „die Lücke“ Klossner — die Zahnlücke versucht er auf dem Foto zu vereiteln — kassierte von Fat Chris eine Abreibung für die Unterhaltsbüetz von gestern: Bäume quer über der Strecke, das Sägemehl einfach liegen gelassen. Diesmal behob er die Mängel im Vorbeigang, notabene ausserhalb der Arbeitszeit (Vorschlag zur Ehrung verdienter Gemeindebürger ist raus).\n\nEingeschüchtert vom Gepruste des Ältesten fassten die Coaches einen Plan: den Defibrillator vor dem Volg klauen und auf halber Strecke beim Bänkli montieren. In der Bahnhofstrasse braucht's ihn eh nicht — der offenen Feierabend-Szene dort fehlt nichts ausser Stühle und ein Stammtisch.\n\nAbschnitt des Tages: die „Riviera“, vom Dicken angepriesen, als plane er ein Trump-Resort. In Wahrheit sind's rund 50 Meter direkt an der Simme — ideal zum Fische füttern oder karisieren.\n\nSportlich teilte sich Rocket-Man die Kräfte ein und überrollte Gordo nach Punkten. Der war so unendlich blöd, den anderen ausgerechnet den Anaconda-Loop als Extra anzudrehen — den Friedhof der Kuscheltiere, den er tags zuvor schon solo gemacht hatte. Nach dieser Tortur hätte das 3,5-Tönnerli einen Regenerationstag verdient gehabt; prompt ging ihm im steilen Treppen-Aufstieg zurück in die Todeszone die Puste aus. Er jammerte, die wässerigen Beine seien viel zu schwer. Mikl bemerkte, das seien auch Ueli Stecks letzte Worte gewesen — und die einzige Todeszone sei das Viszeralfett zwischen den Innereien des adipösen Lappens.\n\nDafür wusste der Ernährungsberater, was das Duo-Herzinfarkt nach dem Drill braucht: 8 Dosen White Claw Hard Seltzer auf seinen Nacken. Damit wäre der Gesöff-Partner aufgeboten (ruft an, wir brauchen euch). Low-Carb-Alkohol ist das Einzige, was er uns noch durchgehen lässt — Bier hat uns schliesslich dick gemacht. Und Cheeseburger. Verdammte Cheeseburger. Am Donnerstag sagt die Waage, ob's ein Fehler war. Möge uns Ronald MaDonald beistehen.",
+      photoDir: "assets/runs/2026-06-09",
+      photos: [
+        { file: "die-cruee-komplett", caption: "Die Crüe — ausnahmsweise komplett." },
+        { file: "white-claw-ruft-uns-an", caption: "White Claw, ruft uns an!" }
+      ]
     }
   ]
 };
