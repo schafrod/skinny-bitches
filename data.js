@@ -33,7 +33,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-06-08",
+  lastUpdate: "2026-06-09",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -149,6 +149,11 @@ window.SKINNY = {
         { file: "treppenaufstieg", caption: "Der steile Treppen-Aufstieg in die Todeszone." },
         { file: "red-bull-meldet-euch", caption: "Red Bull, meldet euch!" }
       ]
+    },
+    {
+      date: "2026-06-09",
+      typ: "lauf",
+      text: "Skinny Bitch Tuesday: Mikl war das erste Mal dabei und erschien im olympischen Trainingsjäggli, das er in Bormio beim Jassen gewonnen hat - wenn's was nützt. Lars „die Lücke“ Klossner — die Zahnlücke versucht er auf dem Foto zu vereiteln — kassierte von Fat Chris eine Abreibung für die Unterhaltsbüetz von gestern: Bäume quer über der Strecke, das Sägemehl einfach liegen gelassen. Diesmal behob er die Mängel im Vorbeigang, notabene ausserhalb der Arbeitszeit (Vorschlag zur Ehrung verdienter Gemeindebürger ist raus).\n\nEingeschüchtert vom Gepruste des Ältesten fassten die Coaches einen Plan: den Defibrillator vor dem Volg klauen und auf halber Strecke beim Bänkli montieren. In der Bahnhofstrasse braucht's ihn eh nicht — der offenen Feierabend-Szene dort fehlt nichts ausser Stühle und ein Stammtisch.\n\nAbschnitt des Tages: die „Riviera“, vom Dicken angepriesen, als plane er ein Trump-Resort. In Wahrheit sind's rund 50 Meter direkt an der Simme — ideal zum Fische füttern oder karisieren.\n\nSportlich teilte sich Rocket-Man die Kräfte ein und überrollte Gordo nach Punkten. Der war so unendlich blöd, den anderen ausgerechnet den Anaconda-Loop als Extra anzudrehen — den Friedhof der Kuscheltiere, den er tags zuvor schon solo gemacht hatte. Nach dieser Tortur hätte das 3,5-Tönnerli einen Regenerationstag verdient gehabt; prompt ging ihm im steilen Treppen-Aufstieg zurück in die Todeszone die Puste aus. Er jammerte, die wässerigen Beine seien viel zu schwer. Mikl bemerkte, das seien auch Ueli Stecks letzte Worte gewesen — und die einzige Todeszone sei das Viszeralfett zwischen den Innereien des adipösen Lappens.\n\nDafür wusste der Ernährungsberater, was das Duo-Herzinfarkt nach dem Drill braucht: 8 Dosen White Claw Hard Seltzer auf seinen Nacken. Damit wäre der Gesöff-Partner aufgeboten (ruft an, wir brauchen euch). Low-Carb-Alkohol ist das Einzige, was er uns noch durchgehen lässt — Bier hat uns schliesslich dick gemacht. Und Cheeseburger. Verdammte Cheeseburger. Am Donnerstag sagt die Waage, ob's ein Fehler war. Möge uns Ronald MaDonald beistehen."
     }
   ]
 };
