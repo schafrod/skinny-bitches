@@ -33,7 +33,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-06-09",
+  lastUpdate: "2026-06-11",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -67,7 +67,9 @@ window.SKINNY = {
         // 8.6. Skinny Bitch Monday: Anaconda-Loop (3.41 km) solo gelaufen, keine Wägung -> nur km
         { date: "2026-06-08", km: 6.20 },
         // 9.6. Skinny Bitch Tuesday: Ogi + Anaconda-Loop (+3.41 km)
-        { date: "2026-06-09", km: 9.61 }
+        { date: "2026-06-09", km: 9.61 },
+        // 11.6. Wägung (kein Lauf -> km gleich)
+        { date: "2026-06-11", weightKg: 164.7, km: 9.61 }
       ]
     },
     {
@@ -85,7 +87,8 @@ window.SKINNY = {
         { date: "2026-06-01", weightKg: 149.0, km: 4.18 },
         { date: "2026-06-04", weightKg: 148.5, km: 4.18 },
         // 9.6. Ogi + Anaconda-Loop (+3.41 km)
-        { date: "2026-06-09", km: 7.59 }
+        { date: "2026-06-09", km: 7.59 },
+        { date: "2026-06-11", weightKg: 148.5, km: 7.59 }
       ]
     },
 
@@ -104,7 +107,8 @@ window.SKINNY = {
         { date: "2026-06-01", weightKg: 84.5, km: 2.79 },
         { date: "2026-06-04", weightKg: 84.1, km: 2.79 },
         // 9.6. Ogi + Anaconda-Loop (+3.41 km)
-        { date: "2026-06-09", km: 6.20 }
+        { date: "2026-06-09", km: 6.20 },
+        { date: "2026-06-11", weightKg: 83.7, km: 6.20 }
       ]
     },
     {
@@ -123,7 +127,9 @@ window.SKINNY = {
         { date: "2026-06-01", weightKg: 81.0, km: 0 },
         { date: "2026-06-04", weightKg: 81.2, km: 0 },
         // 9.6. erster Lauf (Mikls Debüt): Ogi + Anaconda-Loop (+3.41 km)
-        { date: "2026-06-09", km: 3.41 }
+        { date: "2026-06-09", km: 3.41 },
+        // 11.6. Wägung — Mika weiter Schätzwert (keine Waage)
+        { date: "2026-06-11", weightKg: 81.2, km: 3.41 }
       ]
     }
 
@@ -167,6 +173,11 @@ window.SKINNY = {
         { file: "die-cruee-komplett", caption: "Die Crüe — ausnahmsweise komplett." },
         { file: "white-claw-ruft-uns-an", caption: "White Claw, ruft uns an!" }
       ]
+    },
+    {
+      date: "2026-06-11",
+      typ: "waage",
+      text: "Donnerstag und die Waage kennt keine Gnade. Er der vorgestern noch White Claw proklamiert hat, legt prompt 600 Gramm zu: 164,7. Wir sagten ja, der Donnerstag verrät alles. Bald müssen wir ihn zur Viehwaage am Bahnhof fahren. Severin hält stoisch sein Gewicht (148,5), Rocket-Man im Standby. Lars scheitert derweil weiter am Erben — 83,7, schon wieder leichter; wer so hager bleibt, hat die Skinny-Bitch-Physik nicht begriffen. Und Mika? Schätzt sich unverändert, eine Waage hat er immer noch keine. In Kilo Veritas — sofern man eine besitzt."
     }
   ]
 };
