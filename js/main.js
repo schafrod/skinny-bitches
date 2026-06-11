@@ -150,6 +150,19 @@
   }
 
   /* ===================== CHARTS (custom SVG) ===================== */
+  // Wählt runde Achsen-Grenzen + Schrittweite (1/2/2.5/5/10 × 10^n), Ziel ~5 Linien.
+  function niceBounds(min, max, fromZero) {
+    if (fromZero) min = 0;
+    if (!isFinite(min) || !isFinite(max)) { min = 0; max = 1; }
+    if (max <= min) max = min + 1;
+    const rawStep = (max - min) / 5;
+    const mag = Math.pow(10, Math.floor(Math.log10(rawStep)));
+    const norm = rawStep / mag;
+    const s = norm <= 1 ? 1 : norm <= 2 ? 2 : norm <= 2.5 ? 2.5 : norm <= 5 ? 5 : 10;
+    const step = s * mag;
+    return { min: fromZero ? 0 : Math.floor(min / step) * step, max: Math.ceil(max / step) * step, step };
+  }
+
   function buildChart(valueKey, fromZero, unit) {
     const people = D.people;
     const dateSet = new Set();
@@ -162,12 +175,8 @@
     people.forEach((p) => hist(p).forEach((h) => { if (h[valueKey] != null) vals.push(h[valueKey]); }));
     if (!vals.length) vals.push(0, 1); // Sicherheitsnetz, falls noch gar nichts da ist
 
-    let yMin = fromZero ? 0 : Math.min(...vals);
-    let yMax = Math.max(...vals, fromZero ? 1 : -Infinity);
-    if (yMin === yMax) { yMin -= 1; yMax += 1; }
-    const pad = (yMax - yMin) * 0.12;
-    yMax += pad;
-    if (!fromZero) yMin -= pad; else yMin = 0;
+    const nb = niceBounds(Math.min(...vals), Math.max(...vals), fromZero);
+    const yMin = nb.min, yMax = nb.max;
 
     const VBW = 360, VBH = 200, padL = 42, padR = 16, padT = 18, padB = 30;
     const plotW = VBW - padL - padR, plotH = VBH - padT - padB;
@@ -176,13 +185,15 @@
 
     let svg = `<svg viewBox="0 0 ${VBW} ${VBH}" role="img" aria-label="Diagramm">`;
 
-    // Gridlines + Y-Beschriftung
-    [0, 0.5, 1].forEach((t) => {
-      const v = yMin + t * (yMax - yMin);
+    // Gridlines + Y-Beschriftung (runde Schritte, ganze Zahlen)
+    const tickCount = Math.round((yMax - yMin) / nb.step);
+    for (let i = 0; i <= tickCount; i++) {
+      const v = yMin + i * nb.step;
       const y = yFor(v).toFixed(1);
       svg += `<line class="grid" x1="${padL}" y1="${y}" x2="${VBW - padR}" y2="${y}"/>`;
-      svg += `<text class="tick-label" x="${padL - 6}" y="${(+y + 3).toFixed(1)}" text-anchor="end">${num(Math.round(v * 10) / 10)}</text>`;
-    });
+      const lbl = (Number.isInteger(nb.step) && Number.isInteger(v)) ? String(v) : num(Math.round(v * 10) / 10);
+      svg += `<text class="tick-label" x="${padL - 6}" y="${(+y + 3).toFixed(1)}" text-anchor="end">${lbl}</text>`;
+    }
 
     // Achsen
     svg += `<line class="axis" x1="${padL}" y1="${padT}" x2="${padL}" y2="${padT + plotH}"/>`;
