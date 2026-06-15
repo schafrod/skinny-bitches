@@ -33,7 +33,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-06-11",
+  lastUpdate: "2026-06-15",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -69,7 +69,9 @@ window.SKINNY = {
         // 9.6. Skinny Bitch Tuesday: Ogi + Anaconda-Loop (+3.41 km)
         { date: "2026-06-09", km: 9.61 },
         // 11.6. Wägung (kein Lauf -> km gleich)
-        { date: "2026-06-11", weightKg: 164.7, km: 9.61 }
+        { date: "2026-06-11", weightKg: 164.7, km: 9.61 },
+        // 15.6. Skinny Bitch Monday: nur Ogi-Weg (kein Anaconda) -> +2.79, ohne Lars/Mika
+        { date: "2026-06-15", km: 12.40 }
       ]
     },
     {
@@ -88,7 +90,9 @@ window.SKINNY = {
         { date: "2026-06-04", weightKg: 148.5, km: 4.18 },
         // 9.6. Ogi + Anaconda-Loop (+3.41 km)
         { date: "2026-06-09", km: 7.59 },
-        { date: "2026-06-11", weightKg: 148.5, km: 7.59 }
+        { date: "2026-06-11", weightKg: 148.5, km: 7.59 },
+        // 15.6. nur Ogi-Weg -> +2.79
+        { date: "2026-06-15", km: 10.38 }
       ]
     },
 
@@ -178,6 +182,11 @@ window.SKINNY = {
       date: "2026-06-11",
       typ: "waage",
       text: "Donnerstag und die Waage kennt keine Gnade. Er der vorgestern noch White Claw proklamiert hat, legt prompt 600 Gramm zu: 164,7. Wir sagten ja, der Donnerstag verrät alles. Bald müssen wir ihn zur Viehwaage am Bahnhof fahren. Severin hält stoisch sein Gewicht (148,5), Rocket-Man im Standby. Lars scheitert derweil weiter am Erben — 83,7, schon wieder leichter; wer so hager bleibt, hat die Skinny-Bitch-Physik nicht begriffen. Und Mika? Schätzt sich unverändert, eine Waage hat er immer noch keine. In Kilo Veritas — sofern man eine besitzt."
+    },
+    {
+      date: "2026-06-15",
+      typ: "lauf",
+      text: "Mika hatte Geburtstag, Lars ging mal wieder mit seiner Theatergruppe fremd — dort gibt er offenbar den grossen Richard Gere und ist allseits begehrt. So zottelten die zwei Brummer wie Baby-Elefanten, ausgesetzt in der Savanne, ganz allein los.\n\nDiesmal gab's nur den ordinären Ogi-Weg, auf den Anaconda-Loop wurde grosszügig verzichtet — wenn sie schon mal nicht unter Aufsicht stehen, wählt man den leichtesten Weg. Kurz und schmerzlos. Wobei der Alte ab Camp IV wieder ziemlich zu Pfeiffen anfing. Die Todeszone fängt bei ihm halt schon auf 855 Metern an. Je +2,8 km im Sack, die Coaches schulden uns einen Snack.\n\nGenau wie die Klatschtanten der Boltig-Metzg, die immer noch kein Protein kredenzt haben. Hans jun. Kronprinz von Längacker scheint im Verwursten von Informationen schneller zu sein als im Liefern. Er schiebt den Link-Leak der Skinny-Bitches auf seinen ehemaligen Lebenspartner (Coach) Lars, welcher sich nach 3 Jahren im Simmenegger-Exil getrennt hat und mit einer Katholikin in die Oberbäuert durchgebrannt ist. Im Rosenkrieg weiss man nie auf welcher Seite der Wahrheit man steht. Janu, so müssen die Chubby-Buddies sich ihr Eiweiss weiterhin mit gestohlenen Eiern aus der Nachbarschaft besorgen oder in die Prostitution zwingen lassen. Aber das kommt schon wieder gut. Ganz gemäss dem alten Sprichwort: „Wenn zwei sich streiten, freut sich der Dicke“"
     }
   ]
 };
