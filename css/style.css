@@ -30,7 +30,10 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+/* scroll-padding-top hält die Sektions-Überschrift unter der Sticky-Nav frei,
+   wenn man einen Nav-Anker anklickt. main.js setzt den exakten Wert (nav-Höhe)
+   per JS; 120px ist nur der Fallback, falls JS nicht läuft. */
+html { scroll-behavior: smooth; scroll-padding-top: 120px; }
 
 body {
   margin: 0;
@@ -168,6 +171,15 @@ a { color: inherit; }
 .btn:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--ink); }
 .btn:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--ink); }
 .btn--blood { background: var(--blood); color: var(--paper); border-color: var(--ink); }
+/* Sekundär-Button auf dunklem Grund (Hero): heller Rahmen, transparent */
+.btn--ghost {
+  background: transparent;
+  color: var(--paper);
+  border-color: var(--paper);
+  box-shadow: 5px 5px 0 rgba(233, 224, 205, 0.45);
+}
+.btn--ghost:hover { box-shadow: 7px 7px 0 rgba(233, 224, 205, 0.6); }
+.btn--ghost:active { box-shadow: 2px 2px 0 rgba(233, 224, 205, 0.45); }
 
 /* ===================== HERO ===================== */
 .hero {
@@ -219,16 +231,28 @@ a { color: inherit; }
   margin: 6px auto 32px;
   color: var(--paper);
 }
+/* Buttons-Reihe im Hero */
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+/* Stand-Stempel: gefüllter Oxblood-Stempel mit hellem Text = klarer Kontrast */
 .hero__stamp {
   display: inline-block;
-  margin: 34px auto 26px;
+  margin: 36px auto 22px;
   font-family: var(--f-mono);
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 12px;
-  color: var(--blood-bright);
-  border: 2px solid var(--blood-bright);
-  padding: 7px 16px;
+  letter-spacing: 0.2em;
+  font-size: 14px;
+  color: var(--paper);
+  background: var(--blood);
+  border: 2px solid var(--paper);
+  padding: 9px 20px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.35);
   transform: rotate(-2.5deg);
 }
 
@@ -825,25 +849,44 @@ a { color: inherit; }
   border-left: 2px solid var(--ink);
   padding-left: 30px;
 }
-.log__entry { position: relative; padding-bottom: 32px; }
+.log__entry { position: relative; padding-bottom: 28px; }
 .log__entry:last-child { padding-bottom: 0; }
 .log__entry::before {            /* Timeline-Knoten (Rhombus, Letterpress-Marke) */
   content: "";
   position: absolute;
   left: -37px;
-  top: 5px;
+  top: 6px;
   width: 11px;
   height: 11px;
   background: var(--blood);
   transform: rotate(45deg);
   box-shadow: 0 0 0 4px var(--paper);
+  z-index: 1;
 }
+/* Kopfzeile = aufklappbarer Trigger (nativ <summary>) */
+.log__head {
+  cursor: pointer;
+  list-style: none;                /* Dreieck weg (Firefox) */
+  position: relative;
+  padding: 0 36px 0 0;             /* rechts Platz fürs +/- */
+}
+.log__head::-webkit-details-marker { display: none; }  /* Dreieck weg (Safari/Chrome) */
+.log__head::after {                /* Auf-/Zu-Indikator */
+  content: "+";
+  position: absolute;
+  right: 4px;
+  top: -2px;
+  font-family: var(--f-display);
+  color: var(--blood);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.log__entry[open] .log__head::after { content: "\2013"; }  /* – wenn offen */
 .log__meta {
   display: flex;
   align-items: center;
   gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 9px;
 }
 .log__date {
   font-family: var(--f-mono);
@@ -862,6 +905,17 @@ a { color: inherit; }
 }
 .log__tag--lauf { color: var(--ink); }
 .log__tag--waage { color: var(--blood); }
+.log__title {
+  font-family: var(--f-display);
+  font-size: 1.12rem;
+  line-height: 1.18;
+  color: var(--ink);
+  margin: 9px 0 0;
+  transition: color .15s;
+}
+.log__head:hover .log__title { color: var(--blood); }
+.log__entry[open] .log__title { color: var(--blood); }
+.log__body { margin-top: 14px; animation: faqReveal .22s ease; }
 .log__text {
   margin: 0;
   font-size: 1.05rem;

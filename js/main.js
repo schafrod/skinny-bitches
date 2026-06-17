@@ -345,10 +345,11 @@
     }
     // neuester Eintrag zuoberst
     entries.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
-    host.innerHTML = entries.map((e) => {
+    host.innerHTML = entries.map((e, i) => {
       const isLauf = e.typ === "lauf";
       const tag = isLauf ? "Lauf" : "Wägung";
       const tagCls = isLauf ? "log__tag--lauf" : "log__tag--waage";
+      const title = escAttr(e.title || tag);
       const body = String(e.text || "").trim()
         .split(/\n{2,}/)
         .map((para) => `<p class="log__text">${para.replace(/\n/g, "<br>")}</p>`)
@@ -361,15 +362,21 @@
           return `<button type="button" class="log__photo" data-full="${dir}${ph.file}.jpg" data-cap="${cap}"><img src="${dir}${ph.file}-t.jpg" alt="${cap}" loading="lazy"></button>`;
         }).join("") + `</div>`;
       }
+      // Nur der neueste Eintrag (i === 0) ist aufgeklappt, die älteren zu.
       return `
-      <article class="log__entry">
-        <div class="log__meta">
-          <time class="log__date" datetime="${e.date}">${longDate(e.date)}</time>
-          <span class="log__tag ${tagCls}">${tag}</span>
+      <details class="log__entry"${i === 0 ? " open" : ""}>
+        <summary class="log__head">
+          <div class="log__meta">
+            <time class="log__date" datetime="${e.date}">${longDate(e.date)}</time>
+            <span class="log__tag ${tagCls}">${tag}</span>
+          </div>
+          <h3 class="log__title">${title}</h3>
+        </summary>
+        <div class="log__body">
+          ${body}
+          ${photos}
         </div>
-        ${body}
-        ${photos}
-      </article>`;
+      </details>`;
     }).join("");
 
     wireLightbox(host);
@@ -401,6 +408,18 @@
     });
   }
 
+  /* ===================== ANKER-OFFSET ===================== */
+  // Hält die Sektions-Überschrift unter der Sticky-Nav frei, wenn man einen
+  // Nav-Link anklickt. Die Nav ist auf Mobile höher (umgebrochene Links), darum
+  // messen wir ihre echte Höhe und setzen scroll-padding-top live (auch bei resize).
+  function fitScrollPad() {
+    const nav = $(".nav");
+    if (!nav) return;
+    const set = () => { document.documentElement.style.scrollPaddingTop = (nav.offsetHeight + 10) + "px"; };
+    set();
+    window.addEventListener("resize", set, { passive: true });
+  }
+
   /* ===================== INIT ===================== */
   function init() {
     renderStand();
@@ -409,6 +428,7 @@
     renderCharts();
     renderShame();
     renderLog();
+    fitScrollPad();
   }
   if (document.readyState !== "loading") init();
   else document.addEventListener("DOMContentLoaded", init);

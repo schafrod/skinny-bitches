@@ -129,7 +129,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="css/style.css?v=21" />
+  <link rel="stylesheet" href="css/style.css?v=22" />
 </head>
 <body>
 
@@ -163,7 +163,10 @@
       Zwei andere sorgen dafür, dass es weh tut – und lustig wird.
     </p>
 
-    <a href="#crew" class="btn btn--blood">Wer hier schwitzt &rarr;</a>
+    <div class="hero__cta">
+      <a href="#logbuch" class="btn btn--blood">Speckige News &darr;</a>
+      <a href="#crew" class="btn btn--ghost">Wer hier schwitzt &rarr;</a>
+    </div>
 
     <p class="hero__stamp" id="hero-stand">Stand: wird geladen …</p>
   </section>
@@ -303,11 +306,11 @@
   <!-- ===================== LOGBUCH ===================== -->
   <section class="section section--logbuch" id="logbuch">
     <div class="wrap">
-      <p class="overline overline--center">Protokoll der Leiden</p>
+      <p class="overline overline--center">Protokoll des Leidens</p>
       <h2 class="section__title">Logbuch</h2>
       <p class="section__lead">
-        Montags gelaufen, donnerstags gewogen — und immer kommentiert.
-        Was die Kurven nicht erzählen, steht hier.
+        Montag laufen, Donnerstag wiegen – meistens kommentiert.
+        Was die Zahlen nicht erzählen, steht hier.
       </p>
       <div class="log" id="logbuch-list">
         <!-- JS rendert die Einträge (neuester zuoberst) -->
@@ -339,7 +342,7 @@
       <p class="section__lead">
         Ein Algorithmus hat sich die Dicken in sexy ausgemalt. Sieht in etwa aus wie
         90% der Fitness-Infaulenzer auf Instagram. Das kann kein Ziel sein, denn:
-        Ein bisschen dick ist nicht so slim.
+        Ein bisschen dick ist ja nicht so slim.
       </p>
       <figure class="ziel">
         <img class="ziel__img" src="assets/ziel.jpg" alt="Severin und Chrigu durchtrainiert — eine KI-Fantasie" width="896" height="1195" />
@@ -472,7 +475,7 @@
 
   <!-- data.js immer frisch laden (Zeitstempel umgeht den Browser-Cache bei Wochen-Updates) -->
   <script>document.write('\x3Cscript src="data.js?t=' + Date.now() + '">\x3C/script>');</script>
-  <script src="js/main.js?v=16"></script>
+  <script src="js/main.js?v=17"></script>
 
   <!-- GoatCounter — datenschutzfreundliche Besucher-Statistik (kein Cookie, ignoriert localhost) -->
   <script data-goatcounter="https://skinny-bitches.goatcounter.com/count"
