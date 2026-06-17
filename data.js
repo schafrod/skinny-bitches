@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-06-15",
+  lastUpdate: "2026-06-17",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -74,7 +74,9 @@ window.SKINNY = {
         // 11.6. Wägung (kein Lauf -> km gleich)
         { date: "2026-06-11", weightKg: 164.7, km: 9.61 },
         // 15.6. Skinny Bitch Monday: nur Ogi-Weg (kein Anaconda) -> +2.79, ohne Lars/Mika
-        { date: "2026-06-15", km: 12.40 }
+        { date: "2026-06-15", km: 12.40 },
+        // 17.6. Cheat-Day-Lauf: Chrigu solo, Ogi-Weg -> +2.79
+        { date: "2026-06-17", km: 15.19 }
       ]
     },
     {
@@ -196,6 +198,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Zwei Brummer ohne Aufsicht",
       text: "Mika hatte Geburtstag, Lars ging mal wieder mit seiner Theatergruppe fremd — dort gibt er offenbar den grossen Richard Gere und ist allseits begehrt. So zottelten die zwei Brummer wie Baby-Elefanten, ausgesetzt in der Savanne, ganz allein los.\n\nDiesmal gab's nur den ordinären Ogi-Weg, auf den Anaconda-Loop wurde grosszügig verzichtet — wenn sie schon mal nicht unter Aufsicht stehen, wählt man den leichtesten Weg. Kurz und schmerzlos. Wobei der Alte ab Camp IV wieder ziemlich zu Pfeiffen anfing. Die Todeszone fängt bei ihm halt schon auf 855 Metern an. Je +2,8 km im Sack, die Coaches schulden uns einen Snack.\n\nGenau wie die Klatschtanten der Boltig-Metzg, die immer noch kein Protein kredenzt haben. Hans jun. Kronprinz von Längacker scheint im Verwursten von Informationen schneller zu sein als im Liefern. Er schiebt den Link-Leak der Skinny-Bitches auf seinen ehemaligen Lebenspartner (Coach) Lars, welcher sich nach 3 Jahren im Simmenegger-Exil getrennt hat und mit einer Katholikin in die Oberbäuert durchgebrannt ist. Im Rosenkrieg weiss man nie auf welcher Seite der Wahrheit man steht. Janu, so müssen die Chubby-Buddies sich ihr Eiweiss weiterhin mit gestohlenen Eiern aus der Nachbarschaft besorgen oder in die Prostitution zwingen lassen. Aber das kommt schon wieder gut. Ganz gemäss dem alten Sprichwort: „Wenn zwei sich streiten, freut sich der Dicke“"
+    },
+    {
+      date: "2026-06-17",
+      typ: "lauf",
+      title: "Cheat-Day rückwärts",
+      text: "Halt, heute ist doch Mittwoch!? Stimmt, verdammt — was soll der Scheiss? Der egoistische Fetteran hatte heute Cheat-Day. Unter Skinny Bitches bedeutet das genau das Gegenteil: Er hievte seinen Kadaver alleine durch den Wald, um sich einen Vorteil zu verschaffen. Sollte man auch, wenn man Fettreserven für 3 Jahre mit sich rumträgt.\n\nDer unterernährte Coach Mikl hat diese Woche zudem eine strenge Low-Carb-Diät mit Proteinen aus Eierlikör und Baileys angeordnet. Wir werden bald wissen, ob sich das in Kilo auszahlt."
     }
   ]
 };
