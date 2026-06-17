@@ -218,20 +218,14 @@ a { color: inherit; }
   height: auto;
   margin: 0 auto 14px;
   /* helles Lineart (logo-hell.png) auf dunklem Grund */
-  transform-origin: center center;
-  backface-visibility: hidden;
-  will-change: transform;
-  animation: heroLogoInflate 1.4s cubic-bezier(.36, .66, .3, 1) .2s both;
+  transform-origin: center;
+  animation: heroLogoPop 1s ease-in-out .2s both;
 }
-/* Beim Öffnen: das Emblem bläht sich Richtung Betrachter auf (translateZ + Perspektive),
-   darf sich dabei verziehen (ungleiches scaleX/scaleY = Ballon-Wabern), und kehrt
-   am Ende exakt in den Ausgangszustand zurück. */
-@keyframes heroLogoInflate {
-  0%   { transform: perspective(900px) translateZ(0)     scale(1, 1); }
-  28%  { transform: perspective(900px) translateZ(170px) scale(1.30, 1.14); }
-  52%  { transform: perspective(900px) translateZ(250px) scale(1.16, 1.42); }
-  74%  { transform: perspective(900px) translateZ(130px) scale(1.24, 1.12); }
-  100% { transform: perspective(900px) translateZ(0)     scale(1, 1); }
+/* Beim Öffnen: kurz aufblähen, dann zurück in den Ursprung */
+@keyframes heroLogoPop {
+  0%   { transform: scale(1); }
+  45%  { transform: scale(1.13); }
+  100% { transform: scale(1); }
 }
 .hero__claim {
   font-family: var(--f-western);
