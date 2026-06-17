@@ -29,12 +29,12 @@ In `data.js` bei jeder Person unten im `history`-Array einen Eintrag anhängen:
 
 **Montag = Lauftag (km-only):** An einem reinen Lauftag NICHT wägen → Eintrag mit `km`, **ohne** `weightKg`, z.B. `{ date: "2026-06-08", km: 6.20 }`. `main.js` behandelt das sauber (km-Punkt im km-Chart, kein Punkt im Gewichts-Chart; Karte nimmt Gewicht/BMI aus dem letzten Wäge-Eintrag via `currW`/`startW`). Nur Läufer kriegen einen Eintrag. `lastUpdate` darf auch auf einen Montag gesetzt werden (Stand = letzte Datenänderung).
 
-**Logbuch:** nach jedem Lauf (Mo) und jeder Wägung (Do) unten im `log`-Array einen Eintrag anhängen: `{ date: "JJJJ-MM-TT", typ: "lauf" | "waage", text: "dein Kommentar" }`. Neuester erscheint zuoberst. Das ist der erzählerische Teil — kurz, frech, mit Zahlen. Längere Einträge: Absätze mit `\n\n` im `text` trennen (renderLog macht daraus mehrere `<p>`).
+**Logbuch:** nach jedem Lauf (Mo) und jeder Wägung (Do) unten im `log`-Array einen Eintrag anhängen: `{ date: "JJJJ-MM-TT", typ: "lauf" | "waage", title: "Knappe Überschrift", text: "dein Kommentar" }`. **`title` ist Pflicht** (3–6 Wörter): die Einträge sind ein Akkordeon (`<details>`) — nur der neueste ist offen, die älteren zugeklappt; zugeklappt sieht man Datum + Tag + `title`. Neuester erscheint zuoberst. Das ist der erzählerische Teil — kurz, frech, mit Zahlen. Längere Einträge: Absätze mit `\n\n` im `text` trennen (renderLog macht daraus mehrere `<p>`).
 
 **Lauf-Fotos:** Ein Logbuch-Eintrag kann `photoDir` + `photos: [{ file, caption }]` haben → Thumbnail-Reihe unter dem Text, Klick öffnet ein Lightbox-Overlay (`wireLightbox` in main.js; Esc/Klick schliesst). Bilder liegen in `assets/runs/JJJJ-MM-TT/`: pro Foto `<slug>.jpg` (Vollbild ~1600px) **und** `<slug>-t.jpg` (Thumb ~440px). Original-Fotos kommen nach `Fotos/` (gitignored) und werden mit PIL verkleinert/komprimiert (EXIF-Drehung via `ImageOps.exif_transpose`), Vintage-Sepia per CSS-`filter`.
 
 ## Wichtig bei Design-Änderungen
-CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=21`, `main.js?v=16`). **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
+CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=22`, `main.js?v=17`). **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
 
 ## Die Crew (alle Werte echt)
 | Person | Nick | Rolle | Grösse | Jg. | Start-kg |
