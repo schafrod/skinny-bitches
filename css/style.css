@@ -125,7 +125,11 @@ a { color: inherit; }
   padding: 12px var(--gut);
   background: var(--paper);
   border-bottom: var(--border);
+  transition: transform .3s ease;
+  will-change: transform;
 }
+/* Beim Runterscrollen weg, beim Hochscrollen zurück (main.js steuert die Klasse) */
+.nav--hidden { transform: translateY(-100%); }
 .nav__brand {
   font-family: var(--f-display);
   font-size: 1.1rem;
@@ -214,6 +218,14 @@ a { color: inherit; }
   height: auto;
   margin: 0 auto 14px;
   /* helles Lineart (logo-hell.png) auf dunklem Grund */
+  transform-origin: center;
+  animation: heroLogoPop 1s ease-in-out .2s both;
+}
+/* Beim Öffnen: kurz aufblähen, dann zurück in den Ursprung */
+@keyframes heroLogoPop {
+  0%   { transform: scale(1); }
+  45%  { transform: scale(1.13); }
+  100% { transform: scale(1); }
 }
 .hero__claim {
   font-family: var(--f-western);
@@ -1089,4 +1101,6 @@ a { color: inherit; }
   html { scroll-behavior: auto; }
   .btn { transition: none; }
   .faq__a { animation: none; }
+  .hero__logo { animation: none; }
+  .nav { transition: none; }
 }

@@ -62,7 +62,7 @@ window.SKINNY = {
       weightTrend: "down",
       heightCm: 187,
       birthYear: 1983,
-      bio: "El Gordo tippt schneller, als er rennt. Sein BMI hat mehr Hubraum als der Damen-Turnverein zusammen.",
+      bio: "El Gordo tippt schneller, als er rennt. Sein BMI hat mehr Hubraum als der Damen-Turnverein zusammen und JouJoux-Chips frisst er samt Spielzeug.",
       // history: ältester Eintrag zuoberst, neuester zuunterst.
       history: [
         { date: "2026-06-01", weightKg: 165.3, km: 2.79 },

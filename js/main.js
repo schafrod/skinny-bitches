@@ -420,6 +420,30 @@
     window.addEventListener("resize", set, { passive: true });
   }
 
+  /* ===================== NAV AUTO-HIDE ===================== */
+  // Nav verschwindet beim Runterscrollen (spart Platz, v.a. mobil) und kommt
+  // beim Hochscrollen zurück. Nahe ganz oben immer sichtbar.
+  function wireNavAutohide() {
+    const nav = $(".nav");
+    if (!nav) return;
+    let lastY = window.scrollY;
+    let ticking = false;
+    const THRESH = 6;   // kleine Bewegungen ignorieren (ruhiger)
+    const update = () => {
+      const y = Math.max(0, window.scrollY);
+      const dy = y - lastY;
+      if (Math.abs(dy) >= THRESH) {
+        if (y <= nav.offsetHeight || dy < 0) nav.classList.remove("nav--hidden"); // oben oder hoch -> zeigen
+        else nav.classList.add("nav--hidden");                                    // runter -> weg
+        lastY = y;
+      }
+      ticking = false;
+    };
+    window.addEventListener("scroll", () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+  }
+
   /* ===================== INIT ===================== */
   function init() {
     renderStand();
@@ -429,6 +453,7 @@
     renderShame();
     renderLog();
     fitScrollPad();
+    wireNavAutohide();
   }
   if (document.readyState !== "loading") init();
   else document.addEventListener("DOMContentLoaded", init);
