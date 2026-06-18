@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-06-17",
+  lastUpdate: "2026-06-18",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -76,7 +76,9 @@ window.SKINNY = {
         // 15.6. Skinny Bitch Monday: nur Ogi-Weg (kein Anaconda) -> +2.79, ohne Lars/Mika
         { date: "2026-06-15", km: 12.40 },
         // 17.6. Cheat-Day-Lauf: Chrigu solo, Ogi-Weg -> +2.79
-        { date: "2026-06-17", km: 15.19 }
+        { date: "2026-06-17", km: 15.19 },
+        // 18.6. Wägung (kein Lauf -> km gleich): grosser Sprung dank Schleichlauf
+        { date: "2026-06-18", weightKg: 160.8, km: 15.19 }
       ]
     },
     {
@@ -97,7 +99,9 @@ window.SKINNY = {
         { date: "2026-06-09", km: 7.59 },
         { date: "2026-06-11", weightKg: 148.5, km: 7.59 },
         // 15.6. nur Ogi-Weg -> +2.79
-        { date: "2026-06-15", km: 10.38 }
+        { date: "2026-06-15", km: 10.38 },
+        // 18.6. Wägung (kein Lauf -> km gleich)
+        { date: "2026-06-18", weightKg: 147.5, km: 10.38 }
       ]
     },
 
@@ -117,7 +121,9 @@ window.SKINNY = {
         { date: "2026-06-04", weightKg: 84.1, km: 2.79 },
         // 9.6. Ogi + Anaconda-Loop (+3.41 km)
         { date: "2026-06-09", km: 6.20 },
-        { date: "2026-06-11", weightKg: 83.7, km: 6.20 }
+        { date: "2026-06-11", weightKg: 83.7, km: 6.20 },
+        // 18.6. Wägung: tritt weiter auf der Stelle (erbt nichts)
+        { date: "2026-06-18", weightKg: 83.7, km: 6.20 }
       ]
     },
     {
@@ -138,7 +144,9 @@ window.SKINNY = {
         // 9.6. erster Lauf (Mikls Debüt): Ogi + Anaconda-Loop (+3.41 km)
         { date: "2026-06-09", km: 3.41 },
         // 11.6. Wägung — Mika weiter Schätzwert (keine Waage)
-        { date: "2026-06-11", weightKg: 81.2, km: 3.41 }
+        { date: "2026-06-11", weightKg: 81.2, km: 3.41 },
+        // 18.6. Wägung — weiter ohne Waage, Schätzwert unverändert
+        { date: "2026-06-18", weightKg: 81.2, km: 3.41 }
       ]
     }
 
@@ -204,6 +212,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Cheat-Day rückwärts",
       text: "Halt, heute ist doch Mittwoch!? Stimmt, verdammt — was soll der Scheiss? Der egoistische Fetteran hatte heute Cheat-Day. Unter Skinny Bitches bedeutet das genau das Gegenteil: Er hievte seinen Kadaver alleine durch den Wald, um sich einen Vorteil zu verschaffen. Sollte man auch, wenn man Fettreserven für 3 Jahre mit sich rumträgt.\n\nDer unterernährte Coach Mikl hat diese Woche zudem eine strenge Low-Carb-Diät mit Proteinen aus Eierlikör und Baileys angeordnet. Wir werden bald wissen, ob sich das in Kilo auszahlt."
+    },
+    {
+      date: "2026-06-18",
+      typ: "waage",
+      title: "20 Mödeli Anke leichter",
+      text: "Heute waren die Bitches nervös, man musste die Waagzahlen förmlich aus ihnen rauspressen. Mikls Gewicht bleibt weiterhin ein Mysterium und deshalb wie letzte Woche. Auch Mr. Sexybless tritt auf der Stelle. Die Fülligen wittern Betrug noch besser als Frittieröl. Entweder sind die beiden leichter als ein 3. Klässler oder haben Angst, das schmutzige Erbe anzutreten.\n\nDafür verlieren unsere Moppel gemeinsam soviel Gewicht, wie rund 20 Mödeli Anke (20x250g). Chrigus Schleichlauf zahlt prompt aufs Konto ein: 160,8 Kilo, satte 3,9 weg in 7 Tagen. Severin hält stoisch mit und schmeisst ein weiteres Kilo raus (147,5).\n\nDes Hausfrauenschwarms eiweissreiche Schnaps-Offensive scheint voll aufzugehen. Darauf erstmal einen Eierlikör. Proust!"
     }
   ]
 };
