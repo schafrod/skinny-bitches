@@ -50,14 +50,14 @@ Mika war am 1.6. nicht beim Lauf (km 0). „Opfer" = Trainee-Rolle. Auf der Seit
 
 **Hall of Shame** wertet den **Fortschritt Richtung eigenes Ziel, relativ zum Ausgangsgewicht (%)** (Opfer = abgenommen, Coach = zugenommen/„geerbt"). Anzeige: % gross, kg + Tag klein darunter. Ein gemeinsames Ranking; Lager via Trenner „die Abnehmer" / „die Erber" + Rollen-Tag getrennt. Coaches landen realistisch auf 3/4. (JS rendert ins `#shame-list`-Div — **nicht** in die `<section id="shame">`; die Sektion-ID dient nur dem Nav-Anker. Vorher kollidierten beide IDs und das Ranking wurde ohne `.wrap`/Titel full-bleed gerendert — behoben.) Die „Erben"-Regel (beide Coaches) ist in Mission + Kurven-Text erklärt (separate FAQ dazu wurde wieder entfernt). **Charts:** Y-Achsen nutzen `niceBounds()` — runde Grenzen + Schrittweite (1/2/2.5/5/10 × 10^n), ganzzahlige Beschriftung, mehrere Gitterlinien (statt nur Min/Mitte/Max). Hover/Tap auf die Punkte zeigt einen interaktiven Tooltip (Name, Datum, Wert) — grosse transparente Hit-Kreise + `.charttip`-Div, gesteuert in `main.js`/`wireChartTooltips`. Distanzen werden überall auf 1 Kommastelle gerundet angezeigt (2,79 km → „2,8 km").
 
-## Stand der Zahlen (Stand 15.6.2026)
-Läufe bisher: **Mo 1.6.** Auftakt · **Mo 8.6.** Chrigu solo (Anaconda-Loop) · **Di 9.6.** Crew komplett (Mikas Debüt, +3,41 km für alle vier) · **Mo 15.6.** Chrigu+Severin solo, nur Ogi-Weg (+2,79 km; Lars beim Theater, Mika Geburtstag). Wägungen: **Do 4.6.** + **Do 11.6.**
+## Stand der Zahlen (Stand 23.6.2026)
+Läufe: **1.6.** Auftakt · **8.6.** Chrigu solo (Anaconda-Loop) · **9.6.** Crew komplett, Mikas Debüt (+3,41) · **15.6.** Chrigu+Severin Ogi-Weg · **17.6.** Chrigu solo (Cheat-Day) · **22.6.** Chrigu+Severin Ogi-Weg · **23.6.** Chrigu+Severin+Lars Ogi-Weg (Lars zurück nach Theater-Pause, Mika verschollen; Anaconda-Treppe als One-Way zum Einstieg statt als Loop → trotzdem +2,79). Wägungen: **4.6.** · **11.6.** · **18.6.**
 
 | Person | kg (Δ seit Start) | km total |
 |---|---|---|
-| Chrigu | 164,7 (−0,6) | 12,40 |
-| Severin | 148,5 (−0,5) | 10,38 |
-| Lars | 83,7 (−0,8, „Erben misslingt") | 6,20 |
+| Chrigu | 160,8 (−4,5) | 20,77 |
+| Severin | 147,5 (−1,5) | 15,96 |
+| Lars | 83,7 (−0,8, „Erben misslingt") | 8,99 |
 | Mika | ≈81,2 (+0,2, geschätzt) | 3,41 |
 
 ## Strecke (aus echter GPX)
@@ -68,9 +68,9 @@ Rundkurs Schinti → Boltigen → Schinti, **2,79 km, 159 hm, höchster Punkt 85
 ## Offen / nächste Schritte
 1. Wöchentlich pflegen: **Mo Lauf** = km-only-Eintrag(e) + Logbuch (typ „lauf"), **Do Wägung** = Gewicht + Logbuch (typ „waage"). Fotos optional an den Eintrag.
 2. Wachstums-Motor (angeboten, noch nicht gebaut): Medien-Pitch, Sponsoren-One-Pager/Media-Kit, Social-Content-System — siehe Memory.
-3. Optional: Google Search Console + sitemap einreichen. **Hero-Klarheit für Erstbesucher** (klare Orientierungs-Zeile) lag als Vorschlag vor, wurde verschoben.
+3. **Google Search Console:** Einrichtung gestartet (Domain-Property `skinny-bitches.ch`, DNS-TXT bei Hosttech; Sitemap als VOLLE URL einreichen → `https://www.skinny-bitches.ch/sitemap.xml`). Indexierungs-Status prüfen — Seite war Mitte Juni noch nicht indexiert (normal für neue Domain). **Hero-Klarheit für Erstbesucher** (Orientierungs-Zeile) lag als Vorschlag vor, wurde verschoben.
 
-**Erledigt:** Go-Live www.skinny-bitches.ch inkl. **HTTPS** (Apex→www). Sponsoren-Sektion „Die Komplizen" + Kontakt-CTA (info@simmental.digital), dunkle Fusszeile, Crew-Vornamen, SEO-Hygiene (JSON-LD/sitemap/robots/Favicon), Social-Vorschaubild, **GoatCounter-Statistik**, **Logbuch** mit **Lauf-Fotos + Lightbox**, km-only-Lauftage, Hall-of-Shame-Wertung in **% vom Start** (Lager getrennt), lesbare **Chart-Achsen** (`niceBounds`) + Hover-Tooltips. Daten bis **Lauf 15.6.** eingetragen.
+**Erledigt:** Go-Live www.skinny-bitches.ch inkl. **HTTPS** (Apex→www). Sponsoren-Sektion „Die Komplizen" + Kontakt-CTA (info@simmental.digital), dunkle Fusszeile, Crew-Vornamen, SEO-Hygiene (JSON-LD/sitemap/robots/Favicon), Social-Vorschaubild, **GoatCounter-Statistik**, **Logbuch** mit **Lauf-Fotos + Lightbox**, km-only-Lauftage, Hall-of-Shame-Wertung in **% vom Start** (Lager getrennt), lesbare **Chart-Achsen** (`niceBounds`) + Hover-Tooltips, **Logbuch-Akkordeon** (nur neuester offen, `title` pro Eintrag), **Nav-Autohide** beim Scrollen, Hero-Logo-Puls. Daten bis **Lauf 23.6.** eingetragen.
 
 ## Eine neue Session fortsetzen
 Im Ordner `/Users/Shared/CC_Git/Skinny Bitches` eine neue Claude-Session starten — das Projektgedächtnis lädt automatisch. Einfach sagen: *„Mach bei den Skinny Bitches weiter, lies ENTWICKLUNG.md und das Memory."*
