@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-06-18",
+  lastUpdate: "2026-06-22",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -78,7 +78,9 @@ window.SKINNY = {
         // 17.6. Cheat-Day-Lauf: Chrigu solo, Ogi-Weg -> +2.79
         { date: "2026-06-17", km: 15.19 },
         // 18.6. Wägung (kein Lauf -> km gleich): grosser Sprung dank Schleichlauf
-        { date: "2026-06-18", weightKg: 160.8, km: 15.19 }
+        { date: "2026-06-18", weightKg: 160.8, km: 15.19 },
+        // 22.6. Skinny Bitch Monday: Ogi-Weg mit Severin -> +2.79
+        { date: "2026-06-22", km: 17.98 }
       ]
     },
     {
@@ -101,7 +103,9 @@ window.SKINNY = {
         // 15.6. nur Ogi-Weg -> +2.79
         { date: "2026-06-15", km: 10.38 },
         // 18.6. Wägung (kein Lauf -> km gleich)
-        { date: "2026-06-18", weightKg: 147.5, km: 10.38 }
+        { date: "2026-06-18", weightKg: 147.5, km: 10.38 },
+        // 22.6. Skinny Bitch Monday: Ogi-Weg mit Chrigu -> +2.79
+        { date: "2026-06-22", km: 13.17 }
       ]
     },
 
