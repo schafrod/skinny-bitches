@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-06-22",
+  lastUpdate: "2026-06-23",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -80,7 +80,9 @@ window.SKINNY = {
         // 18.6. Wägung (kein Lauf -> km gleich): grosser Sprung dank Schleichlauf
         { date: "2026-06-18", weightKg: 160.8, km: 15.19 },
         // 22.6. Skinny Bitch Monday: Ogi-Weg mit Severin -> +2.79
-        { date: "2026-06-22", km: 17.98 }
+        { date: "2026-06-22", km: 17.98 },
+        // 23.6. Ogi-Weg (Anaconda-Treppe one-way zum Einstieg, kein Loop) -> +2.79
+        { date: "2026-06-23", km: 20.77 }
       ]
     },
     {
@@ -105,7 +107,9 @@ window.SKINNY = {
         // 18.6. Wägung (kein Lauf -> km gleich)
         { date: "2026-06-18", weightKg: 147.5, km: 10.38 },
         // 22.6. Skinny Bitch Monday: Ogi-Weg mit Chrigu -> +2.79
-        { date: "2026-06-22", km: 13.17 }
+        { date: "2026-06-22", km: 13.17 },
+        // 23.6. Ogi-Weg -> +2.79
+        { date: "2026-06-23", km: 15.96 }
       ]
     },
 
@@ -127,7 +131,9 @@ window.SKINNY = {
         { date: "2026-06-09", km: 6.20 },
         { date: "2026-06-11", weightKg: 83.7, km: 6.20 },
         // 18.6. Wägung: tritt weiter auf der Stelle (erbt nichts)
-        { date: "2026-06-18", weightKg: 83.7, km: 6.20 }
+        { date: "2026-06-18", weightKg: 83.7, km: 6.20 },
+        // 23.6. erster Lauf seit dem 9.6. (Montag immer Theater) -> +2.79
+        { date: "2026-06-23", km: 8.99 }
       ]
     },
     {
@@ -222,6 +228,12 @@ window.SKINNY = {
       typ: "waage",
       title: "20 Mödeli Anke leichter",
       text: "Heute waren die Bitches nervös, man musste die Waagzahlen förmlich aus ihnen rauspressen. Mikls Gewicht bleibt weiterhin ein Mysterium und deshalb wie letzte Woche. Auch Mr. Sexybless tritt auf der Stelle. Die Fülligen wittern Betrug noch besser als Frittieröl. Entweder sind die beiden leichter als ein 3. Klässler oder haben Angst, das schmutzige Erbe anzutreten.\n\nDafür verlieren unsere Moppel gemeinsam soviel Gewicht, wie rund 20 Mödeli Anke (20x250g). Chrigus Schleichlauf zahlt prompt aufs Konto ein: 160,8 Kilo, satte 3,9 weg in 7 Tagen. Severin hält stoisch mit und schmeisst ein weiteres Kilo raus (147,5).\n\nDes Hausfrauenschwarms eiweissreiche Schnaps-Offensive scheint voll aufzugehen. Darauf erstmal einen Eierlikör. Proust!"
+    },
+    {
+      date: "2026-06-23",
+      typ: "lauf",
+      title: "Wurst-Tuesday",
+      text: "Endlich wieder fast vollzählig: Mr. Sexybless hat Montag gecancelt (huerä Theater!). Also wurde die Tortur scho ummi auf Dienstag verschoben. Mika ghostet uns seit letzter Woche. Coach Lars liess sich dafür nicht lumpen: Er brachte Protein-Riegel mit, die mehr Kalorien als ein Big Mac haben (was soll der Scheiss?). Statt den Anaconda-Stich wie letztes Mal hinten als Extra-Loop dranzuhängen, jagte er uns die steile Treppe diesmal one-way gleich zum Einstieg hoch — von der ersten Minute an die Folter. Angeblich sei dort letzte Woche noch ein Adipöser auf der Strecke geblieben, von der Bestie geholt. Aber nicht heute. Die Festen pfiffen wie zwei Murmel den Stutz hoch in Sicherheit.\n\nDas echte Drama folgte wie immer an derselben Stelle, und die Affenhitze fordert ihren Tribut. Der junge Schwere gerät schon auf dem Hinweg in Rücklage. Gordo wähnt sich im Vorteil — er teile bloss die Kraft ein, um oben in der Todeszone zum Überholen anzusetzen. Doch es kommt anders: Severin fällt zurück, klönt, dass er ins Schwitzen gerät, und überhaupt habe er doch eigentlich Ferien. Es gibt verrückte Leute die frei nehmen ausschliesslich dafür, um Sport zu treiben. Etwas was die zwei All-Inklusive-Riesenbabys nicht verstehen können.\n\nZurück in der Schinti dann die Überraschung. Nach einem kleinen Standort-Missverständnis findet uns der Boltig-Metzger an der Brücke und überreicht den Schlampen wie ein Money-Girl einen exklusiven Cervelat-Koffer. Damit badet er die Wettschulden seiner Mitwurster aus. Der Protein-Engpass ist vom Tisch, unser erster Sponsor hielt Wort. Merci vielmal! Wir sind auf dem Weg ins Tal der Dünnen mit Hilfe von etwas, das mit viel Liebe in einen Darm gepresst wurde."
     }
   ]
 };
