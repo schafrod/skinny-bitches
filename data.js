@@ -83,8 +83,8 @@ window.SKINNY = {
         { date: "2026-06-22", km: 17.98 },
         // 23.6. Ogi-Weg (Anaconda-Treppe one-way zum Einstieg, kein Loop) -> +2.79
         { date: "2026-06-23", km: 20.77 },
-        // 25.6. Wägung: durchbricht die 160er-Marke
-        { date: "2026-06-25", weightKg: 159.6, km: 20.77 }
+        // 25.6. Wägung + Lauf am selben Tag: durchbricht die 160er-Marke, Ogi-Weg (+2.79)
+        { date: "2026-06-25", weightKg: 159.6, km: 23.56 }
       ]
     },
     {
