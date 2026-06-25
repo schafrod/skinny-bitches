@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-06-23",
+  lastUpdate: "2026-06-25",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -82,7 +82,9 @@ window.SKINNY = {
         // 22.6. Skinny Bitch Monday: Ogi-Weg mit Severin -> +2.79
         { date: "2026-06-22", km: 17.98 },
         // 23.6. Ogi-Weg (Anaconda-Treppe one-way zum Einstieg, kein Loop) -> +2.79
-        { date: "2026-06-23", km: 20.77 }
+        { date: "2026-06-23", km: 20.77 },
+        // 25.6. Wägung: durchbricht die 160er-Marke
+        { date: "2026-06-25", weightKg: 159.6, km: 20.77 }
       ]
     },
     {
@@ -109,7 +111,9 @@ window.SKINNY = {
         // 22.6. Skinny Bitch Monday: Ogi-Weg mit Chrigu -> +2.79
         { date: "2026-06-22", km: 13.17 },
         // 23.6. Ogi-Weg -> +2.79
-        { date: "2026-06-23", km: 15.96 }
+        { date: "2026-06-23", km: 15.96 },
+        // 25.6. Wägung
+        { date: "2026-06-25", weightKg: 147.3, km: 15.96 }
       ]
     },
 
@@ -133,7 +137,9 @@ window.SKINNY = {
         // 18.6. Wägung: tritt weiter auf der Stelle (erbt nichts)
         { date: "2026-06-18", weightKg: 83.7, km: 6.20 },
         // 23.6. erster Lauf seit dem 9.6. (Montag immer Theater) -> +2.79
-        { date: "2026-06-23", km: 8.99 }
+        { date: "2026-06-23", km: 8.99 },
+        // 25.6. Wägung: schrumpft weiter (Erben misslingt)
+        { date: "2026-06-25", weightKg: 83.5, km: 8.99 }
       ]
     },
     {
@@ -156,7 +162,9 @@ window.SKINNY = {
         // 11.6. Wägung — Mika weiter Schätzwert (keine Waage)
         { date: "2026-06-11", weightKg: 81.2, km: 3.41 },
         // 18.6. Wägung — weiter ohne Waage, Schätzwert unverändert
-        { date: "2026-06-18", weightKg: 81.2, km: 3.41 }
+        { date: "2026-06-18", weightKg: 81.2, km: 3.41 },
+        // 25.6. Wägung — weiter Phantom, Schätzwert unverändert
+        { date: "2026-06-25", weightKg: 81.2, km: 3.41 }
       ]
     }
 
@@ -238,6 +246,12 @@ window.SKINNY = {
       photos: [
         { file: "wurst-on-the-rocks", caption: "Wurst on the rocks. Sponsor Urs Wittwer flankiert von den zarten Fichten." }
       ]
+    },
+    {
+      date: "2026-06-25",
+      typ: "waage",
+      title: "Die Wurst-Kur wirkt",
+      text: "Gordo durchbricht die Schallmauer und steht bei 159,6 — minus 1,2 in 7 Tagen, minus 5,7 seit Start. Sevl zottelt brav mit (147,3). Lars erbt weiterhin nichts und schrumpft sogar auf 83,5. Er sagt, er habe die Zehennägel wiedermal geschnitten. Mikl bleibt das Phantom ohne Waage und ohne Rückmeldung. Wir glauben, er will nicht mehr mit den dicken Kindern spielen. Doch wir geben ihn noch nicht auf."
     }
   ]
 };
