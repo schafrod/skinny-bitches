@@ -89,6 +89,7 @@
         progTxt = (d > 0 ? "+" : "−") + num(Math.abs(d)) + " kg " + (wantsUp ? "— Erben misslingt" : "— Buffet führt");
       }
 
+      const fadeCls = p.fadeStage ? ` card--fade card--fade-${p.fadeStage}` : "";
       const roleCls = p.role === "coach" ? "card__role--coach" : "card__role--trainee";
       const roleTxt = p.role === "coach" ? "Coach" : "Opfer";
       const initials = p.name.split(/\s+/).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
@@ -101,7 +102,7 @@
       const bmi = b != null ? `${p.estimated ? "≈ " : ""}<strong>${num(b)}</strong>` : "—";
 
       return `
-      <article class="card${has ? "" : " card--idle"}">
+      <article class="card${has ? "" : " card--idle"}${fadeCls}">
         <span class="card__role ${roleCls}">${roleTxt}</span>
         ${portrait}
         <h3 class="card__name">${p.name}</h3>

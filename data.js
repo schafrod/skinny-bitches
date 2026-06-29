@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-06-25",
+  lastUpdate: "2026-06-29",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -84,7 +84,9 @@ window.SKINNY = {
         // 23.6. Ogi-Weg (Anaconda-Treppe one-way zum Einstieg, kein Loop) -> +2.79
         { date: "2026-06-23", km: 20.77 },
         // 25.6. Wägung + Lauf am selben Tag: durchbricht die 160er-Marke, Ogi-Weg (+2.79)
-        { date: "2026-06-25", weightKg: 159.6, km: 23.56 }
+        { date: "2026-06-25", weightKg: 159.6, km: 23.56 },
+        // 29.6. Skinny Bitch Monday: Ogi-Weg -> +2.79
+        { date: "2026-06-29", km: 26.35 }
       ]
     },
     {
@@ -113,7 +115,9 @@ window.SKINNY = {
         // 23.6. Ogi-Weg -> +2.79
         { date: "2026-06-23", km: 15.96 },
         // 25.6. Wägung
-        { date: "2026-06-25", weightKg: 147.3, km: 15.96 }
+        { date: "2026-06-25", weightKg: 147.3, km: 15.96 },
+        // 29.6. Ogi-Weg -> +2.79
+        { date: "2026-06-29", km: 18.75 }
       ]
     },
 
@@ -139,7 +143,9 @@ window.SKINNY = {
         // 23.6. erster Lauf seit dem 9.6. (Montag immer Theater) -> +2.79
         { date: "2026-06-23", km: 8.99 },
         // 25.6. Wägung: schrumpft weiter (Erben misslingt)
-        { date: "2026-06-25", weightKg: 83.5, km: 8.99 }
+        { date: "2026-06-25", weightKg: 83.5, km: 8.99 },
+        // 29.6. Ogi-Weg -> +2.79
+        { date: "2026-06-29", km: 11.78 }
       ]
     },
     {
@@ -152,6 +158,9 @@ window.SKINNY = {
       heightCm: 182,
       birthYear: 1997,
       estimated: true,   // keine Waage — Gewicht geschätzt
+      // Verblass-Countdown: Mika erscheint nicht mehr. Stufe 1–4 macht seine Karte
+      // schrittweise transparenter (Start 29.6.). Kommt er am 20.7. nicht, fliegt er raus.
+      fadeStage: 1,
       bio: "Boltigens berüchtigtster Bruder. Erbt die Kilos der anderen, statt selber welche zu lassen — und hat endlich ein Zweithobby. Beim Auftakt fehlte er; die Kilometer holt er nach.",
       // am 1.6. gewogen, aber nicht mitgelaufen -> 0 km
       history: [
@@ -252,6 +261,17 @@ window.SKINNY = {
       typ: "waage",
       title: "Die Wurst-Kur wirkt",
       text: "Gordo durchbricht die Schallmauer und steht bei 159,6 — minus 1,2 in 7 Tagen, minus 5,7 seit Start. Sevl zottelt brav mit (147,3). Lars erbt weiterhin nichts und schrumpft sogar auf 83,5. Er sagt, er habe die Zehennägel wiedermal geschnitten. Mikl bleibt das Phantom ohne Waage und ohne Rückmeldung. Wir glauben, er will nicht mehr mit den dicken Kindern spielen. Doch wir geben ihn noch nicht auf."
+    },
+    {
+      date: "2026-06-29",
+      typ: "lauf",
+      title: "Feindkontakt mit der Anaconda",
+      text: "Trotz Gewitterwarnung zogen wir los — aber versetzt. Coach Lars verkündete um 19:00, seine Landi-Wetter-App orakle ab 20:00 Regen. Chrigu hingegen mästete sich um diese Zeit noch und kam erst später auf den Track. Man traf sich auf halber Strecke und klatschte im Vorbeilaufen ab — so wie Volleyballspielerinnen das halt so tun. Und Mika? Bleibt unser Sorgenkind, hängt nur noch mit der offenen Feierabendszene rum. Er will einfach nicht feisser werden. Aber wir geben ihn noch nicht auf.\n\nDann, zum ersten Mal: Feindkontakt mit der Anaconda! Das Biest hatte es auf den schmalen Coach abgesehen und wollte ihn in einem Happen verschlingen. Doch das Schlangenvieh hat die Rechnung ohne Rocket-Man gemacht. Er stellte sich dem eingeschleppten Untier, kämpfte verbissen und schimpfte, dass er es häuten und sich daraus ein Meerjungfrauenkostüm basteln werde. Die Anaconda — auf dem Helsana-Trail bisher nur leichte Kost (magere Jogger) gewohnt und noch nie einem entschlossenen Dicken begegnet — zog nach heftigem Kampf niedergeschlagen in den Dschungel zurück.\n\nSeverin ist der lebende Beweis: Superhelden müssen nicht fliegen können, um anderen zu helfen. Zur Verteidigung reicht es, einfach mehr Appetit als der Angreifer zu haben.",
+      photoDir: "assets/runs/2026-06-29",
+      photos: [
+        { file: "rocketman-vs-anaconda", caption: "Rocketman kämpft entschlossen gegen die Anaconda, die seinen kümmerlichen Freund Coach Lars verspeisen wollte." },
+        { file: "stinkefinger-fuers-biest", caption: "Rocketman zeigt dem Biest den Stinkefinger." }
+      ]
     }
   ]
 };
