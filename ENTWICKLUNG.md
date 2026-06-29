@@ -34,7 +34,7 @@ In `data.js` bei jeder Person unten im `history`-Array einen Eintrag anhängen:
 **Lauf-Fotos:** Ein Logbuch-Eintrag kann `photoDir` + `photos: [{ file, caption }]` haben → Thumbnail-Reihe unter dem Text, Klick öffnet ein Lightbox-Overlay (`wireLightbox` in main.js; Esc/Klick schliesst). Bilder liegen in `assets/runs/JJJJ-MM-TT/`: pro Foto `<slug>.jpg` (Vollbild ~1600px) **und** `<slug>-t.jpg` (Thumb ~440px). Original-Fotos kommen nach `Fotos/` (gitignored) und werden mit PIL verkleinert/komprimiert (EXIF-Drehung via `ImageOps.exif_transpose`), Vintage-Sepia per CSS-`filter`.
 
 ## Wichtig bei Design-Änderungen
-CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=25`, `main.js?v=18`). **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
+CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=26`, `main.js?v=19`). **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
 
 ## Die Crew (alle Werte echt)
 | Person | Nick | Rolle | Grösse | Jg. | Start-kg |
@@ -50,15 +50,17 @@ Mika war am 1.6. nicht beim Lauf (km 0). „Opfer" = Trainee-Rolle. Auf der Seit
 
 **Hall of Shame** wertet den **Fortschritt Richtung eigenes Ziel, relativ zum Ausgangsgewicht (%)** (Opfer = abgenommen, Coach = zugenommen/„geerbt"). Anzeige: % gross, kg + Tag klein darunter. Ein gemeinsames Ranking; Lager via Trenner „die Abnehmer" / „die Erber" + Rollen-Tag getrennt. Coaches landen realistisch auf 3/4. (JS rendert ins `#shame-list`-Div — **nicht** in die `<section id="shame">`; die Sektion-ID dient nur dem Nav-Anker. Vorher kollidierten beide IDs und das Ranking wurde ohne `.wrap`/Titel full-bleed gerendert — behoben.) Die „Erben"-Regel (beide Coaches) ist in Mission + Kurven-Text erklärt (separate FAQ dazu wurde wieder entfernt). **Charts:** Y-Achsen nutzen `niceBounds()` — runde Grenzen + Schrittweite (1/2/2.5/5/10 × 10^n), ganzzahlige Beschriftung, mehrere Gitterlinien (statt nur Min/Mitte/Max). Hover/Tap auf die Punkte zeigt einen interaktiven Tooltip (Name, Datum, Wert) — grosse transparente Hit-Kreise + `.charttip`-Div, gesteuert in `main.js`/`wireChartTooltips`. Distanzen werden überall auf 1 Kommastelle gerundet angezeigt (2,79 km → „2,8 km").
 
-## Stand der Zahlen (Stand 23.6.2026)
-Läufe: **1.6.** Auftakt · **8.6.** Chrigu solo (Anaconda-Loop) · **9.6.** Crew komplett, Mikas Debüt (+3,41) · **15.6.** Chrigu+Severin Ogi-Weg · **17.6.** Chrigu solo (Cheat-Day) · **22.6.** Chrigu+Severin Ogi-Weg · **23.6.** Chrigu+Severin+Lars Ogi-Weg (Lars zurück nach Theater-Pause, Mika verschollen; Anaconda-Treppe als One-Way zum Einstieg statt als Loop → trotzdem +2,79). Wägungen: **4.6.** · **11.6.** · **18.6.**
+## Stand der Zahlen (Stand 29.6.2026)
+Läufe bis **29.6.**: 1.6. Auftakt · 8.6. Chrigu solo (Anaconda) · 9.6. Crew komplett (+3,41) · 15.6./22.6. Chrigu+Severin Ogi-Weg · 17.6./25.6. Chrigu solo · 23.6. Chrigu+Severin+Lars (Lars zurück) · 29.6. Chrigu+Severin+Lars (erster Anaconda-Feindkontakt, Severin rettet Lars). Wägungen: **4.6. · 11.6. · 18.6. · 25.6.** (Chrigu unter 160!).
 
 | Person | kg (Δ seit Start) | km total |
 |---|---|---|
-| Chrigu | 160,8 (−4,5) | 20,77 |
-| Severin | 147,5 (−1,5) | 15,96 |
-| Lars | 83,7 (−0,8, „Erben misslingt") | 8,99 |
+| Chrigu | 159,6 (−5,7) | 26,35 |
+| Severin | 147,3 (−1,7) | 18,75 |
+| Lars | 83,5 (−1,0, „Erben misslingt") | 11,78 |
 | Mika | ≈81,2 (+0,2, geschätzt) | 3,41 |
+
+**Mika verblasst:** erscheint nicht mehr → `fadeStage` (data.js) macht seine Karte schrittweise transparent. **Stufe 1 seit 29.6.**; pro verpasstem Montag +1 (6.7.→2, 13.7.→3, 20.7.→4). Kommt er am **20.7.** nicht, Nachruf-Logbucheintrag „Missed in Action" + sein `people`-Objekt (Karte/Statistik) löschen. Kommt er doch, `fadeStage` entfernen.
 
 ## Strecke (aus echter GPX)
 Rundkurs Schinti → Boltigen → Schinti, **2,79 km, 159 hm, höchster Punkt 855 m**. Höhenprofil ist aus der echten GPX gezeichnet (`Skinny-Bitch-Track.gpx`, liegt auf Christians Desktop), im flachen SchweizMobil-Maßstab mit beschrifteten Achsen. (Anzeige rundet auf 1 Kommastelle → „2,8 km".)
