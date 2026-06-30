@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-06-29",
+  lastUpdate: "2026-06-30",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -86,7 +86,9 @@ window.SKINNY = {
         // 25.6. Wägung + Lauf am selben Tag: durchbricht die 160er-Marke, Ogi-Weg (+2.79)
         { date: "2026-06-25", weightKg: 159.6, km: 23.56 },
         // 29.6. Skinny Bitch Monday: Ogi-Weg -> +2.79
-        { date: "2026-06-29", km: 26.35 }
+        { date: "2026-06-29", km: 26.35 },
+        // 30.6. Chrigu solo, Ogi-Weg -> +2.79
+        { date: "2026-06-30", km: 29.14 }
       ]
     },
     {
