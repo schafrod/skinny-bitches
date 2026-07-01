@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-06-30",
+  lastUpdate: "2026-06-29",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -88,7 +88,9 @@ window.SKINNY = {
         // 29.6. Skinny Bitch Monday: Ogi-Weg -> +2.79
         { date: "2026-06-29", km: 26.35 },
         // 30.6. Chrigu solo, Ogi-Weg -> +2.79
-        { date: "2026-06-30", km: 29.14 }
+        { date: "2026-06-30", km: 29.14 },
+        // 1.7. Chrigu solo, Anaconda-Loop -> +3.41
+        { date: "2026-07-01", km: 32.55 }
       ]
     },
     {
