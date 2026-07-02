@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-06-29",
+  lastUpdate: "2026-07-02",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -90,7 +90,9 @@ window.SKINNY = {
         // 30.6. Chrigu solo, Ogi-Weg -> +2.79
         { date: "2026-06-30", km: 29.14 },
         // 1.7. Chrigu solo, Anaconda-Loop -> +3.41
-        { date: "2026-07-01", km: 32.55 }
+        { date: "2026-07-01", km: 32.55 },
+        // 2.7. Wägung: trotz Strebern wieder auf 160,0 (+0.4)
+        { date: "2026-07-02", weightKg: 160.0, km: 32.55 }
       ]
     },
     {
@@ -121,7 +123,9 @@ window.SKINNY = {
         // 25.6. Wägung
         { date: "2026-06-25", weightKg: 147.3, km: 15.96 },
         // 29.6. Ogi-Weg -> +2.79
-        { date: "2026-06-29", km: 18.75 }
+        { date: "2026-06-29", km: 18.75 },
+        // 2.7. Wägung
+        { date: "2026-07-02", weightKg: 147.2, km: 18.75 }
       ]
     },
 
@@ -149,7 +153,9 @@ window.SKINNY = {
         // 25.6. Wägung: schrumpft weiter (Erben misslingt)
         { date: "2026-06-25", weightKg: 83.5, km: 8.99 },
         // 29.6. Ogi-Weg -> +2.79
-        { date: "2026-06-29", km: 11.78 }
+        { date: "2026-06-29", km: 11.78 },
+        // 2.7. Wägung
+        { date: "2026-07-02", weightKg: 83.4, km: 11.78 }
       ]
     },
     {
@@ -177,7 +183,9 @@ window.SKINNY = {
         // 18.6. Wägung — weiter ohne Waage, Schätzwert unverändert
         { date: "2026-06-18", weightKg: 81.2, km: 3.41 },
         // 25.6. Wägung — weiter Phantom, Schätzwert unverändert
-        { date: "2026-06-25", weightKg: 81.2, km: 3.41 }
+        { date: "2026-06-25", weightKg: 81.2, km: 3.41 },
+        // 2.7. Wägung — weiter verschollen, Schätzwert unverändert
+        { date: "2026-07-02", weightKg: 81.2, km: 3.41 }
       ]
     }
 
@@ -276,6 +284,12 @@ window.SKINNY = {
         { file: "rocketman-vs-anaconda", caption: "Rocketman kämpft entschlossen gegen die Anaconda, die seinen kümmerlichen Freund Coach Lars verspeisen wollte." },
         { file: "stinkefinger-fuers-biest", caption: "Rocketman zeigt dem Biest den Stinkefinger." }
       ]
+    },
+    {
+      date: "2026-07-02",
+      typ: "waage",
+      title: "Der Mähdrescher isst zurück",
+      text: "Waagtag, und diesmal beisst die Wahrheit wieder zu. Gordo der plütterige Streber — 3 statt 1 mal Ogi-Weg, gestern sogar mit Anaconda-Loop, alles reingesteckt —, doch die Waage zeigt 160,0: plus 0,4. Der menschliche Mähdrescher hat nebst der Lauferei auch die Fress- und Sauferei nicht vernachlässigt. Rocket-Man und Sexybless tun derweil, was sie am besten können: fast nichts (147,2 und 83,4, je minus 0,1). Und Mikl? Du weisst schon."
     }
   ]
 };
