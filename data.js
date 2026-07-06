@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-07-02",
+  lastUpdate: "2026-07-06",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -92,7 +92,9 @@ window.SKINNY = {
         // 1.7. Chrigu solo, Anaconda-Loop -> +3.41
         { date: "2026-07-01", km: 32.55 },
         // 2.7. Wägung: trotz Strebern wieder auf 160,0 (+0.4)
-        { date: "2026-07-02", weightKg: 160.0, km: 32.55 }
+        { date: "2026-07-02", weightKg: 160.0, km: 32.55 },
+        // 6.7. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-07-06", km: 35.96 }
       ]
     },
     {
@@ -125,7 +127,9 @@ window.SKINNY = {
         // 29.6. Ogi-Weg -> +2.79
         { date: "2026-06-29", km: 18.75 },
         // 2.7. Wägung
-        { date: "2026-07-02", weightKg: 147.2, km: 18.75 }
+        { date: "2026-07-02", weightKg: 147.2, km: 18.75 },
+        // 6.7. grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-07-06", km: 22.16 }
       ]
     },
 
@@ -170,7 +174,7 @@ window.SKINNY = {
       estimated: true,   // keine Waage — Gewicht geschätzt
       // Verblass-Countdown: Mika erscheint nicht mehr. Stufe 1–4 macht seine Karte
       // schrittweise transparenter (Start 29.6.). Kommt er am 20.7. nicht, fliegt er raus.
-      fadeStage: 1,
+      fadeStage: 2,
       bio: "Boltigens berüchtigtster Bruder. Erbt die Kilos der anderen, statt selber welche zu lassen — und hat endlich ein Zweithobby. Beim Auftakt fehlte er; die Kilometer holt er nach.",
       // am 1.6. gewogen, aber nicht mitgelaufen -> 0 km
       history: [
@@ -290,6 +294,12 @@ window.SKINNY = {
       typ: "waage",
       title: "Der Mähdrescher isst zurück",
       text: "Waagtag, und diesmal beisst die Wahrheit wieder zu. Gordo der plütterige Streber — 3 statt 1 mal Ogi-Weg, gestern sogar mit Anaconda-Loop, alles reingesteckt —, doch die Waage zeigt 160,0: plus 0,4. Der menschliche Mähdrescher hat nebst der Lauferei auch die Fress- und Sauferei nicht vernachlässigt. Rocket-Man und Sexybless tun derweil, was sie am besten können: fast nichts (147,2 und 83,4, je minus 0,1). Und Mikl? Du weisst schon."
+    },
+    {
+      date: "2026-07-06",
+      typ: "lauf",
+      title: "Fans, Rindler, schwere- und Reichen-Jungs",
+      text: "Lauftag, und diesmal mit reichlich Publikum: Ein Skinny-Bitch-Fangirl (Name der Redaktion bekannt) dackelte den Babyelefanten hinterher. Die Klossnerei hingegen enttäuschten auf ganzer Linie und blieben beide fern — Lars wie Mika. Die Wichsos wollen uns platzen sehen oder wehrlos den Weight Watchers überlassen. Man wollte sich vor dem Fan nicht die Blösse geben und wählte extra die grosse Runde inklusive Anaconda-Loop und 3-fachem Tubeli-Chehr. Es dampfte noch ordentlich im warmen Wald. Der Alt-Ranzige dampfte am meisten.\n\nKurz vor dem Ziel noch mehr Aufmerksamkeit: Rindlispigger und die Reichen-Jungs mähten die Wiese entlang des Wegs hinauf in die Todeszone und meinten, der pflätschnasse Dicke war wohl eher in der Simme baden gegangen statt zu stampfen. Mulaffe, die konnten sich ja auch vom Motormäher bergauf ziehen lassen. Wenn diese Teile erstmal im Mainstream ankommen, werden alle E-Bike-Senioren damit künftig auch die Wanderwege verstopfen und sich im Longevity-Wahn mit 95-jährig noch auf die Mittagsfluh hinterherschleifen lassen.\n\nDie Wurstfeen waren aber heute auch im Namen der Gehweg-Sicherheit unterwegs. Dabei haben sie verschiedene Hochrisiko-Passagen ausgemacht, wo der abwesende Coach und Wegmeister Lars nachbessern muss. Es gibt diverse vermeidbare Stolperfallen auf dem Skinny-Bitch-Trail, die einfach zu entschärfen wären. Schliesslich wäre ein Sturz bei diesem Kaliber fatal und unsere beiden Topmoppel unfähig, auch nur 3m zum Kühlschrank an Krücken zu gehen.\n\nMan erzählt sich im Tal, ein Oberschenkelhalsbruch sei der Anfang vom Ende — der direkte Zubringer ins Altersheim. Wobei diese Akku-Velos wohl auch ihren Teil dazu beitragen. Wir bleiben wohl besser bei der Tschalpperei."
     }
   ]
 };
