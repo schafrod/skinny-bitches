@@ -315,7 +315,7 @@ window.SKINNY = {
       date: "2026-07-09",
       typ: "waage",
       title: "Lars erbt sein 1. Halbmödeli!",
-      text: "Die Wägungen kamen pünktlich. Der Protokollant hat's verpennt — die Zahlen sind trotzdem schonungslos. El Gordo drückt sich mit 159,8 nur Arschknapp unter die Schallmauer: minus 0,2. Bei dem Laufpensum eher ein Almosen der Physik als eine Leistung, aber wir nehmen's so.\n\nRocket-Man dagegen legt 0,3 drauf (147,5) — die Ferien-Ausrede zieht langsam Speck an. Und dann das Wunder von Boltigen: Lars erbt tatsächlich! Plus 0,1 auf 83,5. Nach fünf Wochen Abmagern endlich hundert Gramm in die richtige Richtung — vermutlich sind es nur die langen Zehennägel, aber nu. Mikl? Schätzungsweise unverändert. Wie alles an ihm zurzeit."
+      text: "Die Wägungen kamen pünktlich. Der Protokollant hat's verpennt — die Zahlen sind trotzdem schonungslos. El Gordo drückt sich mit 159,8 nur arschknapp unter die Schallmauer: minus 0,2. Bei dem Laufpensum eher ein Almosen der Physik als eine Leistung, aber wir nehmen's so.\n\nRocket-Man dagegen legt 0,3 drauf (147,5) — die Ferien-Ausrede zieht langsam Speck an. Und dann das Wunder von Boltigen: Lars erbt tatsächlich! Plus 0,1 auf 83,5. Nach fünf Wochen Abmagern endlich hundert Gramm in die richtige Richtung — vermutlich sind es nur die langen Zehennägel, aber nu. Mikl? Schätzungsweise unverändert. Wie alles an ihm zurzeit."
     }
   ]
 };
