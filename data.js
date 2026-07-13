@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-07-09",
+  lastUpdate: "2026-07-13",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -98,7 +98,9 @@ window.SKINNY = {
         // 8.7. Chrigu solo, grosse Runde (Ogi + Anaconda-Loop) -> +3.41 (Header bleibt auf 6.7.)
         { date: "2026-07-08", km: 39.37 },
         // 9.7. Wägung: arschknapp wieder unter 160
-        { date: "2026-07-09", weightKg: 159.8, km: 39.37 }
+        { date: "2026-07-09", weightKg: 159.8, km: 39.37 },
+        // 13.7. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-07-13", km: 42.78 }
       ]
     },
     {
@@ -135,7 +137,9 @@ window.SKINNY = {
         // 6.7. grosse Runde inkl. Anaconda-Loop -> +3.41
         { date: "2026-07-06", km: 22.16 },
         // 9.7. Wägung: +0.3 — die Ferien-Ausrede zieht Speck an
-        { date: "2026-07-09", weightKg: 147.5, km: 22.16 }
+        { date: "2026-07-09", weightKg: 147.5, km: 22.16 },
+        // 13.7. grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-07-13", km: 25.57 }
       ]
     },
 
@@ -182,7 +186,7 @@ window.SKINNY = {
       estimated: true,   // keine Waage — Gewicht geschätzt
       // Verblass-Countdown: Mika erscheint nicht mehr. Stufe 1–4 macht seine Karte
       // schrittweise transparenter (Start 29.6.). Kommt er am 20.7. nicht, fliegt er raus.
-      fadeStage: 2,
+      fadeStage: 3,
       bio: "Boltigens berüchtigtster Bruder. Erbt die Kilos der anderen, statt selber welche zu lassen — und hat endlich ein Zweithobby. Beim Auftakt fehlte er; die Kilometer holt er nach.",
       // am 1.6. gewogen, aber nicht mitgelaufen -> 0 km
       history: [
@@ -316,6 +320,12 @@ window.SKINNY = {
       typ: "waage",
       title: "Lars erbt sein 1. Halbmödeli!",
       text: "Die Wägungen kamen pünktlich. Der Protokollant hat's verpennt — die Zahlen sind trotzdem schonungslos. El Gordo drückt sich mit 159,8 nur arschknapp unter die Schallmauer: minus 0,2. Bei dem Laufpensum eher ein Almosen der Physik als eine Leistung, aber wir nehmen's so.\n\nRocket-Man dagegen legt 0,3 drauf (147,5) — die Ferien-Ausrede zieht langsam Speck an. Und dann das Wunder von Boltigen: Lars erbt tatsächlich! Plus 0,1 auf 83,5. Nach fünf Wochen Abmagern endlich hundert Gramm in die richtige Richtung — vermutlich sind es nur die langen Zehennägel, aber nu. Mikl? Schätzungsweise unverändert. Wie alles an ihm zurzeit."
+    },
+    {
+      date: "2026-07-13",
+      typ: "lauf",
+      title: "Nächste Runde ohne Oberbäuerter-Beteiligung",
+      text: "Skinny Bitch Monday ist nicht die Fussball-WM: Bei uns gelten dieselben Regeln für alle, es gibt kein VAR und egal wie mächtig die Person ist die dich anruft um eine Gefälligkeit von dir zu fordern - du sagst ab und läufst mit. Der polyvalente Coach Lars sah das anders und ging seinem grossen Bruder \"Hombre\" beim Heuen helfen. Obschon es seit Tagen schön ist, das Gras kaum höher ist als vor 2 Wochen und es scheiss Heu bei Knutti's Jürg in der Landi in handlichen 2kg-Ballen zu kaufen gibt. Der andere Oberbäuerter Mother-Mikl2 ghostet uns auch weiterhin. Wir hoffen, es geht ihm gut und er besiegt seine Essstörung. Irgendwann.\n\nDer skandalöse Montag geht weiter: Unser Parkplatz — besetzt! Ein Camper aus der Grande Nation (die, welche Schnecken fressen). Offenbar hat sich die Schinti in der instagram-geschwängerten Van-Life-Community rumgesprochen. An Bord nicht nur ein Hund, sondern auch eine Katze. Da kannst du gleich die Schwiegermutter mit in den Bus nehmen — die ist auch stubenrein, mit dem Unterschied, dass man dem Schwiegertiger das Kistchen nicht neu einstreuen muss.\n\nGelaufen sind also nur die zwei Dampfwalzen, dafür die grosse Runde inklusive Anaconda-Loop und 3fachem Tubeli-Chehr. Die Hitzewelle steht im Wald wie eine Wand — doch die pflätschnassen Speckschwarten tränkten den furztrockenen Waldboden derart mit Schweiss, dass der Kanton das Feuerverbot für Boltigen umgehend wieder aufhob. Rocket-Man feierte das standesgemäss mit einer milden Parisienne und vier Zügen in die offenen Lungenflügel. Rauchen hat schliesslich keine Kalorien und hält uns an der Simme die Brämi vom Leib. Die saugen uns seit Wochen das Blut aus den dicken Pfösten. Bei dieser Masse an überzuckertem Blut wundert das keinen."
     }
   ]
 };
