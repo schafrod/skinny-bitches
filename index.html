@@ -129,7 +129,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="css/style.css?v=26" />
+  <link rel="stylesheet" href="css/style.css?v=27" />
 </head>
 <body>
 
@@ -151,6 +151,12 @@
       <a href="#faq">FAQ</a>
     </nav>
   </header>
+
+  <!-- ===================== TICKER (Telegramm-Laufband) ===================== -->
+  <!-- Inhalt kommt automatisch aus den letzten Logbuch-Einträgen (renderTicker in main.js) -->
+  <a class="ticker" id="ticker" href="#logbuch" aria-label="Neueste Meldungen — zum Logbuch">
+    <div class="ticker__track" id="ticker-track"></div>
+  </a>
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="top">
@@ -475,7 +481,7 @@
 
   <!-- data.js immer frisch laden (Zeitstempel umgeht den Browser-Cache bei Wochen-Updates) -->
   <script>document.write('\x3Cscript src="data.js?t=' + Date.now() + '">\x3C/script>');</script>
-  <script src="js/main.js?v=19"></script>
+  <script src="js/main.js?v=20"></script>
 
   <!-- GoatCounter — datenschutzfreundliche Besucher-Statistik (kein Cookie, ignoriert localhost) -->
   <script data-goatcounter="https://skinny-bitches.goatcounter.com/count"

@@ -156,6 +156,37 @@ a { color: inherit; }
 }
 .nav__links a:hover { color: var(--blood); border-color: var(--blood); }
 
+/* ===================== TICKER (Telegramm-Laufband) ===================== */
+.ticker {
+  display: block;
+  overflow: hidden;
+  background: var(--blood);
+  color: var(--paper);
+  border-bottom: var(--border);
+  text-decoration: none;
+  padding: 7px 0;
+  white-space: nowrap;
+}
+.ticker__track {
+  display: inline-flex;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  will-change: transform;
+  animation: tickerScroll var(--ticker-dur, 40s) linear infinite;
+}
+.ticker:hover .ticker__track { animation-play-state: paused; }
+.ticker__item { padding-right: 3.5em; }
+.ticker__item b { font-weight: 400; color: var(--paper-deep); }
+@keyframes tickerScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker__track { animation: none; }
+}
+
 /* ===================== BUTTONS ===================== */
 .btn {
   --shadow: 5px 5px 0 var(--ink);

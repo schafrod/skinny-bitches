@@ -409,6 +409,26 @@
     });
   }
 
+  /* ===================== TICKER ===================== */
+  // Telegramm-Laufband unter der Nav: die letzten 3 Logbuch-Einträge (Datum,
+  // Typ, Titel), automatisch aus data.js — beim Wochenupdate ist nichts extra
+  // zu pflegen. Inhalt wird verdoppelt für den nahtlosen Endlos-Loop.
+  function renderTicker() {
+    const track = $("#ticker-track");
+    if (!track) return;
+    const entries = (Array.isArray(D.log) ? D.log.slice() : [])
+      .sort((a, b) => (a.date < b.date ? 1 : -1))
+      .slice(0, 3);
+    if (!entries.length) { $("#ticker").style.display = "none"; return; }
+    const items = entries.map((e) =>
+      `<span class="ticker__item">+++ ${shortDate(e.date)} <b>${e.typ === "lauf" ? "Lauf" : "Wägung"}:</b> ${escAttr(e.title || "")}</span>`
+    ).join("");
+    track.innerHTML = items + items; // 2x für nahtlosen Loop (translateX -50%)
+    // Tempo an Inhaltslänge koppeln (~60 px/s), sonst rast kurzer Inhalt
+    const half = track.scrollWidth / 2;
+    track.style.setProperty("--ticker-dur", Math.max(15, Math.round(half / 60)) + "s");
+  }
+
   /* ===================== ANKER-OFFSET ===================== */
   // Hält die Sektions-Überschrift unter der Sticky-Nav frei, wenn man einen
   // Nav-Link anklickt. Die Nav ist auf Mobile höher (umgebrochene Links), darum
@@ -453,6 +473,7 @@
     renderCharts();
     renderShame();
     renderLog();
+    renderTicker();
     fitScrollPad();
     wireNavAutohide();
   }
