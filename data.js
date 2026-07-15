@@ -100,7 +100,9 @@ window.SKINNY = {
         // 9.7. Wägung: arschknapp wieder unter 160
         { date: "2026-07-09", weightKg: 159.8, km: 39.37 },
         // 13.7. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
-        { date: "2026-07-13", km: 42.78 }
+        { date: "2026-07-13", km: 42.78 },
+        // 16.7. Chrigu solo, grosse Runde (Ogi + Anaconda-Loop) -> +3.41 (Header bleibt auf 13.7.)
+        { date: "2026-07-16", km: 46.19 }
       ]
     },
     {
