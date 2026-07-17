@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-07-13",
+  lastUpdate: "2026-07-16",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -102,7 +102,9 @@ window.SKINNY = {
         // 13.7. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
         { date: "2026-07-13", km: 42.78 },
         // 15.7. Chrigu solo, grosse Runde (Ogi + Anaconda-Loop) -> +3.41 (Header bleibt auf 13.7.)
-        { date: "2026-07-15", km: 46.19 }
+        { date: "2026-07-15", km: 46.19 },
+        // 16.7. Wägung: wieder über der Schallmauer (+0.7)
+        { date: "2026-07-16", weightKg: 160.5, km: 46.19 }
       ]
     },
     {
@@ -141,7 +143,9 @@ window.SKINNY = {
         // 9.7. Wägung: +0.3 — die Ferien-Ausrede zieht Speck an
         { date: "2026-07-09", weightKg: 147.5, km: 22.16 },
         // 13.7. grosse Runde inkl. Anaconda-Loop -> +3.41
-        { date: "2026-07-13", km: 25.57 }
+        { date: "2026-07-13", km: 25.57 },
+        // 16.7. Wägung: nochmals +0.1
+        { date: "2026-07-16", weightKg: 147.6, km: 25.57 }
       ]
     },
 
@@ -173,7 +177,9 @@ window.SKINNY = {
         // 2.7. Wägung
         { date: "2026-07-02", weightKg: 83.4, km: 11.78 },
         // 9.7. Wägung: erstes Halbmödeli geerbt (+0.1)
-        { date: "2026-07-09", weightKg: 83.5, km: 11.78 }
+        { date: "2026-07-09", weightKg: 83.5, km: 11.78 },
+        // 16.7. Wägung: erbt im Rückwärtsgang (-0.7), neuer Tiefststand
+        { date: "2026-07-16", weightKg: 82.8, km: 11.78 }
       ]
     },
     {
@@ -205,7 +211,9 @@ window.SKINNY = {
         // 2.7. Wägung — weiter verschollen, Schätzwert unverändert
         { date: "2026-07-02", weightKg: 81.2, km: 3.41 },
         // 9.7. Wägung — schätzungsweise unverändert, wie alles an ihm
-        { date: "2026-07-09", weightKg: 81.2, km: 3.41 }
+        { date: "2026-07-09", weightKg: 81.2, km: 3.41 },
+        // 16.7. Wägung — die einzige Konstante, Schätzwert unverändert
+        { date: "2026-07-16", weightKg: 81.2, km: 3.41 }
       ]
     }
 
@@ -328,6 +336,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Nächste Runde ohne Oberbäuerter-Beteiligung",
       text: "Skinny Bitch Monday ist nicht die Fussball-WM: Bei uns gelten dieselben Regeln für alle, es gibt kein VAR und egal wie mächtig die Person ist die dich anruft um eine Gefälligkeit von dir zu fordern - du sagst ab und läufst mit. Der polyvalente Coach Lars sah das anders und ging seinem grossen Bruder \"Hombre\" beim Heuen helfen. Obschon es seit Tagen schön ist, das Gras kaum höher ist als vor 2 Wochen und es scheiss Heu bei Knutti's Jürg in der Landi in handlichen 2kg-Ballen zu kaufen gibt. Der andere Oberbäuerter Mother²-Mikl ghostet uns auch weiterhin. Wir hoffen, es geht ihm gut und er besiegt seine Essstörung. Irgendwann.\n\nDer skandalöse Montag geht weiter: Unser Parkplatz — besetzt! Ein Camper aus der Grande Nation (die, welche Schnecken fressen). Offenbar hat sich die Schinti in der instagram-geschwängerten Van-Life-Community rumgesprochen. An Bord nicht nur ein Hund, sondern auch eine Katze. Da kannst du gleich die Schwiegermutter mit in den Bus nehmen — die ist auch stubenrein, mit dem Unterschied, dass man Schwiegertiger das Kistchen nicht neu einstreuen muss.\n\nGelaufen sind also nur die zwei Dampfwalzen, dafür die grosse Runde inklusive Anaconda-Loop und 3-fachem Tubeli-Chehr. Die Hitzewelle steht im Wald wie eine Wand — doch die pflätschnassen Speckschwarten tränkten den furztrockenen Waldboden derart mit Schweiss, dass der Kanton das Feuerverbot für Boltigen umgehend wieder aufhob. Rocket-Man feierte das standesgemäss mit einer milden Parisienne und vier Zügen in die offenen Lungenflügel. Rauchen hat schliesslich keine Kalorien und hält uns an der Simme die Brämi vom Leib. Die saugen uns seit Wochen den Lebenssaft aus den dicken Pfösten. Bei dieser Masse an überzuckertem Blut wundert das keinen."
+    },
+    {
+      date: "2026-07-16",
+      typ: "waage",
+      title: "Der Coach zweifelt am Geschäftsmodell",
+      text: "Wägetag, und die Waage spuckt nur schlechte Nachrichten. Gordo stemmt sich mit 160,5 wieder über die Schallmauer (+0,7) — die lange Runde vom Vortag war offenbar nur der Appetizer fürs Abendessen. Rocket-Man legt nochmals 0,1 drauf (147,6). Die Wonneproppen laufen und laufen und werden dabei schwerer — ein physikalisches Wunder, das die Wissenschaft noch beschäftigen wird.\n\nCoach Lars zieht daraus den einzig logischen Schluss und stellt die Lauferei grundsätzlich in Frage: Ob wir nicht besser mit zum Heuen gekommen wären? Der Mann hat leicht reden — er selbst ist mit 82,8 nochmals 0,7 Kilo losgeworden und erbt inzwischen im Rückwärtsgang. Bei den Skinny Bitches läuft aktuell schlicht alles in die falsche Richtung: Die Dicken werden schwerer, die Dünnen dünner. Nur Mikl bleibt als einzige Konstante und sagt dazu wie immer - nichts."
     }
   ]
 };
