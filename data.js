@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-07-16",
+  lastUpdate: "2026-07-20",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -104,7 +104,9 @@ window.SKINNY = {
         // 15.7. Chrigu solo, grosse Runde (Ogi + Anaconda-Loop) -> +3.41 (Header bleibt auf 13.7.)
         { date: "2026-07-15", km: 46.19 },
         // 16.7. Wägung: wieder über der Schallmauer (+0.7)
-        { date: "2026-07-16", weightKg: 160.5, km: 46.19 }
+        { date: "2026-07-16", weightKg: 160.5, km: 46.19 },
+        // 20.7. Skinny Bitch Monday: volle Hütte, grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-07-20", km: 49.60 }
       ]
     },
     {
@@ -145,7 +147,9 @@ window.SKINNY = {
         // 13.7. grosse Runde inkl. Anaconda-Loop -> +3.41
         { date: "2026-07-13", km: 25.57 },
         // 16.7. Wägung: nochmals +0.1
-        { date: "2026-07-16", weightKg: 147.6, km: 25.57 }
+        { date: "2026-07-16", weightKg: 147.6, km: 25.57 },
+        // 20.7. grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-07-20", km: 28.98 }
       ]
     },
 
@@ -179,7 +183,9 @@ window.SKINNY = {
         // 9.7. Wägung: erstes Halbmödeli geerbt (+0.1)
         { date: "2026-07-09", weightKg: 83.5, km: 11.78 },
         // 16.7. Wägung: erbt im Rückwärtsgang (-0.7), neuer Tiefststand
-        { date: "2026-07-16", weightKg: 82.8, km: 11.78 }
+        { date: "2026-07-16", weightKg: 82.8, km: 11.78 },
+        // 20.7. grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-07-20", km: 15.19 }
       ]
     },
     {
@@ -342,6 +348,12 @@ window.SKINNY = {
       typ: "waage",
       title: "Der Coach zweifelt am Geschäftsmodell",
       text: "Wägetag, und die Waage spuckt nur schlechte Nachrichten. Gordo stemmt sich mit 160,5 wieder über die Schallmauer (+0,7) — die lange Runde vom Vortag war offenbar nur der Appetizer fürs Abendessen. Rocket-Man legt nochmals 0,1 drauf (147,6). Die Wonneproppen laufen und laufen und werden dabei schwerer — ein physikalisches Wunder, das die Wissenschaft noch beschäftigen wird.\n\nCoach Lars zieht daraus den einzig logischen Schluss und stellt die Lauferei grundsätzlich in Frage: Ob wir nicht besser mit zum Heuen gekommen wären? Der Mann hat leicht reden — er selbst ist mit 82,8 nochmals 0,7 Kilo losgeworden und erbt inzwischen im Rückwärtsgang. Bei den Skinny Bitches läuft aktuell schlicht alles in die falsche Richtung: Die Dicken werden schwerer, die Dünnen dünner. Nur Mikl bleibt als einzige Konstante und sagt dazu wie immer - nichts."
+    },
+    {
+      date: "2026-07-20",
+      typ: "lauf",
+      title: "Helium, Himalaya und Liebe",
+      text: "Volle Hütte am Skinny Bitch Monday! Nebst den drei Stammkräften Gordo, Rocket-Man und Coach Sexybless liefen im Rahmen des Ferienpass Obersimmental auch Gordos Kinder mit — und als wäre das nicht genug, gesellten sich die Gebrüder «Los Kropfos» als Mitläufer dazu. Die beiden Halb-Thais waren heute auf Schnupperkurs und gelobten ihre baldige Rückkehr bei unserer Montagabend-Routine. Der Ogi-Weg hat Hochsaison, gelaufen wurde standesgemäss die grosse Runde inklusive Anaconda-Loop. Nach nun bald 100 gemeinsamen Kilometer, werden die ersten \"Strassenschäden\" sichtbar. Viele Baumwurzeln auf dem Pfad sind mittlerweile freigelegt, weil die Verdrängung und der Hufen der Dicken einsetzt. Das macht den Spass zum Hindernisparcours wo man seine Augen stets auf dem Boden haben muss, damit man sich nicht auf die Fresse legt.\n\nBeim heutigen Andrang kam es am Treppenaufstieg zu Wartezeiten wie am Hillary Step im Himalaya. Coach Lars nutzte den Stau für etwas Bergsteiger-Folklore: Gemäss Überlieferung müsse jeder 12. Dicke beim Anaconda-Treppenaufstieg sein Leben lassen — und als Letzter in der Schlange könnte es rechnerisch Severin treffen. Passiert ist gar nichts. Nomal Schwein gha gopfertelli.\n\nIm Gegenteil: Rocket-Man schwitzt nicht mal richtig. Die Expedition kam einstimmig zum Schluss, dass er nur aus Helium und Liebe besteht — anders ist sein gemütliches, schwereloses Wanken nicht zu erklären."
     }
   ]
 };
