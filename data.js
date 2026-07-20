@@ -188,40 +188,35 @@ window.SKINNY = {
         { date: "2026-07-20", km: 15.19 }
       ]
     },
+    /* ===== MISSED IN ACTION seit 20.7.2026 =====================================
+       Mika ist nach 4 Verblass-Stufen offiziell vermisst (Nachruf im Logbuch).
+       Kommt er zurück: diesen Block wieder einkommentieren (Komma nach Lars'
+       Objekt nicht vergessen) und den fadeStage entfernen.
     {
       id: "mika",
       photo: "assets/mika.jpg",
       name: "Mika",
       nick: "Mother²-Mikl",
       role: "coach",
-      weightTrend: "up",   // erbt die Kilos der anderen — seine Kurve darf steigen
+      weightTrend: "up",
       heightCm: 182,
       birthYear: 1997,
-      estimated: true,   // keine Waage — Gewicht geschätzt
-      // Verblass-Countdown: Mika erscheint nicht mehr. Stufe 1–4 macht seine Karte
-      // schrittweise transparenter (Start 29.6.). Kommt er am 20.7. nicht, fliegt er raus.
+      estimated: true,
       fadeStage: 3,
       bio: "Boltigens berüchtigtster Bruder. Erbt die Kilos der anderen, statt selber welche zu lassen — und hat endlich ein Zweithobby. Beim Auftakt fehlte er; die Kilometer holt er nach.",
-      // am 1.6. gewogen, aber nicht mitgelaufen -> 0 km
       history: [
         { date: "2026-06-01", weightKg: 81.0, km: 0 },
         { date: "2026-06-04", weightKg: 81.2, km: 0 },
-        // 9.6. erster Lauf (Mikls Debüt): Ogi + Anaconda-Loop (+3.41 km)
         { date: "2026-06-09", km: 3.41 },
-        // 11.6. Wägung — Mika weiter Schätzwert (keine Waage)
         { date: "2026-06-11", weightKg: 81.2, km: 3.41 },
-        // 18.6. Wägung — weiter ohne Waage, Schätzwert unverändert
         { date: "2026-06-18", weightKg: 81.2, km: 3.41 },
-        // 25.6. Wägung — weiter Phantom, Schätzwert unverändert
         { date: "2026-06-25", weightKg: 81.2, km: 3.41 },
-        // 2.7. Wägung — weiter verschollen, Schätzwert unverändert
         { date: "2026-07-02", weightKg: 81.2, km: 3.41 },
-        // 9.7. Wägung — schätzungsweise unverändert, wie alles an ihm
         { date: "2026-07-09", weightKg: 81.2, km: 3.41 },
-        // 16.7. Wägung — die einzige Konstante, Schätzwert unverändert
         { date: "2026-07-16", weightKg: 81.2, km: 3.41 }
       ]
     }
+    ============================================================================ */
 
   ],
 
@@ -348,6 +343,18 @@ window.SKINNY = {
       typ: "waage",
       title: "Der Coach zweifelt am Geschäftsmodell",
       text: "Wägetag, und die Waage spuckt nur schlechte Nachrichten. Gordo stemmt sich mit 160,5 wieder über die Schallmauer (+0,7) — die lange Runde vom Vortag war offenbar nur der Appetizer fürs Abendessen. Rocket-Man legt nochmals 0,1 drauf (147,6). Die Wonneproppen laufen und laufen und werden dabei schwerer — ein physikalisches Wunder, das die Wissenschaft noch beschäftigen wird.\n\nCoach Lars zieht daraus den einzig logischen Schluss und stellt die Lauferei grundsätzlich in Frage: Ob wir nicht besser mit zum Heuen gekommen wären? Der Mann hat leicht reden — er selbst ist mit 82,8 nochmals 0,7 Kilo losgeworden und erbt inzwischen im Rückwärtsgang. Bei den Skinny Bitches läuft aktuell schlicht alles in die falsche Richtung: Die Dicken werden schwerer, die Dünnen dünner. Nur Mikl bleibt als einzige Konstante und sagt dazu wie immer - nichts."
+    },
+    {
+      // Nachruf bewusst VOR dem Lauf-Eintrag vom selben Tag: bei gleichem Datum
+      // zeigt die (stabile) Sortierung den früher stehenden Eintrag zuoberst.
+      date: "2026-07-20",
+      typ: "nachruf",
+      title: "Missed in Action: Mother²-Mikl",
+      text: "Die Skinny Bitches nehmen Abschied von ihrem Gründungsmitglied Mother²-Mikl, Coach, Ernährungsberater und Boltigens berüchtigtstem Bruder. Zuletzt gesehen am 9. Juni 2026 auf dem Ogi-Weg, im olympischen Trainingsjäggli aus Bormio. Seither: Funkstille. Sieben Wägungen, kein Lebenszeichen, keine Waage — er blieb sich bis zum Schluss treu.\n\nSeine Bilanz bleibt unerreicht: 3,41 Kilometer in zwei Monaten, geschätzte 81,2 Kilo (nie verifiziert), plus 0,2 geerbte Kilo und eine selbst verordnete Low-Carb-Diät aus Eierlikör und Baileys, deren Wirkung die Wissenschaft nie überprüfen konnte. Er verblasste wie ein Hundehaufen am Simme-Port. Heute nehmen wir Abschied und ihn vom Netz. Die offene Feierabendszene vor dem Volg hat gewonnen. Boltigens Letten hat einen weiteren guten Mann verschluckt.\n\nAber: Bei den Skinny Bitches gibt es kein Vergessen, nur Vermisste. Sollte Mikl eines Montags wieder in der Schinti auftauchen, kriegt er Karte, Kurve und Schätzgewicht zurück — und eine Doppelrunde als Busse. Bis dahin: Machs gut, Mikl. Und iss auch zwischen den Geburtstagen mal was.",
+      photoDir: "assets/runs/2026-07-20",
+      photos: [
+        { file: "mikl-nachruf", caption: "In stillem Gedenken: Mother²-Mikl (*1997 — vermisst 2026). Zuletzt gesehen im olympischen Trainingsjäggli aus Bormio." }
+      ]
     },
     {
       date: "2026-07-20",

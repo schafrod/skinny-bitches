@@ -956,6 +956,11 @@ a { color: inherit; }
 }
 .log__tag--lauf { color: var(--ink); }
 .log__tag--waage { color: var(--blood); }
+.log__tag--nachruf { color: var(--paper); background: var(--blood); border-color: var(--blood); }
+
+/* Nachruf-Foto im Todesanzeigen-Stil: s/w, dicker Trauerrand, kein Sepia */
+.log__entry--nachruf .log__photo { border-width: 3px; box-shadow: 4px 4px 0 var(--ink); }
+.log__entry--nachruf .log__photo img { filter: grayscale(1) contrast(1.05); }
 .log__title {
   font-family: var(--f-display);
   font-size: 1.12rem;

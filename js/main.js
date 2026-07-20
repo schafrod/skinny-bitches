@@ -347,9 +347,8 @@
     // neuester Eintrag zuoberst
     entries.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
     host.innerHTML = entries.map((e, i) => {
-      const isLauf = e.typ === "lauf";
-      const tag = isLauf ? "Lauf" : "Wägung";
-      const tagCls = isLauf ? "log__tag--lauf" : "log__tag--waage";
+      const tag = e.typ === "lauf" ? "Lauf" : e.typ === "nachruf" ? "Nachruf" : "Wägung";
+      const tagCls = "log__tag--" + (e.typ === "lauf" ? "lauf" : e.typ === "nachruf" ? "nachruf" : "waage");
       const title = escAttr(e.title || tag);
       const body = String(e.text || "").trim()
         .split(/\n{2,}/)
@@ -365,7 +364,7 @@
       }
       // Nur der neueste Eintrag (i === 0) ist aufgeklappt, die älteren zu.
       return `
-      <details class="log__entry"${i === 0 ? " open" : ""}>
+      <details class="log__entry${e.typ === "nachruf" ? " log__entry--nachruf" : ""}"${i === 0 ? " open" : ""}>
         <summary class="log__head">
           <div class="log__meta">
             <time class="log__date" datetime="${e.date}">${longDate(e.date)}</time>
@@ -417,11 +416,11 @@
     const track = $("#ticker-track");
     if (!track) return;
     const entries = (Array.isArray(D.log) ? D.log.slice() : [])
-      .sort((a, b) => (a.date < b.date ? 1 : -1))
+      .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
       .slice(0, 3);
     if (!entries.length) { $("#ticker").style.display = "none"; return; }
     const items = entries.map((e) =>
-      `<span class="ticker__item">+++ ${shortDate(e.date)} <b>${e.typ === "lauf" ? "Lauf" : "Wägung"}:</b> ${escAttr(e.title || "")}</span>`
+      `<span class="ticker__item">+++ ${shortDate(e.date)} <b>${e.typ === "lauf" ? "Lauf" : e.typ === "nachruf" ? "Nachruf" : "Wägung"}:</b> ${escAttr(e.title || "")}</span>`
     ).join("");
     track.innerHTML = items + items; // 2x für nahtlosen Loop (translateX -50%)
     // Tempo an Inhaltslänge koppeln (~60 px/s), sonst rast kurzer Inhalt
