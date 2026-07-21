@@ -353,7 +353,7 @@ window.SKINNY = {
       text: "Die Skinny Bitches nehmen Abschied von ihrem Gründungsmitglied Mother²-Mikl, Coach, Ernährungsberater und Boltigens berüchtigtstem Bruder. Zuletzt gesehen am 9. Juni 2026 auf dem Ogi-Weg, im olympischen Trainingsjäggli aus Bormio. Seither: Funkstille. Sieben Wägungen, kein Lebenszeichen, keine Waage — er blieb sich bis zum Schluss treu.\n\nSeine Bilanz bleibt unerreicht: 3,41 Kilometer in zwei Monaten, geschätzte 81,2 Kilo (nie verifiziert), plus 0,2 geerbte Kilo und eine selbst verordnete Low-Carb-Diät aus Eierlikör und Baileys, deren Wirkung die Wissenschaft nie überprüfen konnte. Er verblasste wie ein Hundehaufen am Simme-Port. Heute nehmen wir Abschied und ihn vom Netz. Die offene Feierabendszene vor dem Volg hat gewonnen. Boltigens Letten hat einen weiteren guten Mann verschluckt.\n\nAber: Bei den Skinny Bitches gibt es kein Vergessen, nur Vermisste. Sollte Mikl eines Montags wieder in der Schinti auftauchen, kriegt er Karte, Kurve und Schätzgewicht zurück — und eine Doppelrunde als Busse. Bis dahin: Machs gut, Mikl. Und iss auch zwischen den Geburtstagen mal was.",
       photoDir: "assets/runs/2026-07-20",
       photos: [
-        { file: "mikl-nachruf", caption: "Zuletzt gesehen vor dem Volg Boltigen." }
+        { file: "mikl-nachruf", caption: "Vermisst seit 9.6.26: Mother²-Mikl. Zuletzt gesehen vor dem Volg Boltigen." }
       ]
     },
     {
