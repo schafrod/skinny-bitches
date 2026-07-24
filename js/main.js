@@ -167,16 +167,24 @@
     return { min: fromZero ? 0 : Math.floor(min / step) * step, max: Math.ceil(max / step) * step, step };
   }
 
-  function buildChart(valueKey, fromZero, unit) {
+  function buildChart(valueKey, fromZero, unit, onlyIncreases) {
     const people = D.people.filter((p) => !p.memorial);  // Gedenk-Karten ohne Kurve
+    // onlyIncreases (km-Chart): Punkt nur, wenn der Wert gegenüber dem vorherigen
+    // Eintrag gestiegen ist (= es wurde wirklich gelaufen). Wäge-Donnerstage tragen
+    // das kumulierte km zwar mit, sollen aber keinen eigenen Knoten zeichnen.
+    const rowsFor = (p) => {
+      const rows = hist(p).filter((r) => r[valueKey] != null);
+      if (!onlyIncreases) return rows;
+      return rows.filter((r, i) => i === 0 || r[valueKey] > rows[i - 1][valueKey] + 1e-9);
+    };
     const dateSet = new Set();
-    people.forEach((p) => hist(p).forEach((h) => { if (h[valueKey] != null) dateSet.add(h.date); }));
+    people.forEach((p) => rowsFor(p).forEach((h) => dateSet.add(h.date)));
     const dates = [...dateSet].sort();
     const n = dates.length;
     const idxOf = (d) => dates.indexOf(d);
 
     const vals = [];
-    people.forEach((p) => hist(p).forEach((h) => { if (h[valueKey] != null) vals.push(h[valueKey]); }));
+    people.forEach((p) => rowsFor(p).forEach((h) => vals.push(h[valueKey])));
     if (!vals.length) vals.push(0, 1); // Sicherheitsnetz, falls noch gar nichts da ist
 
     const nb = niceBounds(Math.min(...vals), Math.max(...vals), fromZero);
@@ -213,7 +221,7 @@
 
     // Linien + Punkte (Personen ohne Messung tragen nichts bei)
     people.forEach((p, si) => {
-      const h = hist(p).filter((row) => row[valueKey] != null);
+      const h = rowsFor(p);
       if (!h.length) return;
       const st = SERIES_STYLES[si % SERIES_STYLES.length];
       const pts = h.map((row) => ({ x: xFor(idxOf(row.date)), y: yFor(row[valueKey]), v: row[valueKey], date: row.date }));
@@ -254,7 +262,7 @@
     const w = $("#chart-weight");
     if (w) { const r = buildChart("weightKg", false, "kg"); w.innerHTML = r.svg; renderLegend("#legend-weight", r.n); }
     const k = $("#chart-km");
-    if (k) { const r = buildChart("km", true, "km"); k.innerHTML = r.svg; renderLegend("#legend-km", r.n); }
+    if (k) { const r = buildChart("km", true, "km", true); k.innerHTML = r.svg; renderLegend("#legend-km", r.n); }
     wireChartTooltips();
   }
 
