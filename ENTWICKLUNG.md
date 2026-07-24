@@ -34,7 +34,7 @@ In `data.js` bei jeder Person unten im `history`-Array einen Eintrag anhängen:
 **Lauf-Fotos:** Ein Logbuch-Eintrag kann `photoDir` + `photos: [{ file, caption }]` haben → Thumbnail-Reihe unter dem Text, Klick öffnet ein Lightbox-Overlay (`wireLightbox` in main.js; Esc/Klick schliesst). Bilder liegen in `assets/runs/JJJJ-MM-TT/`: pro Foto `<slug>.jpg` (Vollbild ~1600px) **und** `<slug>-t.jpg` (Thumb ~440px). Original-Fotos kommen nach `Fotos/` (gitignored) und werden mit PIL verkleinert/komprimiert (EXIF-Drehung via `ImageOps.exif_transpose`), Vintage-Sepia per CSS-`filter`.
 
 ## Wichtig bei Design-Änderungen
-CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=28`, `main.js?v=21`). **Ticker:** Telegramm-Laufband unter der Nav zeigt automatisch die letzten 3 Logbuch-Titel (`renderTicker` in main.js) — beim Wochenupdate nichts extra zu pflegen. **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
+CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=29`, `main.js?v=22`). **Ticker:** Telegramm-Laufband unter der Nav zeigt automatisch die letzten 3 Logbuch-Titel (`renderTicker` in main.js) — beim Wochenupdate nichts extra zu pflegen. **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
 
 ## Die Crew (alle Werte echt)
 | Person | Nick | Rolle | Grösse | Jg. | Start-kg |
@@ -60,7 +60,7 @@ Läufe bis **29.6.**: 1.6. Auftakt · 8.6. Chrigu solo (Anaconda) · 9.6. Crew k
 | Lars | 83,5 (−1,0, „Erben misslingt") | 11,78 |
 | Mika | ≈81,2 (+0,2, geschätzt) | 3,41 |
 
-**Mika = MISSED IN ACTION (seit 20.7.):** Nach 3 Verblass-Stufen am 20.7. offiziell vermisst. Nachruf-Logbucheintrag „Missed in Action: Mother²-Mikl" (eigener `typ: "nachruf"` mit gefülltem Badge + s/w-Todesanzeigen-Foto). Sein `people`-Objekt ist in `data.js` **auskommentiert konserviert** — Rückkehr = Block einkommentieren (Komma!), `fadeStage` raus, Seiten-Texte zurückdrehen (Mission/Crew/Kurven/Shame/FAQ sprechen jetzt von 3er-Crew + Vermisstem). Die `.card--fade-1..4`-CSS-Klassen bleiben für künftige Verblass-Fälle.
+**Mika = MISSED IN ACTION (seit 20.7.):** Nachruf-Logbucheintrag „Missed in Action: Mother²-Mikl" (eigener `typ: "nachruf"` mit gefülltem Badge + s/w-Todesanzeigen-Foto). Sein `people`-Objekt ist seit 23.7. wieder aktiv als **Gedenk-Karte** (`memorial: true`): erscheint in der Crew (s/w-Porträt mit Trauerrand, Badge „Vermisst", Bilanz eingefroren, Box „Vermisst seit 9.6.26 — zuletzt gesehen vor dem Volg"), zählt aber **nicht** in Kurven/Hall of Shame/Legende. Rückkehr = `memorial` entfernen, history normal weiterführen, Seiten-Texte zurückdrehen (Mission/Crew/Kurven/Shame/FAQ sprechen von 3er-Crew + Vermisstem). `.card--fade-1..4`-CSS bleibt für künftige Verblass-Fälle.
 
 ## Strecke (aus echter GPX)
 Rundkurs Schinti → Boltigen → Schinti, **2,79 km, 159 hm, höchster Punkt 855 m**. Höhenprofil ist aus der echten GPX gezeichnet (`Skinny-Bitch-Track.gpx`, liegt auf Christians Desktop), im flachen SchweizMobil-Maßstab mit beschrifteten Achsen. (Anzeige rundet auf 1 Kommastelle → „2,8 km".)
