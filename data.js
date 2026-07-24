@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-07-20",
+  lastUpdate: "2026-07-23",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -106,7 +106,9 @@ window.SKINNY = {
         // 16.7. Wägung: wieder über der Schallmauer (+0.7)
         { date: "2026-07-16", weightKg: 160.5, km: 46.19 },
         // 20.7. Skinny Bitch Monday: volle Hütte, grosse Runde inkl. Anaconda-Loop -> +3.41
-        { date: "2026-07-20", km: 49.60 }
+        { date: "2026-07-20", km: 49.60 },
+        // 23.7. Wägung: wieder unter der Schallmauer, Bestwert seit Start
+        { date: "2026-07-23", weightKg: 159.5, km: 49.60 }
       ]
     },
     {
@@ -149,7 +151,9 @@ window.SKINNY = {
         // 16.7. Wägung: nochmals +0.1
         { date: "2026-07-16", weightKg: 147.6, km: 25.57 },
         // 20.7. grosse Runde inkl. Anaconda-Loop -> +3.41
-        { date: "2026-07-20", km: 28.98 }
+        { date: "2026-07-20", km: 28.98 },
+        // 23.7. Wägung: aufs Gramm wie letzte Woche
+        { date: "2026-07-23", weightKg: 147.6, km: 28.98 }
       ]
     },
 
@@ -185,13 +189,15 @@ window.SKINNY = {
         // 16.7. Wägung: erbt im Rückwärtsgang (-0.7), neuer Tiefststand
         { date: "2026-07-16", weightKg: 82.8, km: 11.78 },
         // 20.7. grosse Runde inkl. Anaconda-Loop -> +3.41
-        { date: "2026-07-20", km: 15.19 }
+        { date: "2026-07-20", km: 15.19 },
+        // 23.7. Wägung: verdunstet weiter (-0.4)
+        { date: "2026-07-23", weightKg: 82.4, km: 15.19 }
       ]
     },
-    /* ===== MISSED IN ACTION seit 20.7.2026 =====================================
-       Mika ist nach 4 Verblass-Stufen offiziell vermisst (Nachruf im Logbuch).
-       Kommt er zurück: diesen Block wieder einkommentieren (Komma nach Lars'
-       Objekt nicht vergessen) und den fadeStage entfernen.
+    /* ----- MISSED IN ACTION seit 20.7.2026 (Nachruf im Logbuch) -----
+       memorial: true = Gedenk-Karte: erscheint in der Crew (s/w, Badge "Vermisst",
+       Bilanz eingefroren), zählt aber NICHT in Kurven/Hall of Shame/Legende.
+       Kommt Mika zurück: memorial entfernen, history normal weiterführen. */
     {
       id: "mika",
       photo: "assets/mika.jpg",
@@ -202,7 +208,7 @@ window.SKINNY = {
       heightCm: 182,
       birthYear: 1997,
       estimated: true,
-      fadeStage: 3,
+      memorial: true,
       bio: "Boltigens berüchtigtster Bruder. Erbt die Kilos der anderen, statt selber welche zu lassen — und hat endlich ein Zweithobby. Beim Auftakt fehlte er; die Kilometer holt er nach.",
       history: [
         { date: "2026-06-01", weightKg: 81.0, km: 0 },
@@ -216,7 +222,6 @@ window.SKINNY = {
         { date: "2026-07-16", weightKg: 81.2, km: 3.41 }
       ]
     }
-    ============================================================================ */
 
   ],
 
@@ -361,6 +366,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Helium, Himalaya und Liebe",
       text: "Volle Hütte am Skinny Bitch Monday! Nebst den drei Stammkräften Gordo, Rocket-Man und Coach Sexybless liefen im Rahmen des Ferienpass Obersimmental auch Gordos Kinder mit — und als wäre das nicht genug, gesellten sich die Gebrüder «Los Kropfos» als Mitläufer dazu. Die beiden Halb-Thais waren heute auf Schnupperkurs und gelobten ihre baldige Rückkehr bei unserer Montagabend-Routine. Der Ogi-Weg hat Hochsaison, gelaufen wurde standesgemäss die grosse Runde inklusive Anaconda-Loop. Nach nun bald 100 gemeinsamen Kilometer, werden die ersten \"Strassenschäden\" sichtbar. Viele Baumwurzeln auf dem Pfad sind mittlerweile freigelegt, weil die Verdrängung und der Hufen der Dicken einsetzt. Das macht den Spass zum Hindernisparcours wo man seine Augen stets auf dem Boden haben muss, damit man sich nicht auf die Fresse legt.\n\nBeim heutigen Andrang kam es am Treppenaufstieg zu Wartezeiten wie am Hillary Step im Himalaya. Coach Lars nutzte den Stau für etwas Bergsteiger-Folklore: Gemäss Überlieferung müsse jeder 12. Dicke beim Anaconda-Treppenaufstieg sein Leben lassen — und als Letzter in der Schlange könnte es rechnerisch Severin treffen. Passiert ist gar nichts. Nomal Schwein gha gopfertelli.\n\nIm Gegenteil: Rocket-Man schwitzt nicht mal richtig. Die Expedition kam einstimmig zum Schluss, dass er nur aus Helium und Liebe besteht — anders ist sein gemütliches, schwereloses Wanken nicht zu erklären."
+    },
+    {
+      date: "2026-07-23",
+      typ: "waage",
+      title: "Einer fehlt, einer schwindet",
+      text: "Erster Waagtag ohne Mikl — und die Lücke füllt sich auf unheimliche Art: Coach Lars schrumpft schon wieder. 82,4, nochmals 0,4 weniger. Wer erben soll und stattdessen verdunstet, hat das Konzept nicht begriffen oder aber - die zwei Mähdrescher fressen dem Kommunal-Sprenzel alles weg.\n\nBei den Dicken läuft's einigermassen rund (wie sollte es auch anders): Gordo drückt sich mit 159,5 wieder unter die Schallmauer — mit minus 1,0 zumindest mal ein Lebenszeichen. Die Wurst-Kur, das Laufpensum, irgendwas wirkt. Rocket-Man hält derweil stoisch an seinen 147,6 fest — auf das Gramm genau wie letzte Woche. Wie ein zuverlässiges Uhrwerk. Nur die Richtung müsste noch justiert werden."
     }
   ]
 };

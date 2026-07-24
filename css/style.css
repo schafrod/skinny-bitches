@@ -504,6 +504,16 @@ a { color: inherit; }
 .card--fade-3 { opacity: 0.32; filter: grayscale(0.7); }
 .card--fade-4 { opacity: 0.16; filter: grayscale(1); }
 
+/* Gedenk-Karte (memorial: true): voll sichtbar, aber s/w mit Trauerrand.
+   Bilanz eingefroren und leicht ausgegraut; zählt nicht in Kurven/Ranking. */
+.card--memorial img.portrait {
+  filter: grayscale(1) contrast(1.05);
+  border-width: 3px;
+}
+.card--memorial .specs { opacity: 0.65; }
+.card__role--memorial { color: var(--paper); background: var(--blood); border-color: var(--blood); }
+.progress--memorial { color: var(--blood); border-color: var(--blood); }
+
 /* ===================== STRECKE / OGI-WEG ===================== */
 .strecke { max-width: 920px; margin: 0 auto; }
 .strecke__stats {

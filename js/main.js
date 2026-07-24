@@ -75,7 +75,10 @@
       const success = wantsUp ? d > 0.05 : d < -0.05;
 
       let progCls, progTxt;
-      if (!has) {
+      if (p.memorial) {
+        progCls = "progress--memorial";
+        progTxt = "Vermisst seit 9.6.26 — zuletzt gesehen vor dem Volg";
+      } else if (!has) {
         progCls = "progress--flat";
         progTxt = "Beim Auftakt gefehlt";
       } else if (!moved) {
@@ -89,9 +92,9 @@
         progTxt = (d > 0 ? "+" : "−") + num(Math.abs(d)) + " kg " + (wantsUp ? "— Erben misslingt" : "— Buffet führt");
       }
 
-      const fadeCls = p.fadeStage ? ` card--fade card--fade-${p.fadeStage}` : "";
-      const roleCls = p.role === "coach" ? "card__role--coach" : "card__role--trainee";
-      const roleTxt = p.role === "coach" ? "Coach" : "Opfer";
+      const fadeCls = p.memorial ? " card--memorial" : (p.fadeStage ? ` card--fade card--fade-${p.fadeStage}` : "");
+      const roleCls = p.memorial ? "card__role--memorial" : (p.role === "coach" ? "card__role--coach" : "card__role--trainee");
+      const roleTxt = p.memorial ? "Vermisst" : (p.role === "coach" ? "Coach" : "Opfer");
       const initials = p.name.split(/\s+/).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
       const portrait = p.photo
         ? `<img class="portrait" src="${p.photo}" alt="${p.name}">`
@@ -115,7 +118,7 @@
           <li><span class="k">BMI</span><span class="dots"></span><span class="v">${bmi}</span></li>
         </ul>
         <div class="progress ${progCls}"><b>${progTxt}</b></div>
-        ${p.estimated ? '<p class="card__note">Schätzung – Mika hat noch keine Waage</p>' : ""}
+        ${p.estimated && !p.memorial ? '<p class="card__note">Schätzung – Mika hat noch keine Waage</p>' : ""}
         ${p.bio ? `<p class="card__bio">${p.bio}</p>` : ""}
       </article>`;
     }).join("");
@@ -165,7 +168,7 @@
   }
 
   function buildChart(valueKey, fromZero, unit) {
-    const people = D.people;
+    const people = D.people.filter((p) => !p.memorial);  // Gedenk-Karten ohne Kurve
     const dateSet = new Set();
     people.forEach((p) => hist(p).forEach((h) => { if (h[valueKey] != null) dateSet.add(h.date); }));
     const dates = [...dateSet].sort();
@@ -235,7 +238,7 @@
   function renderLegend(sel, n) {
     const host = $(sel);
     if (!host) return;
-    let html = D.people.map((p, si) => {
+    let html = D.people.filter((p) => !p.memorial).map((p, si) => {
       if (!hist(p).length) return "";   // ohne Messung kein Legenden-Eintrag
       const st = SERIES_STYLES[si % SERIES_STYLES.length];
       const style = `border-top-color:${st.color};border-top-style:${st.dash ? "dashed" : "solid"}`;
@@ -291,7 +294,7 @@
 
     // Gewertet wird der Fortschritt Richtung EIGENES Ziel:
     // Opfer (down) zählt das Abgenommene, Coaches (up) das Zugenommene ("erben").
-    const rows = D.people.filter((p) => currW(p)).map((p) => {
+    const rows = D.people.filter((p) => !p.memorial && currW(p)).map((p) => {
       const s0 = startW(p).weightKg;
       const d = currW(p).weightKg - s0;            // < 0 = abgenommen
       const pct = s0 ? (d / s0) * 100 : 0;        // vorzeichenbehaftet, % vom Ausgangsgewicht
