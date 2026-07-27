@@ -563,7 +563,12 @@ a { color: inherit; }
 .profile__grid { stroke: var(--ink-faint); stroke-width: 1; stroke-dasharray: 2 4; opacity: 0.45; vector-effect: non-scaling-stroke; }
 .profile__fill { fill: url(#hatch); opacity: 0.5; }
 .profile__line { fill: none; stroke: var(--ink); stroke-width: 2.5; vector-effect: non-scaling-stroke; }
-.profile__line--anaconda { stroke: var(--blood); stroke-width: 2; }
+/* Anaconda-Runde: gestrichelt in Oxblood — auf gemeinsamen Abschnitten scheint
+   die Ink-Linie durch die Lücken, ab dem Abzweig läuft sie allein bis 3,4 km */
+.profile__line--anaconda { stroke: var(--blood); stroke-width: 2; stroke-dasharray: 6 4; }
+/* Endpunkt-Marker: macht sichtbar, dass die zwei Runden verschieden lang sind */
+.profile__end--ogi { fill: var(--ink); }
+.profile__end--anaconda { fill: var(--blood); }
 .profile__xaxis {
   display: flex;
   justify-content: space-between;
@@ -589,7 +594,7 @@ a { color: inherit; }
 }
 .profile__legend-item { display: inline-flex; align-items: center; gap: 8px; }
 .profile__swatch { width: 26px; height: 0; border-top: 3px solid var(--ink); }
-.profile__swatch--anaconda { border-top-color: var(--blood); }
+.profile__swatch--anaconda { border-top-color: var(--blood); border-top-style: dashed; }
 
 .profile__cap {
   display: flex;
