@@ -569,22 +569,17 @@ a { color: inherit; }
 /* Endpunkt-Marker: macht sichtbar, dass die zwei Runden verschieden lang sind */
 .profile__end--ogi { fill: var(--ink); }
 .profile__end--anaconda { fill: var(--blood); }
-/* Vertikale Markierung + Label am Ogi-Ende (2,8 km) */
+/* Vertikale Markierung am Ogi-Ende (2,8 km); Label steht unten in der X-Achse */
 .profile__marker { stroke: var(--ink); stroke-width: 1; stroke-dasharray: 3 3; opacity: 0.6; vector-effect: non-scaling-stroke; }
-.profile__marker-label {
+.profile__xaxis-mark {
   position: absolute;
-  top: 2px;
+  top: 0;
   transform: translateX(-50%);
-  font-family: var(--f-mono);
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: var(--ink);
-  background: var(--paper);
-  padding: 0 4px;
   white-space: nowrap;
 }
 .profile__xaxis {
+  position: relative;   /* Anker für die absolute 2,8-km-Marke */
   display: flex;
   justify-content: space-between;
   margin: 8px 0 14px 52px;
