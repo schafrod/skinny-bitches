@@ -145,7 +145,6 @@
         <div class="stat">
           <div class="stat__num">${num(r.hoehe_max ?? 0)}<span class="unit"> m</span></div>
           <div class="stat__label">Höchster Punkt</div>
-          ${sub(`mit Anaconda-Loop ${num(r.hoehe_max ?? 0)} m`)}
         </div>`;
     }
     // Orte ins Höhenprofil (Start · via · Ziel)
