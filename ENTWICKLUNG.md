@@ -34,7 +34,7 @@ In `data.js` bei jeder Person unten im `history`-Array einen Eintrag anhängen:
 **Lauf-Fotos:** Ein Logbuch-Eintrag kann `photoDir` + `photos: [{ file, caption }]` haben → Thumbnail-Reihe unter dem Text, Klick öffnet ein Lightbox-Overlay (`wireLightbox` in main.js; Esc/Klick schliesst). Bilder liegen in `assets/runs/JJJJ-MM-TT/`: pro Foto `<slug>.jpg` (Vollbild ~1600px) **und** `<slug>-t.jpg` (Thumb ~440px). Original-Fotos kommen nach `Fotos/` (gitignored) und werden mit PIL verkleinert/komprimiert (EXIF-Drehung via `ImageOps.exif_transpose`), Vintage-Sepia per CSS-`filter`.
 
 ## Wichtig bei Design-Änderungen
-CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=31`, `main.js?v=25`). km-Chart zeichnet Punkte nur bei echtem Lauf (km gestiegen) — Wäge-Einträge tragen km zwar mit, erzeugen aber keinen Knoten. **Ticker:** Telegramm-Laufband unter der Nav zeigt automatisch die letzten 3 Logbuch-Titel (`renderTicker` in main.js) — beim Wochenupdate nichts extra zu pflegen. **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
+CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=33`, `main.js?v=25`). km-Chart zeichnet Punkte nur bei echtem Lauf (km gestiegen) — Wäge-Einträge tragen km zwar mit, erzeugen aber keinen Knoten. **Ticker:** Telegramm-Laufband unter der Nav zeigt automatisch die letzten 3 Logbuch-Titel (`renderTicker` in main.js) — beim Wochenupdate nichts extra zu pflegen. **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
 
 ## Die Crew (alle Werte echt)
 | Person | Nick | Rolle | Grösse | Jg. | Start-kg |
