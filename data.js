@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-07-23",
+  lastUpdate: "2026-07-27",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -45,7 +45,13 @@ window.SKINNY = {
     hoehenmeter: 159,         // Höhenmeter Aufstieg pro Runde
     hoehe_max: 855,           // höchster Punkt (m ü. M.)
     orte: ["Schinti", "Boltigen", "Schinti"],  // Rundkurs: Start = Ziel = Schinti, via Boltigen
-    url: "https://schweizmobil.ch/de/tour/372593981"   // Strecke auf SchweizMobil
+    url: "https://schweizmobil.ch/de/tour/372593981",  // Strecke auf SchweizMobil
+    // Erweiterte Runde: Ogi-Weg + Helsana-Trails der Simme entlang ("Anaconda-Loop")
+    anaconda: {
+      laenge_km: 3.41,
+      hoehenmeter: 200,        // aus SchweizMobil-API (totalup 199.9)
+      url: "https://schweizmobil.ch/de/tour/1341889130"
+    }
   },
 
   // Die vier. role: "trainee" (die Dicken) | "coach" (die Schlanken).
@@ -108,7 +114,9 @@ window.SKINNY = {
         // 20.7. Skinny Bitch Monday: volle Hütte, grosse Runde inkl. Anaconda-Loop -> +3.41
         { date: "2026-07-20", km: 49.60 },
         // 23.7. Wägung: wieder unter der Schallmauer, Bestwert seit Start
-        { date: "2026-07-23", weightKg: 159.5, km: 49.60 }
+        { date: "2026-07-23", weightKg: 159.5, km: 49.60 },
+        // 27.7. Skinny Bitch Monday: Trail mit Anaconda-Loop -> +3.41
+        { date: "2026-07-27", km: 53.01 }
       ]
     },
     {
@@ -153,7 +161,9 @@ window.SKINNY = {
         // 20.7. grosse Runde inkl. Anaconda-Loop -> +3.41
         { date: "2026-07-20", km: 28.98 },
         // 23.7. Wägung: aufs Gramm wie letzte Woche
-        { date: "2026-07-23", weightKg: 147.6, km: 28.98 }
+        { date: "2026-07-23", weightKg: 147.6, km: 28.98 },
+        // 27.7. ordinäre Runde (bei Kräften bleiben für München) -> +2.79
+        { date: "2026-07-27", km: 31.77 }
       ]
     },
 
@@ -372,6 +382,12 @@ window.SKINNY = {
       typ: "waage",
       title: "Einer fehlt, einer schwindet",
       text: "Erster Waagtag ohne Mikl — und die Lücke füllt sich auf unheimliche Art: Coach Lars schrumpft schon wieder. 82,4, nochmals 0,4 weniger. Wer erben soll und stattdessen verdunstet, hat das Konzept nicht begriffen oder aber - die zwei Mähdrescher fressen dem Kommunal-Sprenzel alles weg.\n\nBei den Dicken läuft's einigermassen rund (wie sollte es auch anders): Gordo drückt sich mit 159,5 wieder unter die Schallmauer — mit minus 1,0 zumindest mal ein Lebenszeichen. Die Wurst-Kur, das Laufpensum, irgendwas wirkt. Rocket-Man hält derweil stoisch an seinen 147,6 fest — auf das Gramm genau wie letzte Woche. Wie ein zuverlässiges Uhrwerk. Nur die Richtung müsste noch justiert werden."
+    },
+    {
+      date: "2026-07-27",
+      typ: "lauf",
+      title: "Kinder-Coaches und Temu-Herzbuben",
+      text: "Skinny Bitch Monday mit halber Belegschaft: Coach Lars flickte im Auftrag des Pöbels noch Wasserleitungen, und auch Los Kropfos liessen sich nach ihrem vollmundigen Schnupperkurs-Gelübde nicht blicken. So blieben die Temu-Variante der Wildecker Herzbuben ganz unter sich — motiviert und angetrieben von Gordos Kindern, die kurzerhand das Coaching übernahmen. Kinder-Coaches sind völlig vertretbar, solange wir mit ihnen keinen Waffenmarsch machen. Nicht durchdrehen ihr politisch Korrekten. Ist ja nur der Schattseitenwald, nicht der kongolesische Dschungel.\n\nSportlich trennten sich die Wege: Gordo nahm den Skinny-Bitch-Trail mit Anaconda-Loop unter die Hufe, Rocket-Man entschied sich für die ordinäre Runde. Er wolle bei Kräften bleiben — morgen um drei Uhr früh fährt er mit Ariel für irgendein Ersatzteil nach München. Die Redaktion vermutet allerdings, dass er sich in Schland bloss ein paar McRib's hinter den Fressbalken schieben will. Welcher Simmentaler fährt schon ausserhalb von Wiesn oder Baumaschinen-Messe dorthin? Ja, ja, janu. Der Spass sei dem Brummer gegönnt. In Kilo Veritas."
     }
   ]
 };

@@ -128,19 +128,24 @@
   function renderStrecke() {
     const host = $("#strecke-stats");
     const r = D.route || {};
+    const a = r.anaconda || null;   // erweiterte Runde, farblich abgegrenzt
     if (host) {
+      const sub = (txt) => a ? `<div class="stat__sub">${txt}</div>` : "";
       host.innerHTML = `
         <div class="stat">
           <div class="stat__num">${num(r.laenge_km ?? 0)}<span class="unit"> km</span></div>
           <div class="stat__label">Eine Runde</div>
+          ${sub(`mit Anaconda-Loop ${num(a?.laenge_km ?? 0)} km`)}
         </div>
         <div class="stat">
           <div class="stat__num">${num(r.hoehenmeter ?? 0)}<span class="unit"> hm</span></div>
           <div class="stat__label">Höhenmeter</div>
+          ${sub(`mit Anaconda-Loop ${num(a?.hoehenmeter ?? 0)} hm`)}
         </div>
         <div class="stat">
           <div class="stat__num">${num(r.hoehe_max ?? 0)}<span class="unit"> m</span></div>
           <div class="stat__label">Höchster Punkt</div>
+          ${sub(`mit Anaconda-Loop ${num(r.hoehe_max ?? 0)} m`)}
         </div>`;
     }
     // Orte ins Höhenprofil (Start · via · Ziel)
@@ -151,6 +156,8 @@
     });
     const link = $("#strecke-link");
     if (link && r.url) link.href = r.url;
+    const linkA = $("#strecke-link-anaconda");
+    if (linkA && a?.url) linkA.href = a.url;
   }
 
   /* ===================== CHARTS (custom SVG) ===================== */
