@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-07-27",
+  lastUpdate: "2026-07-30",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -118,7 +118,9 @@ window.SKINNY = {
         // 27.7. Skinny Bitch Monday: Trail mit Anaconda-Loop -> +3.41
         { date: "2026-07-27", km: 53.01 },
         // 29.7. Chrigu solo, Ogi-Weg -> +2.79
-        { date: "2026-07-29", km: 55.80 }
+        { date: "2026-07-29", km: 55.80 },
+        // 30.7. Wägung: Bestwert seit Start
+        { date: "2026-07-30", weightKg: 158.9, km: 55.80 }
       ]
     },
     {
@@ -165,7 +167,9 @@ window.SKINNY = {
         // 23.7. Wägung: aufs Gramm wie letzte Woche
         { date: "2026-07-23", weightKg: 147.6, km: 28.98 },
         // 27.7. ordinäre Runde (bei Kräften bleiben für München) -> +2.79
-        { date: "2026-07-27", km: 31.77 }
+        { date: "2026-07-27", km: 31.77 },
+        // 30.7. Wägung: +0.3 — der McRib hat zugeschlagen
+        { date: "2026-07-30", weightKg: 147.9, km: 31.77 }
       ]
     },
 
@@ -203,7 +207,9 @@ window.SKINNY = {
         // 20.7. grosse Runde inkl. Anaconda-Loop -> +3.41
         { date: "2026-07-20", km: 15.19 },
         // 23.7. Wägung: verdunstet weiter (-0.4)
-        { date: "2026-07-23", weightKg: 82.4, km: 15.19 }
+        { date: "2026-07-23", weightKg: 82.4, km: 15.19 },
+        // 30.7. Wägung: verdunstet weiter (-0.2)
+        { date: "2026-07-30", weightKg: 82.2, km: 15.19 }
       ]
     },
     /* ----- MISSED IN ACTION seit 20.7.2026 (Nachruf im Logbuch) -----
@@ -390,6 +396,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Kinder-Coaches und Temu-Herzbuben",
       text: "Skinny Bitch Monday mit halber Belegschaft: Coach Lars flickte im Auftrag des Pöbels noch Wasserleitungen, und auch Los Kropfos liessen sich nach ihrem vollmundigen Schnupperkurs-Gelübde nicht blicken. So blieben die Temu-Variante der Wildecker Herzbuben ganz unter sich — motiviert und angetrieben von Gordos Kindern, die kurzerhand das Coaching übernahmen. Kinder-Coaches sind völlig vertretbar, solange wir mit ihnen keinen Waffenmarsch machen. Nicht durchdrehen ihr politisch Korrekten. Ist ja nur der Schattseitenwald, nicht der kongolesische Dschungel.\n\nSportlich trennten sich die Wege: Gordo nahm den Skinny-Bitch-Trail mit Anaconda-Loop unter die Hufe, Rocket-Man entschied sich für die ordinäre Runde. Er wolle bei Kräften bleiben — morgen um drei Uhr früh fährt er mit Ariel für irgendein Ersatzteil nach München. Die Redaktion vermutet allerdings, dass er sich in Schland bloss ein paar McRib's hinter den Fressbalken schieben will. Welcher Simmentaler fährt schon ausserhalb von Wiesn oder Baumaschinen-Messe dorthin? Ja, ja, janu. Der Spass sei dem Brummer gegönnt. In Kilo Veritas."
+    },
+    {
+      date: "2026-07-30",
+      typ: "waage",
+      title: "Der McRib hat zugeschlagen",
+      text: "Waagtag, und die Beweisführung ist abgeschlossen: Rocket-Man legt 0,3 zu (147,9) — das «Ersatzteil» aus München hatte offenbar Gurke, Zwiebeln und üppig BBQ-Sauce dran. Die Redaktion verbucht die Prognose als Volltreffer und schickt die Spesenabrechnung direkt an McDonald's nach Bayern.\n\nGordo hingegen liefert: 158,9, nochmals 0,6 weniger — solider Wert, auch wenn die paar Gramm bei einem 350 Pfünder lächerlich wirken. Der Schleichlauf vom Mittwoch scheint sich ausbezahlt zu haben. Und Lars? 82,2. Der Coach verdunstet weiter wie Nebelschwaden über der Simme. Wahrscheinlich liegt es an der vielen Arbeit, da der andere Gemeindeknecht noch Urlaub macht. Noch 0,2 pro Woche weniger, und wir werden ihn künstlich ernähren müssen."
     }
   ]
 };
