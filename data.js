@@ -116,7 +116,9 @@ window.SKINNY = {
         // 23.7. Wägung: wieder unter der Schallmauer, Bestwert seit Start
         { date: "2026-07-23", weightKg: 159.5, km: 49.60 },
         // 27.7. Skinny Bitch Monday: Trail mit Anaconda-Loop -> +3.41
-        { date: "2026-07-27", km: 53.01 }
+        { date: "2026-07-27", km: 53.01 },
+        // 29.7. Chrigu solo, Ogi-Weg -> +2.79
+        { date: "2026-07-29", km: 55.80 }
       ]
     },
     {
