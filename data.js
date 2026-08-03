@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-07-30",
+  lastUpdate: "2026-08-03",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -120,7 +120,9 @@ window.SKINNY = {
         // 29.7. Chrigu solo, Ogi-Weg -> +2.79
         { date: "2026-07-29", km: 55.80 },
         // 30.7. Wägung: Bestwert seit Start
-        { date: "2026-07-30", weightKg: 158.9, km: 55.80 }
+        { date: "2026-07-30", weightKg: 158.9, km: 55.80 },
+        // 3.8. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-08-03", km: 59.21 }
       ]
     },
     {
@@ -169,7 +171,9 @@ window.SKINNY = {
         // 27.7. ordinäre Runde (bei Kräften bleiben für München) -> +2.79
         { date: "2026-07-27", km: 31.77 },
         // 30.7. Wägung: +0.3 — der McRib hat zugeschlagen
-        { date: "2026-07-30", weightKg: 147.9, km: 31.77 }
+        { date: "2026-07-30", weightKg: 147.9, km: 31.77 },
+        // 3.8. grosse Runde inkl. Anaconda-Loop -> +3.41 (Doppel-Loop unbestätigt, nicht gewertet)
+        { date: "2026-08-03", km: 35.18 }
       ]
     },
 
@@ -402,6 +406,12 @@ window.SKINNY = {
       typ: "waage",
       title: "Der McRib hat zugeschlagen",
       text: "Waagtag, und die Beweisführung ist abgeschlossen: Rocket-Man legt 0,3 zu (147,9) — das «Ersatzteil» aus München hatte offenbar Gurke, Zwiebeln und üppig BBQ-Sauce dran. Die Redaktion verbucht die Prognose als Volltreffer und schickt die Spesenabrechnung direkt an McDonald's nach Bayern.\n\nGordo hingegen liefert: 158,9, nochmals 0,6 weniger — solider Wert, auch wenn die paar Gramm bei einem 350 Pfünder lächerlich wirken. Der Schleichlauf vom Mittwoch scheint sich ausbezahlt zu haben. Und Lars? 82,2. Der Coach verdunstet weiter wie Nebelschwaden über der Simme. Wahrscheinlich liegt es an der vielen Arbeit, da der andere Gemeindeknecht noch Urlaub macht. Noch 0,2 pro Woche weniger, und wir werden ihn künstlich ernähren müssen."
+    },
+    {
+      date: "2026-08-03",
+      typ: "lauf",
+      title: "Sherpas aus T-Heiland",
+      text: "Am Start diesmal: Rocket-Man, Gordo und die Hermanos Los Kropfos — zurück für eine zweite Runde Wahnsinn. Coach Lars fehlte wegen Theatersaison, liess der Truppe aber vorab ein Briefing zukommen. Der Auftrag darin war klar: Weil sich Sevl letzten Montag den Anaconda-Loop gespart hatte, hätte er ihn heute zur Strafe doppelt zu laufen. Ob er das getan hat, weiss keine Sau. Die Auswertung der Wildkamera-VARs läuft — bis dahin gilt die Unschuldsvermutung, gewertet wird solange nur eine Runde.\n\nLosgetroolet wurde erst um 20:10, weil Sevl mutmasslich wieder zweimal zu Abend ass. Gordo spielte sich derweil als Bergführer auf — und blieb ausgerechnet im Loop, beim Wiederaufstieg in die Todeszone, an einem harzigen Baum kleben (man munkelt auch Kreislauf oder mimimi). Dort musste der Expeditionsleiter die zwei Sherpas aus T-Heiland vorbeiwinken. Das zweite Stück Meertrübeli-Kuchen zum Znacht war rückblickend keine gute Idee.\n\nAuch so spät loszugehen war dämlich. Schliesslich nähern wir uns dem Herbschtmonet und die Lichtverhältnisse wurden mies. Das könnte bei den stoggligen Baumwürzen die überall auf dem Track liegen zur nächsten Todesfalle werden. Und davon gibt es auf dem Ogi bereits genug. Erst letzte Woche wurde eine Frau mittleren Alters hier von zwei Killer-Wespen überwältigt und musste mit der Rega ausgeflogen werden. Jaja, der Skinny-Bitch-Trail ist kein Räbäliechtli-Umzug und gefährlicher als mit einem SCB-Trikot beim Jauner Schafscheid einzumarschieren. Aber hey, mit etwas Abstand auf die Kropfos kamen unsere Baby-Rhinos dann doch noch halbwegs lebendig im Grydbödeli an. Alles nochmal gut gegangen. Doch das Rega-Premium Abo für Tierkadaver wäre wohl eine Überlegung wert."
     }
   ]
 };
