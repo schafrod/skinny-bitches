@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-08-03",
+  lastUpdate: "2026-08-06",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -122,7 +122,9 @@ window.SKINNY = {
         // 30.7. Wägung: Bestwert seit Start
         { date: "2026-07-30", weightKg: 158.9, km: 55.80 },
         // 3.8. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
-        { date: "2026-08-03", km: 59.21 }
+        { date: "2026-08-03", km: 59.21 },
+        // 6.8. Wägung: ein Päckli Aufschnitt weniger (-0.1)
+        { date: "2026-08-06", weightKg: 158.8, km: 59.21 }
       ]
     },
     {
@@ -173,7 +175,9 @@ window.SKINNY = {
         // 30.7. Wägung: +0.3 — der McRib hat zugeschlagen
         { date: "2026-07-30", weightKg: 147.9, km: 31.77 },
         // 3.8. grosse Runde inkl. Anaconda-Loop -> +3.41 (Doppel-Loop unbestätigt, nicht gewertet)
-        { date: "2026-08-03", km: 35.18 }
+        { date: "2026-08-03", km: 35.18 },
+        // 6.8. Wägung: der Stoiker, dritte Woche fast dieselbe Zahl
+        { date: "2026-08-06", weightKg: 147.9, km: 35.18 }
       ]
     },
 
@@ -213,7 +217,9 @@ window.SKINNY = {
         // 23.7. Wägung: verdunstet weiter (-0.4)
         { date: "2026-07-23", weightKg: 82.4, km: 15.19 },
         // 30.7. Wägung: verdunstet weiter (-0.2)
-        { date: "2026-07-30", weightKg: 82.2, km: 15.19 }
+        { date: "2026-07-30", weightKg: 82.2, km: 15.19 },
+        // 6.8. Wägung: hält das Gewicht (Theater verbrennt keine Kalorien)
+        { date: "2026-08-06", weightKg: 82.2, km: 15.19 }
       ]
     },
     /* ----- MISSED IN ACTION seit 20.7.2026 (Nachruf im Logbuch) -----
@@ -412,6 +418,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Sherpas aus T-Heiland",
       text: "Am Start diesmal: Rocket-Man, Gordo und die Hermanos Los Kropfos — zurück für eine zweite Runde Wahnsinn. Coach Lars fehlte wegen Theatersaison, liess der Truppe aber vorab ein Briefing zukommen. Der Auftrag darin war klar: Weil sich Sevl letzten Montag den Anaconda-Loop gespart hatte, hätte er ihn heute zur Strafe doppelt zu laufen. Ob er das getan hat, weiss keine Sau. Die Auswertung der Wildkamera-VARs läuft — bis dahin gilt die Unschuldsvermutung, gewertet wird solange nur eine Runde.\n\nLosgetroolet wurde erst um 20:10, weil Sevl mutmasslich wieder zweimal zu Abend ass. Gordo spielte sich derweil als Bergführer auf — und blieb ausgerechnet im Loop, beim Wiederaufstieg in die Todeszone, an einem harzigen Baum kleben (man munkelt auch Kreislauf oder mimimi). Dort musste der Expeditionsleiter die zwei Sherpas aus T-Heiland vorbeiwinken. Das zweite Stück Meertrübeli-Kuchen zum Znacht war rückblickend keine gute Idee.\n\nAuch so spät loszugehen war dämlich. Schliesslich nähern wir uns dem Herbschtmonet und die Lichtverhältnisse wurden mies. Das könnte bei den stoggligen Baumwürzen die überall auf dem Track liegen zur nächsten Todesfalle werden. Und davon gibt es auf dem Ogi bereits genug. Erst letzte Woche wurde eine Frau mittleren Alters hier von zwei Killer-Wespen überwältigt und musste mit der Rega ausgeflogen werden. Jaja, der Skinny-Bitch-Trail ist kein Räbäliechtli-Umzug und gefährlicher als mit einem SCB-Trikot beim Jauner Schafscheid einzumarschieren. Aber hey, mit etwas Abstand auf die Kropfos kamen unsere Baby-Rhinos dann doch noch halbwegs lebendig im Grydbödeli an. Alles nochmal gut gegangen. Doch das Rega-Premium Abo für Tierkadaver wäre wohl eine Überlegung wert."
+    },
+    {
+      date: "2026-08-06",
+      typ: "waage",
+      title: "Wasser sparen statt Kilos verbrennen?",
+      text: "Die Welt trocknet aus und brennt — nur die Runden sind antizyklisch unterwegs: Statt Kilos zu verbrennen, lagern sie Wasser ein. Das Merkblatt der Gemeinde zum Wassersparen scheinen sie etwas zu ernst genommen zu haben. El Gordo verliert 0,1 auf 158,8 — ein Päckli Aufschnitt, oder rechnerisch: 0,06 Prozent des Gesamtgewichts. Bei diesem Tempo ist das Zielgewicht etwa zum Ende der Menschheit erreicht. Rocket-Man hält stoisch seine 147,9 — zum dritten Mal fast dieselbe Zahl. Es wird höflich angefragt, ob seit dem Kauf der Waage noch der Sticker über dem Display klebt. Wobei man das schwere Küken auch in Schutz nehmen muss. Wurde er am Wochenende doch von Bürki Märki zum Mästen nach Hause eingeladen.\n\nSexybless steht bei 82,2, immerhin verdunstet er nicht weiter. Die Diagnose ist eindeutig: Theater verbrennt im Gegensatz zum Heuen keine Kalorien. Es wird zudem vermutet, dass er deswegen auch das Liebemachen schleifen lässt. Kann aber auch daran liegen, dass ihm die katholische Verwandtschaft seiner Freundin ausserehelichen GV verboten hat. Das würde auch seine freiwillige Spende an Swissgenetics erklären.\n\nWas ist bloss los bei den Bitches? So kann das nicht weitergehen. Die Armee braucht ihre Super-Pumas zum Wasserfliegen — nicht, um zwei Wonneproppen aus dem Wald zu bergen. Noch ein paar solche Wägungen und das Projekt wird zur nationalen Bedrohung erklärt. Was würde Fitness-Queen Nella Martinetti dazu sagen, wenn sie noch unter uns wäre? Vielleicht sollte man bei der Krankenkasse nachfragen, ob die in Boltigen beliebte Rabattaktion für Magenbypässe noch läuft..."
     }
   ]
 };
