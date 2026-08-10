@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-08-06",
+  lastUpdate: "2026-08-10",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -124,7 +124,9 @@ window.SKINNY = {
         // 3.8. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
         { date: "2026-08-03", km: 59.21 },
         // 6.8. Wägung: ein Päckli Aufschnitt weniger (-0.1)
-        { date: "2026-08-06", weightKg: 158.8, km: 59.21 }
+        { date: "2026-08-06", weightKg: 158.8, km: 59.21 },
+        // 10.8. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-08-10", km: 62.62 }
       ]
     },
     {
@@ -177,7 +179,9 @@ window.SKINNY = {
         // 3.8. grosse Runde inkl. Anaconda-Loop -> +3.41 (Doppel-Loop unbestätigt, nicht gewertet)
         { date: "2026-08-03", km: 35.18 },
         // 6.8. Wägung: der Stoiker, dritte Woche fast dieselbe Zahl
-        { date: "2026-08-06", weightKg: 147.9, km: 35.18 }
+        { date: "2026-08-06", weightKg: 147.9, km: 35.18 },
+        // 10.8. grosse Runde inkl. Anaconda-Loop -> +3.41 (Vorhut bis zur Streckenhälfte)
+        { date: "2026-08-10", km: 38.59 }
       ]
     },
 
@@ -424,6 +428,12 @@ window.SKINNY = {
       typ: "waage",
       title: "Wasser sparen statt Kilos verbrennen?",
       text: "Die Welt trocknet aus und brennt — nur die Runden sind antizyklisch unterwegs: Statt Kilos zu verbrennen, lagern sie Wasser ein. Das Merkblatt der Gemeinde zum Wassersparen scheinen sie etwas zu ernst genommen zu haben. El Gordo verliert 0,1 auf 158,8 — ein Päckli Aufschnitt, oder rechnerisch: 0,06 Prozent des Gesamtgewichts. Bei diesem Tempo ist das Zielgewicht etwa zum Ende der Menschheit erreicht. Rocket-Man hält stoisch seine 147,9 — zum dritten Mal fast dieselbe Zahl. Es wird höflich angefragt, ob seit dem Kauf der Waage noch der Sticker über dem Display klebt. Wobei man das schwere Küken auch in Schutz nehmen muss. Wurde er am Wochenende doch von Bürki Märki zum Mästen nach Hause eingeladen.\n\nSexybless steht bei 82,2, immerhin verdunstet er nicht weiter. Die Diagnose ist eindeutig: Theater verbrennt im Gegensatz zum Heuen keine Kalorien. Es wird zudem vermutet, dass er deswegen auch das Liebemachen schleifen lässt. Kann aber auch daran liegen, dass ihm die katholische Verwandtschaft seiner Freundin ausserehelichen GV verboten hat. Das würde auch seine freiwillige Spende an Swissgenetics erklären.\n\nWas ist bloss los bei den Bitches? So kann das nicht weitergehen. Die Armee braucht ihre Super-Pumas zum Wasserfliegen — nicht, um zwei Wonneproppen aus dem Wald zu bergen. Noch ein paar solche Wägungen und das Projekt wird zur nationalen Bedrohung erklärt. Was würde Fitness-Queen Nella Martinetti dazu sagen, wenn sie noch unter uns wäre? Vielleicht sollte man bei der Krankenkasse nachfragen, ob die in Boltigen beliebte Rabattaktion für Magenbypässe noch läuft..."
+    },
+    {
+      date: "2026-08-10",
+      typ: "lauf",
+      title: "Bauer ledig sucht — die Expertenrunde",
+      text: "Gestartet wurde mit etwas Verspätung, dafür kam die Truppe gut durch. Beschallt war der Wald diesmal von der Stalin-Orgel der Neuzeit — dem Mähwerk der Landwirtschaft. Die Bauern versuchen bei dieser Trockenheit, aus drei Hektaren wenigstens noch ein Silo-Bälli rauszupressen. Taktisch wurde der Spiess umgedreht: Ausgerechnet der ewige Nachzügler Rocket-Man durfte die Vorhut geben und diktierte das Tempo bis zur Streckenhälfte. Vorne in Boltigen übernahmen dann Los Kropfos das Kommando. El Corto fing gar an zu tschoggen — und kassierte vom Schiedsgericht prompt eine Verwarnung, weil er auf der Scheitwegenstrasse nicht regelkonform stets einen Fuss am Boden hatte. El Barbudo hängte sich an, Sevl folgte dem Altranzigen — und der zeigte hitzebedingte Abnutzungserscheinungen und fluchte unentwegt über die harten Konditionen.\n\nIm Zielraum wurden anschliessend die regionalen Reality-TV-Stars von «Bauer, ledig, sucht» verhandelt. Das Gremium kam zum Schluss: Publikumsliebling Hansjürg aus Oberwil hat seine Herzdame professionell karisiert, während Priska aus demselben Dorf im Grunde immer noch einen günstigen Knecht sucht. Einigkeit herrschte auch darin, dass die Taubentaler-Legende Rubin Hansüelu — wäre er denn ledig — die Quoten des Formats durch die Decke jagen würde. Von ihm wären in zwanzig Jahren noch Memes im Umlauf. Hä."
     }
   ]
 };
