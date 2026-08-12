@@ -1040,6 +1040,54 @@ a { color: inherit; }
   color: var(--ink-faint);
 }
 
+/* Monats-Archiv: ältere Monate falten sich hinter einen Button (nur der
+   Monat des neuesten Eintrags zeigt seine Einträge direkt) */
+.log__month { position: relative; padding-bottom: 28px; }
+.log__month:last-child { padding-bottom: 0; }
+.log__month::before {             /* Timeline-Knoten in Tinte (Archiv) */
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 14px;
+  width: 11px;
+  height: 11px;
+  background: var(--ink);
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 4px var(--paper);
+  z-index: 1;
+}
+.log__month-head {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: var(--paper-deep);
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  padding: 12px 40px 12px 16px;
+  transition: color .15s;
+}
+.log__month-head::-webkit-details-marker { display: none; }
+.log__month-head::after {          /* Auf-/Zu-Indikator */
+  content: "+";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--f-display);
+  color: var(--blood);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.log__month[open] .log__month-head::after { content: "\2013"; }
+.log__month-head:hover { color: var(--blood); }
+.log__month-count { color: var(--ink-faint); letter-spacing: 0.08em; }
+.log__month-body { padding-top: 24px; animation: faqReveal .22s ease; }
+
 /* Lauf-Fotos: Thumbnail-Reihe */
 .log__photos {
   display: grid;

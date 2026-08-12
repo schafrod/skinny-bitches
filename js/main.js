@@ -363,7 +363,8 @@
     }
     // neuester Eintrag zuoberst
     entries.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
-    host.innerHTML = entries.map((e, i) => {
+
+    const renderEntry = (e, open) => {
       const tag = e.typ === "lauf" ? "Lauf" : e.typ === "nachruf" ? "Nachruf" : "Wägung";
       const tagCls = "log__tag--" + (e.typ === "lauf" ? "lauf" : e.typ === "nachruf" ? "nachruf" : "waage");
       const title = escAttr(e.title || tag);
@@ -379,9 +380,8 @@
           return `<button type="button" class="log__photo" data-full="${dir}${ph.file}.jpg" data-cap="${cap}"><img src="${dir}${ph.file}-t.jpg" alt="${cap}" loading="lazy"></button>`;
         }).join("") + `</div>`;
       }
-      // Nur der neueste Eintrag (i === 0) ist aufgeklappt, die älteren zu.
       return `
-      <details class="log__entry${e.typ === "nachruf" ? " log__entry--nachruf" : ""}"${i === 0 ? " open" : ""}>
+      <details class="log__entry${e.typ === "nachruf" ? " log__entry--nachruf" : ""}"${open ? " open" : ""}>
         <summary class="log__head">
           <div class="log__meta">
             <time class="log__date" datetime="${e.date}">${longDate(e.date)}</time>
@@ -394,7 +394,37 @@
           ${photos}
         </div>
       </details>`;
-    }).join("");
+    };
+
+    // Nach Monaten gruppieren: der Monat des neuesten Eintrags zeigt seine
+    // Einträge direkt (neuester aufgeklappt); ältere Monate falten sich hinter
+    // einen Monats-Button und klappen erst bei Klick auf.
+    const monthOf = (e) => e.date.slice(0, 7);
+    const monthLabel = (e) => {
+      const d = new Date(e.date + "T00:00:00");
+      return isNaN(d) ? monthOf(e) : d.toLocaleDateString("de-CH", { month: "long", year: "numeric" });
+    };
+    const currentMonth = monthOf(entries[0]);
+    let html = "";
+    let openMonth = null;   // gerade offener älterer Monat (fürs Zusammensammeln)
+    entries.forEach((e, i) => {
+      if (monthOf(e) === currentMonth) {
+        html += renderEntry(e, i === 0);
+        return;
+      }
+      if (openMonth !== monthOf(e)) {
+        if (openMonth !== null) html += `</div></details>`;
+        openMonth = monthOf(e);
+        const count = entries.filter((x) => monthOf(x) === openMonth).length;
+        html += `
+      <details class="log__month">
+        <summary class="log__month-head">${monthLabel(e)} <span class="log__month-count">· ${count} Einträge</span></summary>
+        <div class="log__month-body">`;
+      }
+      html += renderEntry(e, false);
+    });
+    if (openMonth !== null) html += `</div></details>`;
+    host.innerHTML = html;
 
     wireLightbox(host);
   }
