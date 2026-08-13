@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-08-10",
+  lastUpdate: "2026-08-13",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -126,7 +126,9 @@ window.SKINNY = {
         // 6.8. Wägung: ein Päckli Aufschnitt weniger (-0.1)
         { date: "2026-08-06", weightKg: 158.8, km: 59.21 },
         // 10.8. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
-        { date: "2026-08-10", km: 62.62 }
+        { date: "2026-08-10", km: 62.62 },
+        // 13.8. Wägung: Bestwert seit Start (-0.3)
+        { date: "2026-08-13", weightKg: 158.5, km: 62.62 }
       ]
     },
     {
@@ -181,7 +183,9 @@ window.SKINNY = {
         // 6.8. Wägung: der Stoiker, dritte Woche fast dieselbe Zahl
         { date: "2026-08-06", weightKg: 147.9, km: 35.18 },
         // 10.8. grosse Runde inkl. Anaconda-Loop -> +3.41 (Vorhut bis zur Streckenhälfte)
-        { date: "2026-08-10", km: 38.59 }
+        { date: "2026-08-10", km: 38.59 },
+        // 13.8. Wägung: der Sticker ist offiziell entfernt (-0.1)
+        { date: "2026-08-13", weightKg: 147.8, km: 38.59 }
       ]
     },
 
@@ -223,7 +227,9 @@ window.SKINNY = {
         // 30.7. Wägung: verdunstet weiter (-0.2)
         { date: "2026-07-30", weightKg: 82.2, km: 15.19 },
         // 6.8. Wägung: hält das Gewicht (Theater verbrennt keine Kalorien)
-        { date: "2026-08-06", weightKg: 82.2, km: 15.19 }
+        { date: "2026-08-06", weightKg: 82.2, km: 15.19 },
+        // 13.8. Wägung: erbt eine prave Blutwurst (+0.3)
+        { date: "2026-08-13", weightKg: 82.5, km: 15.19 }
       ]
     },
     /* ----- MISSED IN ACTION seit 20.7.2026 (Nachruf im Logbuch) -----
@@ -434,6 +440,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Bauer ledig sucht — die Expertenrunde",
       text: "Gestartet wurde mit etwas Verspätung, dafür kam die Truppe gut durch. Beschallt war der Wald diesmal von der Stalin-Orgel der Neuzeit — dem Mähwerk der Landwirtschaft. Die Bauern versuchen bei dieser Trockenheit, aus drei Hektaren wenigstens noch ein Silo-Bälli rauszupressen. Taktisch wurde der Spiess umgedreht: Ausgerechnet der ewige Nachzügler Rocket-Man durfte die Vorhut geben und diktierte das Tempo bis zur Streckenhälfte. Vorne in Boltigen übernahmen dann Los Kropfos das Kommando. El Corto fing gar an zu tschoggen — und kassierte vom Schiedsgericht prompt eine Verwarnung, weil er auf der Scheitwegenstrasse nicht regelkonform stets einen Fuss am Boden hatte. El Barbudo hängte sich an, Sevl folgte dem Altranzigen — und der zeigte hitzebedingte Abnutzungserscheinungen und fluchte unentwegt über die harten Konditionen.\n\nIm Zielraum wurden anschliessend die regionalen Reality-TV-Stars von «Bauer, ledig, sucht» verhandelt. Das Gremium kam zum Schluss: Publikumsliebling Hansjürg aus Oberwil hat seine Herzdame professionell karisiert, während Priska aus demselben Dorf im Grunde immer noch einen günstigen Knecht sucht. Einigkeit herrschte auch darin, dass die Taubentaler-Legende Rubin Hansüelu — wäre er denn ledig — die Quoten des Formats durch die Decke jagen würde. Von ihm wären in zwanzig Jahren noch Memes im Umlauf. Hä."
+    },
+    {
+      date: "2026-08-13",
+      typ: "waage",
+      title: "Alle drei in die richtige Richtung",
+      text: "Man notiere den 13. August: Zum ersten Mal in der Geschichte dieses Projekts bewegen sich alle drei Gewogenen in die richtige Richtung. Coach Lars legt satte 0,3 zu (82,5) — eine prave Blutwurst geerbt, die angedrohte Zwangsernährung ist damit vom Tisch. Die Dicken sind stolz auf den Sittenstrolch.\n\nGordo drückt auf 158,5 — nochmals 0,3 weniger, besteht aber trotzdem noch zu 51.9% aus Fett. Die 6,8 Kilo Gesamtverlust entsprechen in etwa seinem Geburtsgewicht. Und der Raketenmann? 147,8, minus 0,1. Die Waage zeigt tatsächlich eine neue Zahl — der Sticker über dem Display ist also offiziell entfernt. Es geht vorwärts bei den Bitches. Huerä langsam, aber die Schnellsten waren sie eh noch nie."
     }
   ]
 };
