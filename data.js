@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-08-13",
+  lastUpdate: "2026-08-17",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -128,7 +128,9 @@ window.SKINNY = {
         // 10.8. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
         { date: "2026-08-10", km: 62.62 },
         // 13.8. Wägung: Bestwert seit Start (-0.3)
-        { date: "2026-08-13", weightKg: 158.5, km: 62.62 }
+        { date: "2026-08-13", weightKg: 158.5, km: 62.62 },
+        // 17.8. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-08-17", km: 66.03 }
       ]
     },
     {
@@ -185,7 +187,9 @@ window.SKINNY = {
         // 10.8. grosse Runde inkl. Anaconda-Loop -> +3.41 (Vorhut bis zur Streckenhälfte)
         { date: "2026-08-10", km: 38.59 },
         // 13.8. Wägung: der Sticker ist offiziell entfernt (-0.1)
-        { date: "2026-08-13", weightKg: 147.8, km: 38.59 }
+        { date: "2026-08-13", weightKg: 147.8, km: 38.59 },
+        // 17.8. grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-08-17", km: 42.00 }
       ]
     },
 
@@ -446,6 +450,12 @@ window.SKINNY = {
       typ: "waage",
       title: "Alle drei in die richtige Richtung",
       text: "Man notiere den 13. August: Zum ersten Mal in der Geschichte dieses Projekts bewegen sich alle drei Gewogenen in die richtige Richtung. Coach Lars legt satte 0,3 zu (82,5) — eine prave Blutwurst geerbt, die angedrohte Zwangsernährung ist damit vom Tisch. Die Dicken sind stolz auf den Sittenstrolch.\n\nGordo drückt auf 158,5 — nochmals 0,3 weniger, besteht aber trotzdem noch zu 51.9% aus Fett. Die 6,8 Kilo Gesamtverlust entsprechen in etwa seinem Geburtsgewicht. Und der Raketenmann? 147,8, minus 0,1. Die Waage zeigt tatsächlich eine neue Zahl — der Sticker über dem Display ist also offiziell entfernt. Es geht vorwärts bei den Bitches. Huerä langsam, aber die Schnellsten waren sie eh noch nie."
+    },
+    {
+      date: "2026-08-17",
+      typ: "lauf",
+      title: "Super Pursuit Mode im Schattsitewald",
+      text: "Nach dem erlösenden Geplätscher über den halben Tag öffnete sich abends ein Zeitfenster besten Laufwetters. Durch den pflätschnassen Wald zu traben war eine Premiere seit dem Skinny-Bitch-Urknall Anfang Juni. Die Guschti am Waldwegrand beäugten die pummeligen Trottel nervös — verständlich, man bringt schliesslich etwa dasselbe Schlachtgewicht auf die Waage.\n\nZuerst sah es danach aus, als würden Los Kropfos mal wieder lieber Oberwils Weissenstalden besuchen, statt mit den gottlos Verfressenen zu schwitzen. Aber nichts da: Mit zehn Minuten Rückstand startete El Barbudo eine unglaubliche Aufholjagd, holte die Dicken noch vor der Halbzeit in Boltigen ein — und überholte sie gleich. Fortan dominierte der Bärtige das Feld; die Adipösen sahen ihn erst im Grydbödeli wieder. Wie er das gemacht hat, weiss kein Mensch. Ein Doping-Missbrauch wird geprüft. Möglicherweise karrisiert er heimlich doch ein frommes Mädchen und hat den grossen Gasförmigen um Knight Riders Super Pursuit Mode gebeten.\n\nSeinen Bruder El Corto muss man derweil für sein Fernbleiben entschuldigen: El Barbudo teilte ihm erst 15 Minuten vor dem Start mit, dass er auf den Ogi geht. Das hätte der mit seinen kurzen Beinen nie rechtzeitig aus dem Niedersimmental ins Grydbödeli geschafft."
     }
   ]
 };
