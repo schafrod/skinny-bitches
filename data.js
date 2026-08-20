@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-08-17",
+  lastUpdate: "2026-08-20",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -130,7 +130,9 @@ window.SKINNY = {
         // 13.8. Wägung: Bestwert seit Start (-0.3)
         { date: "2026-08-13", weightKg: 158.5, km: 62.62 },
         // 17.8. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
-        { date: "2026-08-17", km: 66.03 }
+        { date: "2026-08-17", km: 66.03 },
+        // 20.8. Wägung: ein ganzes Kilo weg, Bestwert (-1.0)
+        { date: "2026-08-20", weightKg: 157.5, km: 66.03 }
       ]
     },
     {
@@ -189,7 +191,9 @@ window.SKINNY = {
         // 13.8. Wägung: der Sticker ist offiziell entfernt (-0.1)
         { date: "2026-08-13", weightKg: 147.8, km: 38.59 },
         // 17.8. grosse Runde inkl. Anaconda-Loop -> +3.41
-        { date: "2026-08-17", km: 42.00 }
+        { date: "2026-08-17", km: 42.00 },
+        // 20.8. Wägung: bester Wochenwert seit die Waage stickerfrei ist (-0.5)
+        { date: "2026-08-20", weightKg: 147.3, km: 42.00 }
       ]
     },
 
@@ -233,7 +237,9 @@ window.SKINNY = {
         // 6.8. Wägung: hält das Gewicht (Theater verbrennt keine Kalorien)
         { date: "2026-08-06", weightKg: 82.2, km: 15.19 },
         // 13.8. Wägung: erbt eine prave Blutwurst (+0.3)
-        { date: "2026-08-13", weightKg: 82.5, km: 15.19 }
+        { date: "2026-08-13", weightKg: 82.5, km: 15.19 },
+        // 20.8. Wägung: hält das Erbe (±0)
+        { date: "2026-08-20", weightKg: 82.5, km: 15.19 }
       ]
     },
     /* ----- MISSED IN ACTION seit 20.7.2026 (Nachruf im Logbuch) -----
@@ -456,6 +462,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Super Pursuit Mode im Schattsitewald",
       text: "Nach dem erlösenden Geplätscher über den halben Tag öffnete sich abends ein Zeitfenster besten Laufwetters. Durch den pflätschnassen Wald zu traben war eine Premiere seit dem Skinny-Bitch-Urknall Anfang Juni. Die Guschti am Waldwegrand beäugten die pummeligen Trottel nervös — verständlich, man bringt schliesslich etwa dasselbe Schlachtgewicht auf die Waage.\n\nZuerst sah es danach aus, als würden Los Kropfos mal wieder lieber Oberwils Weissenstalden besuchen, statt mit den gottlos Verfressenen zu schwitzen. Aber nichts da: Mit zehn Minuten Rückstand startete El Barbudo eine unglaubliche Aufholjagd, holte die Dicken noch vor der Halbzeit in Boltigen ein — und überholte sie gleich. Fortan dominierte der Bärtige das Feld; die Adipösen sahen ihn erst im Grydbödeli wieder. Wie er das gemacht hat, weiss kein Mensch. Ein Doping-Missbrauch wird geprüft. Möglicherweise karrisiert er heimlich doch ein frommes Mädchen und hat den grossen Gasförmigen um Knight Riders Super Pursuit Mode gebeten.\n\nSeinen Bruder El Corto muss man derweil für sein Fernbleiben entschuldigen: El Barbudo teilte ihm erst 15 Minuten vor dem Start mit, dass er auf den Ogi geht. Das hätte der mit seinen kurzen Beinen nie rechtzeitig aus dem Niedersimmental ins Grydbödeli geschafft."
+    },
+    {
+      date: "2026-08-20",
+      typ: "waage",
+      title: "Bestwerte im Doppel Whopper",
+      text: "Es scheint zu stimmen, was die Alten sagen: Regen macht schlank. Nach der Premiere im pflätschnassen Wald liefern die Dicken die beste Wägung seit dem Urknall ab. El Gordo lässt ein ganzes Kilo liegen — 157,5, Bestwert, macht 7,8 seit Start. Vielleicht war's die Aufholjagd von El Barbudo, die die Verfolgten zu Höchstleistungen peitschte. Rocket-Man legt gleich nach: 147,3, minus 0,5 — sein bester Wochenwert, seit die Waage stickerfrei ist.\n\nCoach Lars hält derweil stoisch seine 82,5 und verteidigt damit die geerbte Blutwurst von letzter Woche. Kein Erben, kein Verdunsten — der Mann hat offenbar sein Gleichgewicht gefunden. Zusammen fehlen den Bitches damit fast zehn Kilo seit dem Start. Weiter so, und die Guschti am Waldwegrand können sich wieder entspannen."
     }
   ]
 };
