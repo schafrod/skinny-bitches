@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-08-20",
+  lastUpdate: "2026-08-24",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -132,7 +132,9 @@ window.SKINNY = {
         // 17.8. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
         { date: "2026-08-17", km: 66.03 },
         // 20.8. Wägung: ein ganzes Kilo weg, Bestwert (-1.0)
-        { date: "2026-08-20", weightKg: 157.5, km: 66.03 }
+        { date: "2026-08-20", weightKg: 157.5, km: 66.03 },
+        // 24.8. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-08-24", km: 69.44 }
       ]
     },
     {
@@ -193,7 +195,9 @@ window.SKINNY = {
         // 17.8. grosse Runde inkl. Anaconda-Loop -> +3.41
         { date: "2026-08-17", km: 42.00 },
         // 20.8. Wägung: bester Wochenwert seit die Waage stickerfrei ist (-0.5)
-        { date: "2026-08-20", weightKg: 147.3, km: 42.00 }
+        { date: "2026-08-20", weightKg: 147.3, km: 42.00 },
+        // 24.8. grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-08-24", km: 45.41 }
       ]
     },
 
@@ -468,6 +472,16 @@ window.SKINNY = {
       typ: "waage",
       title: "Bestwerte im Doppel Whopper",
       text: "Es scheint zu stimmen, was die Alten sagen: Regen macht schlank. Nach der Premiere im pflätschnassen Wald liefern die Dicken die beste Wägung seit dem Urknall ab. El Gordo lässt ein ganzes Kilo liegen — 157,5, Bestwert, macht 7,8 seit Start. Vielleicht war's die Aufholjagd von El Barbudo, die die Verfolgten zu Höchstleistungen peitschte. Rocket-Man legt gleich nach: 147,3, minus 0,5 — sein bester Wochenwert, seit die Waage stickerfrei ist.\n\nCoach Lars hält derweil stoisch seine 82,5 und verteidigt damit die geerbte Blutwurst von letzter Woche. Kein Erben, kein Verdunsten — der Mann hat offenbar sein Gleichgewicht gefunden. Zusammen fehlen den Bitches damit fast zehn Kilo seit dem Start. Weiter so, und die Guschti am Waldwegrand können sich wieder entspannen."
+    },
+    {
+      date: "2026-08-24",
+      typ: "lauf",
+      title: "Der Leberwurst-Express",
+      text: "Zu zweit pflügten Sevl und Gordo durch den Wald wie auf dem Tandem. Vorbei ging's an wildgewordenen Wespen, die diesmal keine Chance hatten, dem Leberwurst-Express hinterherzukommen — die Rega konnte am Boden bleiben.\n\nAm Turning-Point vorne in Boltigen dann die Heldentat des Tages: Auf der Scheitwegen-Strasse sass eine kleine Maus, mitten auf der Fahrbahn. Die zwei Kolosse hielten an, bargen das Tierchen und trugen es ins sichere Gras. Man erinnere sich: Anfang Juni lag auf dem Anaconda-Trail noch eine tote Maus als böses Omen — heute rettet der Express ihresgleichen das Leben. Der Kreis schliesst sich. Grosser Ranzen, grosses Herz.",
+      photoDir: "assets/runs/2026-08-24",
+      photos: [
+        { file: "wurstfinger-maus", caption: "Wurstfinger locken die Maus in Sicherheit." }
+      ]
     }
   ]
 };
