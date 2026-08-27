@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-08-24",
+  lastUpdate: "2026-08-27",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -134,7 +134,9 @@ window.SKINNY = {
         // 20.8. Wägung: ein ganzes Kilo weg, Bestwert (-1.0)
         { date: "2026-08-20", weightKg: 157.5, km: 66.03 },
         // 24.8. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
-        { date: "2026-08-24", km: 69.44 }
+        { date: "2026-08-24", km: 69.44 },
+        // 27.8. Wägung: -1.6, grösster Wochensprung, Bestwert
+        { date: "2026-08-27", weightKg: 155.9, km: 69.44 }
       ]
     },
     {
@@ -197,7 +199,9 @@ window.SKINNY = {
         // 20.8. Wägung: bester Wochenwert seit die Waage stickerfrei ist (-0.5)
         { date: "2026-08-20", weightKg: 147.3, km: 42.00 },
         // 24.8. grosse Runde inkl. Anaconda-Loop -> +3.41
-        { date: "2026-08-24", km: 45.41 }
+        { date: "2026-08-24", km: 45.41 },
+        // 27.8. Wägung: -0.8, erstmals unter der 147er-Linie
+        { date: "2026-08-27", weightKg: 146.5, km: 45.41 }
       ]
     },
 
@@ -482,6 +486,12 @@ window.SKINNY = {
       photos: [
         { file: "wurstfinger-maus", caption: "Wurstfinger locken die Maus in Sicherheit." }
       ]
+    },
+    {
+      date: "2026-08-27",
+      typ: "waage",
+      title: "Das Experiment nimmt Fahrt auf",
+      text: "Wer Mäuse rettet, wird belohnt — hat die Waage heute früh bewiesen. Ein paar Tage nach der Heldentat fahren die Ränzlinge die beste Wägung aller Zeiten ein: El Gordo wirft satte 1,6 Kilo ab und steht bei 155,9 — macht 9,4 seit Start, die Zehn-Kilo-Marke ist zum Greifen nah. Rocket-Man zieht mit minus 0,8 nach (146,5) und unterbietet erstmals seit Beginn der neuen Zeitrechnung die 147er-Linie.\n\nZusammen liessen die zwei Troolis diese Woche 2,4 Kilo im Wald — mehr als in manchem ganzen Monat. Ob's das Karma war, der Tandem-Rhythmus oder schlicht die Angst vor den Wespen: Der Güterzug rollt und sollte eigentlich mit einem Cordon-bleu belohnt werden..."
     }
   ]
 };
