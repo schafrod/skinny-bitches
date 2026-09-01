@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-08-27",
+  lastUpdate: "2026-08-31",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -136,7 +136,9 @@ window.SKINNY = {
         // 24.8. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
         { date: "2026-08-24", km: 69.44 },
         // 27.8. Wägung: -1.6, grösster Wochensprung, Bestwert
-        { date: "2026-08-27", weightKg: 155.9, km: 69.44 }
+        { date: "2026-08-27", weightKg: 155.9, km: 69.44 },
+        // 31.8. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-08-31", km: 72.85 }
       ]
     },
     {
@@ -201,7 +203,9 @@ window.SKINNY = {
         // 24.8. grosse Runde inkl. Anaconda-Loop -> +3.41
         { date: "2026-08-24", km: 45.41 },
         // 27.8. Wägung: -0.8, erstmals unter der 147er-Linie
-        { date: "2026-08-27", weightKg: 146.5, km: 45.41 }
+        { date: "2026-08-27", weightKg: 146.5, km: 45.41 },
+        // 31.8. grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-08-31", km: 48.82 }
       ]
     },
 
@@ -492,6 +496,12 @@ window.SKINNY = {
       typ: "waage",
       title: "Das Experiment nimmt Fahrt auf",
       text: "Wer Mäuse rettet, wird belohnt — hat die Waage heute früh bewiesen. Ein paar Tage nach der Heldentat fahren die Ränzlinge die beste Wägung aller Zeiten ein: El Gordo wirft satte 1,6 Kilo ab und steht bei 155,9 — macht 9,4 seit Start, die Zehn-Kilo-Marke ist zum Greifen nah. Rocket-Man zieht mit minus 0,8 nach (146,5) und unterbietet erstmals seit Beginn der neuen Zeitrechnung die 147er-Linie.\n\nZusammen liessen die zwei Troolis diese Woche 2,4 Kilo im Wald — mehr als in manchem ganzen Monat. Ob's das Karma war, der Tandem-Rhythmus oder schlicht die Angst vor den Wespen: Der Güterzug rollt und sollte eigentlich mit einem Cordon-bleu belohnt werden..."
+    },
+    {
+      date: "2026-08-31",
+      typ: "lauf",
+      title: "Lästern auf Weltniveau",
+      text: "Nur die zwei Gründungs-Plauzen am Start — von den Hermanos Los Kropfos fehlte wieder jede Spur. El Corto wurde am Samstag an einem elektronischen Tanzevent gesichtet; dieser schlechte Einfluss könnte einiges erklären. Für die 3,4 Kilometer inklusive Anaconda-Loop brauchte das Duo tätsch eine Stunde — nicht gerade Weltklasse-Performance, aber die Prioritäten lagen woanders: Es wurde derart konzentriert gelästert, dass zwischendurch die Puste zum Laufen ausblieb. Und dann lag da erstmals dieser Geruch in der Luft. Es roch nach Herbst.\n\nPassender Moment für den Blick zurück, denn: exakt drei Monate Skinny Bitch Trail. Die Bilanz seit dem Debut vom 1. Juni: Zusammen hat die Truppe rund 140 Kilometer abgespult und dabei gut 8100 Höhenmeter erklommen — fast einmal von Meereshöhe auf den Everest —, eine Anaconda in die Flucht geschlagen, einen Cervelat-Koffer kassiert und eine Maus gerettet. Das Experiment läuft. Der Herbst kann kommen."
     }
   ]
 };
