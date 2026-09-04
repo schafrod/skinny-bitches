@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-08-31",
+  lastUpdate: "2026-09-03",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -138,7 +138,9 @@ window.SKINNY = {
         // 27.8. Wägung: -1.6, grösster Wochensprung, Bestwert
         { date: "2026-08-27", weightKg: 155.9, km: 69.44 },
         // 31.8. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
-        { date: "2026-08-31", km: 72.85 }
+        { date: "2026-08-31", km: 72.85 },
+        // 3.9. Wägung (verpennt nachgereicht): +0.9 — Apéro-Häppchen
+        { date: "2026-09-03", weightKg: 156.8, km: 72.85 }
       ]
     },
     {
@@ -205,7 +207,9 @@ window.SKINNY = {
         // 27.8. Wägung: -0.8, erstmals unter der 147er-Linie
         { date: "2026-08-27", weightKg: 146.5, km: 45.41 },
         // 31.8. grosse Runde inkl. Anaconda-Loop -> +3.41
-        { date: "2026-08-31", km: 48.82 }
+        { date: "2026-08-31", km: 48.82 },
+        // 3.9. Wägung (verpennt nachgereicht): hält die Linie aufs Gramm
+        { date: "2026-09-03", weightKg: 146.5, km: 48.82 }
       ]
     },
 
@@ -502,6 +506,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Lästern auf Weltniveau",
       text: "Nur die zwei Gründungs-Plauzen am Start — von den Hermanos Los Kropfos fehlte wieder jede Spur. El Corto wurde am Samstag an einem elektronischen Tanzevent gesichtet; dieser schlechte Einfluss könnte einiges erklären. Für die 3,4 Kilometer inklusive Anaconda-Loop brauchte das Duo tätsch eine Stunde — nicht gerade Weltklasse-Performance, aber die Prioritäten lagen woanders: Es wurde derart konzentriert gelästert, dass zwischendurch die Puste zum Laufen ausblieb. Und dann lag da erstmals dieser Geruch in der Luft. Es roch nach Herbst.\n\nPassender Moment für den Blick zurück, denn: exakt drei Monate Skinny Bitch Trail. Die Bilanz seit dem Debut vom 1. Juni: Zusammen hat die Truppe rund 140 Kilometer abgespult und dabei gut 8100 Höhenmeter erklommen — fast einmal von Meereshöhe auf den Everest —, eine Anaconda in die Flucht geschlagen, einen Cervelat-Koffer kassiert und eine Maus gerettet. Das Experiment läuft. Der Herbst kann kommen."
+    },
+    {
+      date: "2026-09-03",
+      typ: "waage",
+      title: "Pfundiger Rückschlag zum Herbschtmonet",
+      text: "Der Waagtag wurde glatt verpennt — die Zahlen vom Donnerstag werden hiermit nachgereicht, und sie erklären vielleicht auch, warum keiner pünktlich auf der Waage stand. El Gordo legt 0,9 zu und steht bei 156,8. Die Rekonstruktion der Ereignisse legt nahe: Hier wurde ordentlich überbordet. Vermutet wird Alkohol in Kombi mit Apèro-Häppchen. Vertammi viele Häppchen!\n\nDer Raketenmann hält derweil seine 146,5 — auf das Gramm genau und weicht damit nicht von seiner Linie. Die kumulierte Zehn-Kilo-Marke muss also noch 1-2 Wochen warten. Kein Drama: Nach drei Monaten weiss man hier, dass Zeit und Beharrlichkeit es regelt. Schliesslich hat es auch Jahre gedauert, sich die Wampen anzufressen."
     }
   ]
 };
