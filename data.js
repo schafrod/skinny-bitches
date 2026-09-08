@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-09-03",
+  lastUpdate: "2026-09-07",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -140,7 +140,9 @@ window.SKINNY = {
         // 31.8. Skinny Bitch Monday: grosse Runde inkl. Anaconda-Loop -> +3.41
         { date: "2026-08-31", km: 72.85 },
         // 3.9. Wägung (verpennt nachgereicht): +0.9 — Apéro-Häppchen
-        { date: "2026-09-03", weightKg: 156.8, km: 72.85 }
+        { date: "2026-09-03", weightKg: 156.8, km: 72.85 },
+        // 7.9. Chrigu solo, grosse Runde inkl. Anaconda-Loop -> +3.41
+        { date: "2026-09-07", km: 76.26 }
       ]
     },
     {
@@ -512,6 +514,12 @@ window.SKINNY = {
       typ: "waage",
       title: "Pfundiger Rückschlag zum Herbschtmonet",
       text: "Der Waagtag wurde glatt verpennt — die Zahlen vom Donnerstag werden hiermit nachgereicht, und sie erklären vielleicht auch, warum keiner pünktlich auf der Waage stand. El Gordo legt 0,9 zu und steht bei 156,8. Die Rekonstruktion der Ereignisse legt nahe: Hier wurde ordentlich überbordet. Vermutet wird Alkohol in Kombi mit Apèro-Häppchen. Vertammi viele Häppchen!\n\nDer Raketenmann hält derweil seine 146,5 — auf das Gramm genau und weicht damit nicht von seiner Linie. Die kumulierte Zehn-Kilo-Marke muss also noch 1-2 Wochen warten. Kein Drama: Nach drei Monaten weiss man hier, dass Zeit und Beharrlichkeit es regelt. Schliesslich hat es auch Jahre gedauert, sich die Wampen anzufressen."
+    },
+    {
+      date: "2026-09-07",
+      typ: "lauf",
+      title: "Weidmannsheil auf dem Ogi",
+      text: "Solo-Schicht für El Gordo. Schon am Parkplatz in der Schinti gab's Verhandlungen mit einem Vertreter der Jägerzunft: Der wollte sich eigentlich im Ogi-Wald auf die Pirsch legen, stellte aber fest, dass ihm der Dicke das Wild verscheucht, wenn er pfeiffend durch den Wald prustet. Man einigte sich — der Weidmann versucht's weiter taleinwärts. Sicher ist sicher, schliesslich kann der runde Lastkahn schnell mit Rotwild verwechselt werden. Und nachdem die sogar auf Pferde ballern, sind auch die Bitches im Wald nicht mehr ganz sicher. Als gäbe es für Fettleibige über 40 nicht schon genug Risiken auf dem Ogi-Weg, kommt jetzt noch die Wildsaison dazu — obschon es den Pfeffer auch günstig in Eimern aus Tschechien zu kaufen gäbe.\n\nKurz vor dem Ziel ertönte trotzdem ein Schuss, dass dem heute einzigen Teilnehmer die wässrigen Knie schlotterten. Hatte sich der bewaffnete Strolch etwa nicht an die Abmachung gehalten und es auf den Dicken abgesehen — um aus dessen Schmutz die Hauptzutat für die <a href=\"https://www.puralpina.ch/products/murmeltiersalbe-warmend\" target=\"_blank\" rel=\"noopener\">Murmeli-Salbe von Puralpina</a> zu gewinnen?! Während sich der Wänzling noch auf Einschusslöcher kontrollierte, fiel ein zweiter Schuss. Der Abstand dazwischen war so gross, dass das Viech locker Zeit zum Zurückschiessen gehabt hätte, wäre es bewaffnet gewesen. Aber nun gut: Zumindest kommt den Bitches der brünftige Hirsch beim wöchentlichen Meeting nicht mehr in die Quere. Weidmannsheil."
     }
   ]
 };
