@@ -1,6 +1,6 @@
 # Skinny Bitches — Stand & Übergabe
 
-Kurzbrief für die Weiterentwicklung (Mensch + KI). Stand: Juni 2026.
+Kurzbrief für die Weiterentwicklung (Mensch + KI). Stand: September 2026.
 
 ## Was ist das?
 Statische Vintage-Website (HTML/CSS/JS, **kein Build, kein Framework**) für das Lauf-Spassprojekt „Skinny Bitches" in Boltigen. Vier Personen werden wöchentlich gewogen, BMI/Kurven/Ranking rechnen sich aus den Daten. Ton: Billy-Hill-Outlaw (derb, Schweizerdeutsch). Look: Holzschnitt/Letterpress, schwarz/creme + Oxblood, dunkler Hero.
@@ -16,7 +16,7 @@ Statische Vintage-Website (HTML/CSS/JS, **kein Build, kein Framework**) für das
 ## Aufbau
 `index.html` (Struktur + Texte, inkl. JSON-LD Structured Data im `<head>`) · `css/style.css` (Stil) · `js/main.js` (rendert Karten/Charts/Ranking **und das Logbuch** aus den Daten) · `data.js` (**die Wochen-Datei**: `people` mit `history` + `log`-Array) · `assets/` (Logo, freigestellte Porträts, Ziel-Foto, `og-image.jpg` für Social-Vorschau, `favicon-32/180.png`) · `robots.txt` + `sitemap.xml` (SEO).
 
-Seiten-Reihenfolge: Hero (dunkel) → Mission → Crew (4 Karten) → Ogi-Weg (Strecke + echtes Höhenprofil) → Kurven → **Logbuch** (Timeline) → Hall of Shame → Das Ziel → Sponsoren → **FAQ** (Akkordeon) → Footer (dunkel).
+Seiten-Reihenfolge: Nav → **Ticker** (Telegramm-Laufband, letzte 3 Logbuch-Titel) → Hero (dunkel) → Mission → Crew (3 Karten + Mika-Gedenk-Karte) → Ogi-Weg (Strecke + echtes Höhenprofil inkl. Anaconda) → Kurven → **Logbuch** (Akkordeon + Monats-Archiv) → Hall of Shame → Das Ziel → Sponsoren → **FAQ** (Akkordeon) → Footer (dunkel).
 
 Social-Vorschaubild (Open Graph) `assets/og-image.jpg` (1200×630, absolute URL in den Meta-Tags). Bei Bild-Änderung den `?v=N` an der og:image-URL erhöhen, damit WhatsApp/Facebook den Cache neu zieht.
 
@@ -34,7 +34,7 @@ In `data.js` bei jeder Person unten im `history`-Array einen Eintrag anhängen:
 **Lauf-Fotos:** Ein Logbuch-Eintrag kann `photoDir` + `photos: [{ file, caption }]` haben → Thumbnail-Reihe unter dem Text, Klick öffnet ein Lightbox-Overlay (`wireLightbox` in main.js; Esc/Klick schliesst). Bilder liegen in `assets/runs/JJJJ-MM-TT/`: pro Foto `<slug>.jpg` (Vollbild ~1600px) **und** `<slug>-t.jpg` (Thumb ~440px). Original-Fotos kommen nach `Fotos/` (gitignored) und werden mit PIL verkleinert/komprimiert (EXIF-Drehung via `ImageOps.exif_transpose`), Vintage-Sepia per CSS-`filter`.
 
 ## Wichtig bei Design-Änderungen
-CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=34`, `main.js?v=26`). km-Chart zeichnet Punkte nur bei echtem Lauf (km gestiegen) — Wäge-Einträge tragen km zwar mit, erzeugen aber keinen Knoten. **Ticker:** Telegramm-Laufband unter der Nav zeigt automatisch die letzten 3 Logbuch-Titel (`renderTicker` in main.js) — beim Wochenupdate nichts extra zu pflegen. **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
+CSS und JS sind in `index.html` mit `?v=N` versioniert (aktuell `style.css?v=35`, `main.js?v=26`). km-Chart zeichnet Punkte nur bei echtem Lauf (km gestiegen) — Wäge-Einträge tragen km zwar mit, erzeugen aber keinen Knoten. **Ticker:** Telegramm-Laufband unter der Nav zeigt automatisch die letzten 3 Logbuch-Titel (`renderTicker` in main.js) — beim Wochenupdate nichts extra zu pflegen. **Wer CSS oder JS ändert, muss die Nummer erhöhen** — sonst zeigt der Browser die alte Datei. (`data.js` braucht das nicht.)
 
 ## Die Crew (alle Werte echt)
 | Person | Nick | Rolle | Grösse | Jg. | Start-kg |
@@ -50,15 +50,15 @@ Mika war am 1.6. nicht beim Lauf (km 0). „Opfer" = Trainee-Rolle. Auf der Seit
 
 **Hall of Shame** wertet den **Fortschritt Richtung eigenes Ziel, relativ zum Ausgangsgewicht (%)** (Opfer = abgenommen, Coach = zugenommen/„geerbt"). Anzeige: % gross, kg + Tag klein darunter. Ein gemeinsames Ranking; Lager via Trenner „die Abnehmer" / „die Erber" + Rollen-Tag getrennt. Coaches landen realistisch auf 3/4. (JS rendert ins `#shame-list`-Div — **nicht** in die `<section id="shame">`; die Sektion-ID dient nur dem Nav-Anker. Vorher kollidierten beide IDs und das Ranking wurde ohne `.wrap`/Titel full-bleed gerendert — behoben.) Die „Erben"-Regel (beide Coaches) ist in Mission + Kurven-Text erklärt (separate FAQ dazu wurde wieder entfernt). **Charts:** Y-Achsen nutzen `niceBounds()` — runde Grenzen + Schrittweite (1/2/2.5/5/10 × 10^n), ganzzahlige Beschriftung, mehrere Gitterlinien (statt nur Min/Mitte/Max). Hover/Tap auf die Punkte zeigt einen interaktiven Tooltip (Name, Datum, Wert) — grosse transparente Hit-Kreise + `.charttip`-Div, gesteuert in `main.js`/`wireChartTooltips`. Distanzen werden überall auf 1 Kommastelle gerundet angezeigt (2,79 km → „2,8 km").
 
-## Stand der Zahlen (Stand 29.6.2026)
-Läufe bis **29.6.**: 1.6. Auftakt · 8.6. Chrigu solo (Anaconda) · 9.6. Crew komplett (+3,41) · 15.6./22.6. Chrigu+Severin Ogi-Weg · 17.6./25.6. Chrigu solo · 23.6. Chrigu+Severin+Lars (Lars zurück) · 29.6. Chrigu+Severin+Lars (erster Anaconda-Feindkontakt, Severin rettet Lars). Wägungen: **4.6. · 11.6. · 18.6. · 25.6.** (Chrigu unter 160!).
+## Stand der Zahlen (Stand 10.9.2026)
+Rhythmus seit 1.6.: **Mo Lauf** (meist grosse Runde inkl. Anaconda-Loop, oft Chrigu+Severin, Lars sporadisch, dazu Gäste „Los Kropfos") · **Do Wägung**. Einzelne Läufe/Wägungen stehen chronologisch in `data.js` (history + log) — das ist die einzige Wahrheit, diese Tabelle nur Schnappschuss. Logbuch: 33 Einträge (Juni 11 / Juli 10 / Aug 9 / Sep 3). Lars liefert seit 20.8. keine Wäge-Werte mehr (letzter Stand 82,5).
 
 | Person | kg (Δ seit Start) | km total |
 |---|---|---|
-| Chrigu | 159,6 (−5,7) | 26,35 |
-| Severin | 147,3 (−1,7) | 18,75 |
-| Lars | 83,5 (−1,0, „Erben misslingt") | 11,78 |
-| Mika | ≈81,2 (+0,2, geschätzt) | 3,41 |
+| Chrigu | 157,0 (−8,3, Bestwert war 155,9 am 27.8.) | 76,26 |
+| Severin | 146,5 (−2,5) | 48,82 |
+| Lars | 82,5 (−2,0, „Erben misslingt") | 15,19 |
+| Mika | ≈81,2 (Gedenk-Karte, vermisst) | 3,41 |
 
 **Mika = MISSED IN ACTION (seit 20.7.):** Nachruf-Logbucheintrag „Missed in Action: Mother²-Mikl" (eigener `typ: "nachruf"` mit gefülltem Badge + s/w-Todesanzeigen-Foto). Sein `people`-Objekt ist seit 23.7. wieder aktiv als **Gedenk-Karte** (`memorial: true`): erscheint in der Crew (s/w-Porträt mit Trauerrand, Badge „Vermisst", Bilanz eingefroren, Box „Vermisst seit 9.6.26 — zuletzt gesehen vor dem Volg"), zählt aber **nicht** in Kurven/Hall of Shame/Legende. Rückkehr = `memorial` entfernen, history normal weiterführen, Seiten-Texte zurückdrehen (Mission/Crew/Kurven/Shame/FAQ sprechen von 3er-Crew + Vermisstem). `.card--fade-1..4`-CSS bleibt für künftige Verblass-Fälle.
 
@@ -72,7 +72,7 @@ Rundkurs Schinti → Boltigen → Schinti, **2,79 km, 159 hm, höchster Punkt 85
 2. Wachstums-Motor (angeboten, noch nicht gebaut): Medien-Pitch, Sponsoren-One-Pager/Media-Kit, Social-Content-System — siehe Memory.
 3. **Google Search Console:** Einrichtung gestartet (Domain-Property `skinny-bitches.ch`, DNS-TXT bei Hosttech; Sitemap als VOLLE URL einreichen → `https://www.skinny-bitches.ch/sitemap.xml`). Indexierungs-Status prüfen — Seite war Mitte Juni noch nicht indexiert (normal für neue Domain). **Hero-Klarheit für Erstbesucher** (Orientierungs-Zeile) lag als Vorschlag vor, wurde verschoben.
 
-**Erledigt:** Go-Live www.skinny-bitches.ch inkl. **HTTPS** (Apex→www). Sponsoren-Sektion „Die Komplizen" + Kontakt-CTA (info@simmental.digital), dunkle Fusszeile, Crew-Vornamen, SEO-Hygiene (JSON-LD/sitemap/robots/Favicon), Social-Vorschaubild, **GoatCounter-Statistik**, **Logbuch** mit **Lauf-Fotos + Lightbox**, km-only-Lauftage, Hall-of-Shame-Wertung in **% vom Start** (Lager getrennt), lesbare **Chart-Achsen** (`niceBounds`) + Hover-Tooltips, **Logbuch-Akkordeon** (nur neuester offen, `title` pro Eintrag), **Nav-Autohide** beim Scrollen, Hero-Logo-Puls. Daten bis **Lauf 23.6.** eingetragen.
+**Erledigt:** Go-Live www.skinny-bitches.ch inkl. **HTTPS** (Apex→www). Sponsoren-Sektion „Die Komplizen" + Kontakt-CTA (info@simmental.digital), dunkle Fusszeile, Crew-Vornamen, SEO-Hygiene (JSON-LD/sitemap/robots/Favicon), Social-Vorschaubild, **GoatCounter-Statistik**, **Logbuch** mit **Lauf-Fotos + Lightbox**, km-only-Lauftage, Hall-of-Shame-Wertung in **% vom Start** (Lager getrennt), lesbare **Chart-Achsen** (`niceBounds`) + Hover-Tooltips, **Logbuch-Akkordeon** (nur neuester offen, `title` pro Eintrag) + **Monats-Archiv**, **Nav-Autohide**, Hero-Logo-Puls, **Ticker**, **Anaconda-Loop in Strecken-Sektion**, Mika-Nachruf + **Gedenk-Karte**, Link-Stil in Logbuch-Texten (`.log__text a`, HTML im `text`-Feld wird gerendert). Daten bis **Wägung 10.9.** eingetragen.
 
 ## Eine neue Session fortsetzen
 Im Ordner `/Users/Shared/CC_Git/Skinny Bitches` eine neue Claude-Session starten — das Projektgedächtnis lädt automatisch. Einfach sagen: *„Mach bei den Skinny Bitches weiter, lies ENTWICKLUNG.md und das Memory."*
