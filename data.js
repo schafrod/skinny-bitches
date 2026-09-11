@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-09-07",
+  lastUpdate: "2026-09-10",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -142,7 +142,9 @@ window.SKINNY = {
         // 3.9. Wägung (verpennt nachgereicht): +0.9 — Apéro-Häppchen
         { date: "2026-09-03", weightKg: 156.8, km: 72.85 },
         // 7.9. Chrigu solo, grosse Runde inkl. Anaconda-Loop -> +3.41
-        { date: "2026-09-07", km: 76.26 }
+        { date: "2026-09-07", km: 76.26 },
+        // 10.9. Wägung: zweiter Rückschlag in Folge (+0.2)
+        { date: "2026-09-10", weightKg: 157.0, km: 76.26 }
       ]
     },
     {
@@ -211,7 +213,9 @@ window.SKINNY = {
         // 31.8. grosse Runde inkl. Anaconda-Loop -> +3.41
         { date: "2026-08-31", km: 48.82 },
         // 3.9. Wägung (verpennt nachgereicht): hält die Linie aufs Gramm
-        { date: "2026-09-03", weightKg: 146.5, km: 48.82 }
+        { date: "2026-09-03", weightKg: 146.5, km: 48.82 },
+        // 10.9. Wägung: unbeirrbar wie ein Findling
+        { date: "2026-09-10", weightKg: 146.5, km: 48.82 }
       ]
     },
 
@@ -520,6 +524,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Weidmannsheil auf dem Ogi",
       text: "Solo-Schicht für El Gordo. Schon am Parkplatz in der Schinti gab's Verhandlungen mit einem Vertreter der Jägerzunft: Der wollte sich eigentlich im Ogi-Wald auf die Pirsch legen, stellte aber fest, dass ihm der Dicke das Wild verscheucht, wenn er pfeiffend durch den Wald prustet. Man einigte sich — der Weidmann versucht's weiter taleinwärts. Sicher ist sicher, schliesslich kann der runde Lastkahn schnell mit Rotwild verwechselt werden. Und nachdem die sogar auf Pferde ballern, sind auch die Bitches im Wald nicht mehr ganz sicher. Als gäbe es für Fettleibige über 40 nicht schon genug Risiken auf dem Ogi-Weg, kommt jetzt noch die Wildsaison dazu — obschon es den Pfeffer auch günstig in Eimern aus Tschechien zu kaufen gäbe.\n\nKurz vor dem Ziel ertönte trotzdem ein Schuss, dass dem heute einzigen Teilnehmer die wässrigen Knie schlotterten. Hatte sich der bewaffnete Strolch etwa nicht an die Abmachung gehalten und es auf den Dicken abgesehen — um aus dessen Schmutz die Hauptzutat für die <a href=\"https://www.puralpina.ch/products/murmeltiersalbe-warmend\" target=\"_blank\" rel=\"noopener\">Murmeli-Salbe von Puralpina</a> zu gewinnen?! Während sich der Wänzling noch auf Einschusslöcher kontrollierte, fiel ein zweiter Schuss. Der Abstand dazwischen war so gross, dass das Viech locker Zeit zum Zurückschiessen gehabt hätte, wäre es bewaffnet gewesen. Aber nun gut: Zumindest kommt den Bitches der brünftige Hirsch beim wöchentlichen Meeting nicht mehr in die Quere. Weidmannsheil."
+    },
+    {
+      date: "2026-09-10",
+      typ: "waage",
+      title: "Kleinlaut in den Herbst",
+      text: "Diese Woche gibt es nichts zu kichern — die Zahlen sprechen leise für sich. Gordo legt nochmals 0,2 zu und steht bei 157,0. Zweiter Rückschlag in Folge, und diesmal ist auch keine Ausrede in Sicht. Die Waage hat recht, sie hat immer recht. Man nimmt es mit gesenktem Bauch zur Kenntnis.\n\nRocket-Man hält seine 146,5 — unbeirrbar, unbewegt, wie ein Findling unterhalb der Mittagsfluh. Die Zehn-Kilo-Marke rückt damit in die Ferne statt näher. Kein Gejammer, keine grossen Töne: Am Montag wird gelaufen. In Kilo Veritas — heimatland."
     }
   ]
 };
