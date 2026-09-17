@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-09-14",
+  lastUpdate: "2026-09-17",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -146,7 +146,9 @@ window.SKINNY = {
         // 10.9. Wägung: zweiter Rückschlag in Folge (+0.2)
         { date: "2026-09-10", weightKg: 157.0, km: 76.26 },
         // 14.9. mit Los Kropfos, verkehrter Anaconda-Loop -> +3.41
-        { date: "2026-09-14", km: 79.67 }
+        { date: "2026-09-14", km: 79.67 },
+        // 17.9. Wägung: Trendwende (−0.7)
+        { date: "2026-09-17", weightKg: 156.3, km: 79.67 }
       ]
     },
     {
@@ -219,7 +221,9 @@ window.SKINNY = {
         // 10.9. Wägung: unbeirrbar wie ein Findling
         { date: "2026-09-10", weightKg: 146.5, km: 48.82 },
         // 14.9. mit Los Kropfos, verkehrter Anaconda-Loop -> +3.41
-        { date: "2026-09-14", km: 52.23 }
+        { date: "2026-09-14", km: 52.23 },
+        // 17.9. Wägung: der Findling bewegt sich — falsche Richtung (+0.3)
+        { date: "2026-09-17", weightKg: 146.8, km: 52.23 }
       ]
     },
 
@@ -540,6 +544,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Don't Look Back in Anger",
       text: "Am Start die zwei Gründungs-Ränzen und die Hermanos Los Kropfos — und die Viererbande hatte sich etwas Gemeines ausgedacht: Skinny-Bitch-Trail mit verkehrtem Anaconda-Loop. Heisst: zweimal die Stairway to Heaven hoch, was deutlich mühsamer ist als andersherum. Wer das freiwillig macht, hat entweder zu viel Energie oder zu wenig Verstand. Man darf raten, was hier zutrifft.\n\nGesprächsthema Nummer eins: Oasis. Just am Montag haben die Gallagher-Brüder ihre Live-'27-Tour verkündet unter dem Motto: «Come witness the fitness». Man fühlte sich angesprochen. Gordo und El Corto sassen schon letzten Mittwoch in der Vorpremiere der Doku «Don't Look Back in Anger» und hatten Hühnerhaut bis unter die Speckfalten. 2025 gingen die zwei beim Ticket-Gerangel noch leer aus — 2027 soll's klappen: München, Rom oder Knebworth. Nein, nicht soll. Muss. Die Registrierung läuft bis Donnerstag um 17 Uhr; am Wägetag entscheidet sich also doppelt, wer fit genug ist. Zurückgeblickt wurde unterwegs übrigens ganz ohne Groll: Rocket-Man trabte als Schlusslicht hinterher, und auf den kann schlicht niemand sauer sein.\n\nDann die Krise: Ein älterer Herr mit Hund auf dem Weg. Wer geht als Erster am Vierbeiner vorbei? Es wurden Streichhölzer gezogen — gelebte Demokratie auf dem Ogi. Das grössere Drama erlebte allerdings der Herr: Er hatte die herannahende Herde nicht bemerkt und erschrak fürchterlich, als sie von hinten auftauchte. Auf dem Rückweg vertöörleten sich die Los Kropfos noch mit psychedelischen Pilzen am Wegesrand. Janu, Hauptsache alle haben überlebt. Live Forever, in kilo veritas."
+    },
+    {
+      date: "2026-09-17",
+      typ: "waage",
+      title: "Einer rauf, einer runter",
+      text: "El Gordo dreht den Trend: minus 0,7, neu 156,3. Das macht exakt 9 Kilo seit Start — die Zehner-Marke liegt wieder in Reichweite. Dafür erwischt es diesmal den Jüngeren: Der Raketenmann legt 0,3 zu und steht bei 146,8. Erstmals seit Wochen bewegt sich der Koloss — nur in die lätze Richtung.\n\nUnterm Strich also ein Unentschieden mit Tendenz nach unten. Und heute um 17 Uhr schliesst die Oasis-Registrierung — ob es 2027 klappt, zeigt sich später. Die Waage hat schon geantwortet."
     }
   ]
 };
