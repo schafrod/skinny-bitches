@@ -13,3 +13,6 @@ Fotos/
 
 # Lokale Preview-Config
 .claude/
+
+# Fertige Outputs: nur lokal, per sd-dateninfra/tools/output_nach_onedrive.py nach OneDrive
+_output/
