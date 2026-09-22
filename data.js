@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-09-17",
+  lastUpdate: "2026-09-21",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -148,7 +148,9 @@ window.SKINNY = {
         // 14.9. mit Los Kropfos, verkehrter Anaconda-Loop -> +3.41
         { date: "2026-09-14", km: 79.67 },
         // 17.9. Wägung: Trendwende (−0.7)
-        { date: "2026-09-17", weightKg: 156.3, km: 79.67 }
+        { date: "2026-09-17", weightKg: 156.3, km: 79.67 },
+        // 21.9. Ogi-Weg inkl. Anaconda-Loop -> +3.41 (Jahrgang 83 in km erreicht)
+        { date: "2026-09-21", km: 83.08 }
       ]
     },
     {
@@ -223,7 +225,9 @@ window.SKINNY = {
         // 14.9. mit Los Kropfos, verkehrter Anaconda-Loop -> +3.41
         { date: "2026-09-14", km: 52.23 },
         // 17.9. Wägung: der Findling bewegt sich — falsche Richtung (+0.3)
-        { date: "2026-09-17", weightKg: 146.8, km: 52.23 }
+        { date: "2026-09-17", weightKg: 146.8, km: 52.23 },
+        // 21.9. Ogi-Weg inkl. Anaconda-Loop -> +3.41
+        { date: "2026-09-21", km: 55.64 }
       ]
     },
 
@@ -550,6 +554,16 @@ window.SKINNY = {
       typ: "waage",
       title: "Einer rauf, einer runter",
       text: "El Gordo dreht den Trend: minus 0,7, neu 156,3. Das macht exakt 9 Kilo seit Start — die Zehner-Marke liegt wieder in Reichweite. Dafür erwischt es diesmal den Jüngeren: Der Raketenmann legt 0,3 zu und steht bei 146,8. Erstmals seit Wochen bewegt sich der Koloss — nur in die lätze Richtung.\n\nUnterm Strich also ein Unentschieden mit Tendenz nach unten. Und heute um 17 Uhr schliesst die Oasis-Registrierung — ob es 2027 klappt, zeigt sich später. Die Waage hat schon geantwortet."
+    },
+    {
+      date: "2026-09-21",
+      typ: "lauf",
+      title: "Und dann kam Dolly... NICHT!",
+      text: "Fixe Runde heute: Ogi-Weg samt Anaconda-Loop, am Start El Gordo und Rocket-Man. Es ging gerade noch so ohne Stirnlampe — und selbst wenn nicht: Der speckige Teint strahlte derart durch den dämmrigen Wald, dass das Friteusen-Geschwader keinerlei Orientierungsprobleme hatte. In der Ferne röhrten noch immer die Hirsche. Die Dicken röhrten zurück. Ob das drüben als Balz oder als Kampfansage ankam, ist nicht überliefert.\n\nVon einem Klossner weit und breit keine Spur. Dabei hatte Coach Lars gegenüber Gordos Sohn noch verlauten lassen, ab heute pfeife dann wieder «ein anderes Vögeli». Gepfiffen hat es dann woanders: Weil der Theater-Text noch nicht sitzt, ging's für Mr. Sexybless nochmals zur Probe. Die Theatergruppe Lampenfieber bringt «…und dann kam Dolly!» auf die Bühne — am 26., 27. und 30. September in der MZH Reidenbach. Untertitel laut Flyer: «Tempo 80». Auf dem Ogi-Weg wäre das neuer Streckenrekord. Und wenn wir schon bei den 80er sind: Der Altränzling hat just heute seinen Jahrgang in Kilometern absolviert (zusammengezählt notabene).\n\nAb Oktober dürfte der Coach dann wieder mittun. Höchste Zeit, denn es gilt einen Plan zu schmieden: Wie kriegt die Gemeinde den Skinny-Bitch-Trail im Winter schneefrei? Ausweichen liegt nicht drin — überall sonst würden die tapsigen Rösti-Mähdrescher ständig auf die Fresse fliegen. Wir werden sehen. In Kilometer veritas.",
+      photoDir: "assets/runs/2026-09-21",
+      photos: [
+        { file: "flyer-dolly", caption: "Theatergruppe Lampenfieber: «…und dann kam Dolly!» — 26., 27. und 30. September, MZH Reidenbach." }
+      ]
     }
   ]
 };
