@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-09-21",
+  lastUpdate: "2026-09-24",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -150,7 +150,9 @@ window.SKINNY = {
         // 17.9. Wägung: Trendwende (−0.7)
         { date: "2026-09-17", weightKg: 156.3, km: 79.67 },
         // 21.9. Ogi-Weg inkl. Anaconda-Loop -> +3.41 (Jahrgang 83 in km erreicht)
-        { date: "2026-09-21", km: 83.08 }
+        { date: "2026-09-21", km: 83.08 },
+        // 24.9. Wägung: neuer Bestwert trotz Fondueplausch (−0.5)
+        { date: "2026-09-24", weightKg: 155.8, km: 83.08 }
       ]
     },
     {
@@ -227,7 +229,9 @@ window.SKINNY = {
         // 17.9. Wägung: der Findling bewegt sich — falsche Richtung (+0.3)
         { date: "2026-09-17", weightKg: 146.8, km: 52.23 },
         // 21.9. Ogi-Weg inkl. Anaconda-Loop -> +3.41
-        { date: "2026-09-21", km: 55.64 }
+        { date: "2026-09-21", km: 55.64 },
+        // 24.9. Wägung: trotz Fondue wieder runter (−0.3)
+        { date: "2026-09-24", weightKg: 146.5, km: 55.64 }
       ]
     },
 
@@ -564,6 +568,12 @@ window.SKINNY = {
       photos: [
         { file: "flyer-dolly", caption: "Theatergruppe Lampenfieber: «…und dann kam Dolly!» — 26., 27. und 30. September, MZH Reidenbach." }
       ]
+    },
+    {
+      date: "2026-09-24",
+      typ: "waage",
+      title: "Caquelon à discrétion",
+      text: "Eigentlich hätte die Waage heute zurückschlagen müssen. Am Freitag lud die <a href=\"https://lenk-milch.ch/\" target=\"_blank\" rel=\"noopener\">Lenk Milch AG</a> zum Jubiläum — Fondueplausch à discrétion. Und beide Bitches sassen am Caquelon. Wer die zwei kennt, weiss: «All you can eat» ist für sie keine Einladung, sondern ein Auftrag. Brotwürfel um Brotwürfel wurde die Käsesuppe trockengelegt und dazu Unmengen an Weisswein in den Schlund gekippt (um nicht zu dehydrieren👆).\n\nUnd trotzdem zeigt der Zähler nach unten. El Gordo verliert 0,5 und steht bei 155,8 — neuer Bestwert, 9,5 Kilo seit Start. Bis zur Zehner-Marke fehlt nur noch ein halbes Kilo. Rocket-Man zieht mit minus 0,3 nach und landet wieder bei 146,5. Zusammen 0,8 Kilo weniger — in einer fucking Fondue-Woche! Milchfett scheint den Buben nicht auf die Schwarte zu schlagen. Die Wissenschaft steht vor einem Rätsel. In Caquelon Veritas."
     }
   ]
 };
