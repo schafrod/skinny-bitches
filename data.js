@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-09-28",
+  lastUpdate: "2026-10-01",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -154,7 +154,9 @@ window.SKINNY = {
         // 24.9. Wägung: neuer Bestwert trotz Fondueplausch (−0.5)
         { date: "2026-09-24", weightKg: 155.8, km: 83.08 },
         // 28.9. Ogi-Weg inkl. Anaconda-Loop -> +3.41
-        { date: "2026-09-28", km: 86.49 }
+        { date: "2026-09-28", km: 86.49 },
+        // 1.10. Wägung: Zehn-Kilo-Marke geknackt (−0.7)
+        { date: "2026-10-01", weightKg: 155.1, km: 86.49 }
       ]
     },
     {
@@ -235,7 +237,9 @@ window.SKINNY = {
         // 24.9. Wägung: trotz Fondue wieder runter (−0.3)
         { date: "2026-09-24", weightKg: 146.5, km: 55.64 },
         // 28.9. Ogi-Weg inkl. Anaconda-Loop -> +3.41
-        { date: "2026-09-28", km: 59.05 }
+        { date: "2026-09-28", km: 59.05 },
+        // 1.10. Wägung: pfundig (+0.5)
+        { date: "2026-10-01", weightKg: 147.0, km: 59.05 }
       ]
     },
 
@@ -584,6 +588,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Risikosport: Waldspaziergang",
       text: "Coach Lars hatte wieder wichtiges Büsney-Zügs zu erledigen und liess die Truppe einmal mehr sitzen. Die Los Kropfos? Seit Wochen verschollen. Die Gummibären-Bande störte das wenig: El Gordo und Rocket-Man zogen den Ogi-Weg samt Anaconda-Loop eben zu zweit durch. Allein waren sie trotzdem nicht. Gesehen hat man zwar nichts, aber im Wald war es auffallend lebhaft. Die Mäuse scheinen Saison zu haben — hinter jeder Kurve raschelte es im Laub.\n\nAuf dem Rückweg von Boltigen stogelten die zwei Maulwürfe von einer Wurzel zur nächsten und schrammten wieder einmal knapp an einem Oberschenkelhalsbruch vorbei. Schuld ist die Dämmerung: Ab halb acht ist unter den Baumkronen kaum noch etwas zu erkennen. Oder der Diabetes, der bekanntlich zuerst auf die Augen schlägt. Item: Ab nächster Woche werden Stirnlampen montiert. Man muss das Schicksal ja nicht herausfordern — in dieser Gewichtsklasse ist ein abendlicher Waldspaziergang ohnehin mehr Risikosport als alles, was die Basejumper im Lauterbrunnental veranstalten."
+    },
+    {
+      date: "2026-10-01",
+      typ: "waage",
+      title: "ZWEISTELLIG!",
+      text: "Es ist vollbracht: Der Altölige hat 700 Gramm verloren und steht bei 155,1 — macht 10,2 Kilo seit Start. Die Zehner-Marke ist gefallen, El Gordo ist offiziell zweistellig (zumindest im Defizit, nicht im Total). 700 Gramm, das entspricht übrigens exakt dem gerade noch akzeptablen «Wohlfühlgewicht» eines Cordon-bleus. Unter 500 Gramm steigen die Bitches gar nicht erst ins Rennen — dann wird lieber der Fitnessteller bestellt, garniert mit einer kilönigen Schweinshaxe. Den Knochen nicht mitgerechnet.\n\nWas Rocket-Man übers Wochenende eskaliert hat, weiss niemand. Fest steht nur: Es war pfundig — exakt pfundig, plus 500 Gramm. Neu 147,0. Ein ehemaliger Coach dieser illustren Laufgruppe hat einst verraten, warum er nicht mehr wiegt als ein neunjähriges Mädchen: Sein Fitnessteller besteht aus einem Fertigsalat (samt Sauce) vom Volg und zwei Goldere-Steaks aus der Boltig-Metzg. Vielleicht sollten wir uns mehr Tipps holen — und umsetzen! In Kilo Veritas. Arrivederci."
     }
   ]
 };
