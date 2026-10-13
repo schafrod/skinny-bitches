@@ -8,3 +8,4 @@
 - **OneDrive-Ablage:** keine
 - Globale Regeln: /Users/Shared/CC_Git/CLAUDE.md (Bildregel, Print, Git-Ablauf).
 - Details zum Ablauf: `README.md`, `ENTWICKLUNG.md`.
+- Zuerst `STAND.md` lesen; nach jedem Arbeitsschritt STAND.md nachführen, committen und pushen.
