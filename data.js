@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-10-01",
+  lastUpdate: "2026-10-12",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -156,7 +156,9 @@ window.SKINNY = {
         // 28.9. Ogi-Weg inkl. Anaconda-Loop -> +3.41
         { date: "2026-09-28", km: 86.49 },
         // 1.10. Wägung: Zehn-Kilo-Marke geknackt (−0.7)
-        { date: "2026-10-01", weightKg: 155.1, km: 86.49 }
+        { date: "2026-10-01", weightKg: 155.1, km: 86.49 },
+        // 12.10. Gusti zügeln Bergblick -> Beret (GPX 4.01 km, 315 hm abwärts) -> +4.01
+        { date: "2026-10-12", km: 90.50 }
       ]
     },
     {
@@ -239,7 +241,9 @@ window.SKINNY = {
         // 28.9. Ogi-Weg inkl. Anaconda-Loop -> +3.41
         { date: "2026-09-28", km: 59.05 },
         // 1.10. Wägung: pfundig (+0.5)
-        { date: "2026-10-01", weightKg: 147.0, km: 59.05 }
+        { date: "2026-10-01", weightKg: 147.0, km: 59.05 },
+        // 12.10. Gusti zügeln Bergblick -> Beret (GPX 4.01 km, 315 hm abwärts) -> +4.01
+        { date: "2026-10-12", km: 63.06 }
       ]
     },
 
@@ -285,7 +289,9 @@ window.SKINNY = {
         // 13.8. Wägung: erbt eine prave Blutwurst (+0.3)
         { date: "2026-08-13", weightKg: 82.5, km: 15.19 },
         // 20.8. Wägung: hält das Erbe (±0)
-        { date: "2026-08-20", weightKg: 82.5, km: 15.19 }
+        { date: "2026-08-20", weightKg: 82.5, km: 15.19 },
+        // 12.10. Gusti zügeln Bergblick -> Beret (GPX 4.01 km, 315 hm abwärts) -> +4.01
+        { date: "2026-10-12", km: 19.20 }
       ]
     },
     /* ----- MISSED IN ACTION seit 20.7.2026 (Nachruf im Logbuch) -----
@@ -594,6 +600,12 @@ window.SKINNY = {
       typ: "waage",
       title: "ZWEISTELLIG!",
       text: "Es ist vollbracht: Der Altölige hat 700 Gramm verloren und steht bei 155,1 — macht 10,2 Kilo seit Start. Die Zehner-Marke ist gefallen, El Gordo ist offiziell zweistellig (zumindest im Defizit, nicht im Total). 700 Gramm, das entspricht übrigens exakt dem gerade noch akzeptablen «Wohlfühlgewicht» eines Cordon-bleus. Unter 500 Gramm steigen die Bitches gar nicht erst ins Rennen — dann wird lieber der Fitnessteller bestellt, garniert mit einer kilönigen Schweinshaxe. Den Knochen nicht mitgerechnet.\n\nWas Rocket-Man übers Wochenende eskaliert hat, weiss niemand. Fest steht nur: Es war pfundig — exakt pfundig, plus 500 Gramm. Neu 147,0. Ein ehemaliger Coach dieser illustren Laufgruppe hat einst verraten, warum er nicht mehr wiegt als ein neunjähriges Mädchen: Sein Fitnessteller besteht aus einem Fertigsalat (samt Sauce) vom Volg und zwei Goldere-Steaks aus der Boltig-Metzg. Vielleicht sollten wir uns mehr Tipps holen — und umsetzen! In Kilo Veritas. Arrivederci."
+    },
+    {
+      date: "2026-10-12",
+      typ: "lauf",
+      title: "Gusti statt Ogi",
+      text: "Kein Ogi-Weg diesmal — Coach Lars hatte andere Pläne. Die Gusti mussten vom Bergblick in den Beret gezügelt werden, und wer die Bitches kennt, weiss: Wenn’s nach Arbeit riecht, sind sie zur Stelle. Mehr oder weniger. Die Pummel waren nämlich spät dran, Lars und Bauernbruder Hombre längst mit der Herde unterwegs. Erst kurz vor dem Überbäuerter Andy B. stiessen die zarten Fichten dazu.\n\nDanach ging’s über einen Krüppelweg runter in den Ruersgraben und drüben wieder rauf ins Gstüss. Gut vier Kilometer, über 300 Höhenmeter abwärts. Von «Treiben» kann allerdings keine Rede sein — das Tempo der Dicken hätte kein Rind beeindruckt. Eher zogen die Viecher die Bitches hinter sich her. Weil die Aktion spontan war, ging vergessen, den Los Kropfos Bescheid zu geben. Die drehten derweil pflichtbewusst ihre Runde auf dem regulären Skinny-Bitch-Trail — allein.\n\nNach rund einer Stunde Einsatz brachte ein Mann im roten Helly-Hansen die Truppe zurück zum Ausgangspunkt. Dort wurde die Regeneration eingeläutet: zwei Stunden Bier beim Überbäuerter. Auf eine Stunde Bewegung zwei Stunden Flüssignahrung — ein Verhältnis, das jedem Sportmediziner die Tränen in die Augen treibt. In Kilo Veritas.\n\nPS: Letzte Woche gab’s keine Updates. Der Wurstfingerige hinter der Tastatur war im Urlaub."
     }
   ]
 };
