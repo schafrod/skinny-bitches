@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-10-12",
+  lastUpdate: "2026-10-15",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -158,7 +158,9 @@ window.SKINNY = {
         // 1.10. Wägung: Zehn-Kilo-Marke geknackt (−0.7)
         { date: "2026-10-01", weightKg: 155.1, km: 86.49 },
         // 12.10. Gusti zügeln Bergblick -> Beret (GPX 4.01 km, 315 hm abwärts) -> +4.01
-        { date: "2026-10-12", km: 90.50 }
+        { date: "2026-10-12", km: 90.50 },
+        // 15.10. Wägung nach Italien-Urlaub (+3.2)
+        { date: "2026-10-15", weightKg: 158.3, km: 90.50 }
       ]
     },
     {
@@ -243,7 +245,9 @@ window.SKINNY = {
         // 1.10. Wägung: pfundig (+0.5)
         { date: "2026-10-01", weightKg: 147.0, km: 59.05 },
         // 12.10. Gusti zügeln Bergblick -> Beret (GPX 4.01 km, 315 hm abwärts) -> +4.01
-        { date: "2026-10-12", km: 63.06 }
+        { date: "2026-10-12", km: 63.06 },
+        // 15.10. Wägung: hält die 147,0
+        { date: "2026-10-15", weightKg: 147.0, km: 63.06 }
       ]
     },
 
@@ -291,7 +295,9 @@ window.SKINNY = {
         // 20.8. Wägung: hält das Erbe (±0)
         { date: "2026-08-20", weightKg: 82.5, km: 15.19 },
         // 12.10. Gusti zügeln Bergblick -> Beret (GPX 4.01 km, 315 hm abwärts) -> +4.01
-        { date: "2026-10-12", km: 19.20 }
+        { date: "2026-10-12", km: 19.20 },
+        // 15.10. erste Wägung seit 20.8. (−0.2, Erben misslingt)
+        { date: "2026-10-15", weightKg: 82.3, km: 19.20 }
       ]
     },
     /* ----- MISSED IN ACTION seit 20.7.2026 (Nachruf im Logbuch) -----
@@ -606,6 +612,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Gusti statt Ogi",
       text: "Kein Ogi-Weg diesmal — Coach Lars hatte andere Pläne. Die Gusti mussten vom Bergblick in den Beret gezügelt werden, und wer die Bitches kennt, weiss: Wenn’s nach Arbeit riecht, sind sie zur Stelle. Mehr oder weniger. Die Pummel waren nämlich spät dran, Lars und Bauernbruder Hombre längst mit der Herde unterwegs. Erst kurz vor dem Überbäuerter Andy B. stiessen die zarten Fichten dazu.\n\nDanach ging’s über einen Krüppelweg runter in den Ruersgraben und drüben wieder rauf ins Gstüss. Gut vier Kilometer, über 300 Höhenmeter abwärts. Von «Treiben» kann allerdings keine Rede sein — das Tempo der Dicken hätte kein Rind beeindruckt. Eher zogen die Viecher die Bitches hinter sich her. Weil die Aktion spontan war, ging vergessen, den Los Kropfos Bescheid zu geben. Die drehten derweil pflichtbewusst ihre Runde auf dem regulären Skinny-Bitch-Trail — allein.\n\nNach rund einer Stunde Einsatz brachte ein Mann im roten Helly-Hansen die Truppe zurück zum Ausgangspunkt. Dort wurde die Regeneration eingeläutet: zwei Stunden Bier beim Überbäuerter. Auf eine Stunde Bewegung zwei Stunden Flüssignahrung — ein Verhältnis, das jedem Sportmediziner die Tränen in die Augen treibt. In Kilo Veritas.\n\nPS: Letzte Woche gab’s keine Updates. Der Wurstfingerige hinter der Tastatur war im Urlaub."
+    },
+    {
+      date: "2026-10-15",
+      typ: "waage",
+      title: "Pasta la vista, Bestwert",
+      text: "Der Italien-Urlaub der ältesten Bitch war ein voller Misserfolg. Kaum eine Woche ohne Aufsicht, und schon mästete sich der Mähdrescher im benachbarten Ausland: plus 3,2 Kilo, neu 158,3. Die Zehner-Marke, vor zwei Wochen noch stolz gefeiert, ist wieder Geschichte — vom zweistelligen Defizit bleiben magere 7,0 Kilo. Arrivederci, Zweistellig.\n\nRocket-Man hält derweil seine 147,0 — kein Gramm rauf, kein Gramm runter. Und Coach Lars stand nach acht Wochen Funkstille erstmals wieder auf der Waage: 82,3, minus 0,2. Erben misslingt weiterhin. Immerhin einer, der nicht in Italien war. In Kilo Veritas."
     }
   ]
 };
