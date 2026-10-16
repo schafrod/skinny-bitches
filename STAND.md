@@ -25,7 +25,7 @@
 | Mika (Gedenk-Karte, vermisst) | ≈81,2 | 3,41 |
 
 - Logbuch: 41 Einträge (Juni 11 / Juli 10 / Aug 9 / Sep 8 / Okt 3). Ältere Monate klappen automatisch ins Archiv.
-- 12.10.: statt Ogi-Weg Gusti-Zügeln Bergblick → Beret (GPX 4,01 km, 315 hm abwärts), auch Lars gutgeschrieben.
+- 12.10.: statt Ogi-Weg Gusti-Zügeln Bergblick → Beret (GPX 4,01 km, 315 hm abwärts), auch Lars gutgeschrieben; Eintrag mit 2 Fotos (`assets/runs/2026-10-12/`).
 - Woche 05.–09.10.: keine Daten (Ferien).
 - Versionen: `css/style.css?v=35`, `js/main.js?v=26` (bei CSS/JS-Änderung erhöhen).
 
