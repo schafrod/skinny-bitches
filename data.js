@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-10-15",
+  lastUpdate: "2026-10-19",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -160,7 +160,9 @@ window.SKINNY = {
         // 12.10. Gusti zügeln Bergblick -> Beret (GPX 4.01 km, 315 hm abwärts) -> +4.01
         { date: "2026-10-12", km: 90.50 },
         // 15.10. Wägung nach Italien-Urlaub (+3.2)
-        { date: "2026-10-15", weightKg: 158.3, km: 90.50 }
+        { date: "2026-10-15", weightKg: 158.3, km: 90.50 },
+        // 19.10. Ogi-Weg inkl. Anaconda-Loop (Chrigu, Severin, Lars) -> +3.41
+        { date: "2026-10-19", km: 93.91 }
       ]
     },
     {
@@ -247,7 +249,9 @@ window.SKINNY = {
         // 12.10. Gusti zügeln Bergblick -> Beret (GPX 4.01 km, 315 hm abwärts) -> +4.01
         { date: "2026-10-12", km: 63.06 },
         // 15.10. Wägung: hält die 147,0
-        { date: "2026-10-15", weightKg: 147.0, km: 63.06 }
+        { date: "2026-10-15", weightKg: 147.0, km: 63.06 },
+        // 19.10. Ogi-Weg inkl. Anaconda-Loop (Chrigu, Severin, Lars) -> +3.41
+        { date: "2026-10-19", km: 66.47 }
       ]
     },
 
@@ -297,7 +301,9 @@ window.SKINNY = {
         // 12.10. Gusti zügeln Bergblick -> Beret (GPX 4.01 km, 315 hm abwärts) -> +4.01
         { date: "2026-10-12", km: 19.20 },
         // 15.10. erste Wägung seit 20.8. (−0.2, Erben misslingt)
-        { date: "2026-10-15", weightKg: 82.3, km: 19.20 }
+        { date: "2026-10-15", weightKg: 82.3, km: 19.20 },
+        // 19.10. Ogi-Weg inkl. Anaconda-Loop (Chrigu, Severin, Lars) -> +3.41
+        { date: "2026-10-19", km: 22.61 }
       ]
     },
     /* ----- MISSED IN ACTION seit 20.7.2026 (Nachruf im Logbuch) -----
@@ -623,6 +629,12 @@ window.SKINNY = {
       typ: "waage",
       title: "Pasta la vista, Bestwert",
       text: "Der Italien-Urlaub der ältesten Bitch war ein voller Misserfolg. Kaum eine Woche ohne Aufsicht, und schon mästete sich der Mähdrescher im benachbarten Ausland: plus 3,2 Kilo, neu 158,3. Die Zehner-Marke, vor zwei Wochen noch stolz gefeiert, ist wieder Geschichte — vom zweistelligen Defizit bleiben magere 7,0 Kilo. Arrivederci, Zweistellig.\n\nRocket-Man hält derweil seine 147,0 — kein Gramm rauf, kein Gramm runter. Und Coach Lars stand nach acht Wochen Funkstille erstmals wieder auf der Waage: 82,3, minus 0,2. Erben misslingt weiterhin. Immerhin einer, der nicht in Italien war. In Kilo Veritas."
+    },
+    {
+      date: "2026-10-19",
+      typ: "lauf",
+      title: "Brückenzoll ir Schinti",
+      text: "Der Dicke hat vergessen, den Los Kropfos Bescheid zu geben — aber die drei waren eh zu früh dran. Spontan um 18 Uhr ging’s los, sonst hätte man nichts mehr gesehen. Denn die Widrigkeiten nehmen zu. Nach drei Wochen Absenz ist der Ogi-Weg kaum noch zu erkennen, auf der Rennstrecke liegt ein Haufen Laub, und der Coach hat den Laubbläser vergessen. Ob die Bitches dem Winter trotzen? Das wird auf jeden Fall spannend.\n\nDie Stirnlampen-Variante wäre einfach, aber hässlich. Man fragt sich, ob die Boschenie-Beleuchtung von Taxi-Samuel noch existiert — und ob man sich damit einen eigenen Winterwanderweg in den Ogi setzen sollte. Dann könnte man den Dicken nachts von der gegenüberliegenden Talseite aus beim Schwitzen zusehen. Die Tarnung des Waldes verlässt sie ja ohnehin bald.\n\nWegen eines Unfalls auf der Talstrasse herrschte bei der Schinti-Brücke reger Verkehr. Beinahe hätte man sich gegen die Lauferei entschieden und stattdessen 5 Fräichi Brückenzoll kassiert — oder das Ding niedergebrannt, sollten noch mehr Stauumfahrer auftauchen. Unterwegs klopfte Coach Lars auf den Busch, um eine riesige Maus zu verscheuchen. Er weiss: Seine Schützlinge haben nicht nur das Gewicht von Elefanten, sondern auch deren Angst vor Mäusen. Würden die zwei Dickhäuter in Panik geraten, wäre der Schattseitenwald kaum noch aufzuforsten. Himmuheiland."
     }
   ]
 };
