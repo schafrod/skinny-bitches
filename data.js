@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-10-19",
+  lastUpdate: "2026-10-22",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -162,7 +162,9 @@ window.SKINNY = {
         // 15.10. Wägung nach Italien-Urlaub (+3.2)
         { date: "2026-10-15", weightKg: 158.3, km: 90.50 },
         // 19.10. Ogi-Weg inkl. Anaconda-Loop (Chrigu, Severin, Lars) -> +3.41
-        { date: "2026-10-19", km: 93.91 }
+        { date: "2026-10-19", km: 93.91 },
+        // 22.10. Wägung: Jo-Jo (−3.0), zehn Kilo wieder beisammen
+        { date: "2026-10-22", weightKg: 155.3, km: 93.91 }
       ]
     },
     {
@@ -251,7 +253,9 @@ window.SKINNY = {
         // 15.10. Wägung: hält die 147,0
         { date: "2026-10-15", weightKg: 147.0, km: 63.06 },
         // 19.10. Ogi-Weg inkl. Anaconda-Loop (Chrigu, Severin, Lars) -> +3.41
-        { date: "2026-10-19", km: 66.47 }
+        { date: "2026-10-19", km: 66.47 },
+        // 22.10. Wägung: neuer Bestwert (−0.7)
+        { date: "2026-10-22", weightKg: 146.3, km: 66.47 }
       ]
     },
 
@@ -303,7 +307,9 @@ window.SKINNY = {
         // 15.10. erste Wägung seit 20.8. (−0.2, Erben misslingt)
         { date: "2026-10-15", weightKg: 82.3, km: 19.20 },
         // 19.10. Ogi-Weg inkl. Anaconda-Loop (Chrigu, Severin, Lars) -> +3.41
-        { date: "2026-10-19", km: 22.61 }
+        { date: "2026-10-19", km: 22.61 },
+        // 22.10. Wägung: Erben misslingt (−0.2)
+        { date: "2026-10-22", weightKg: 82.1, km: 22.61 }
       ]
     },
     /* ----- MISSED IN ACTION seit 20.7.2026 (Nachruf im Logbuch) -----
@@ -635,6 +641,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Brückenzoll ir Schinti",
       text: "Der Dicke hat vergessen, den Los Kropfos Bescheid zu geben — aber die drei waren eh zu früh dran. Spontan um 18 Uhr ging’s los, sonst hätte man nichts mehr gesehen. Denn die Widrigkeiten nehmen zu. Nach drei Wochen Absenz ist der Ogi-Weg kaum noch zu erkennen, auf der Rennstrecke liegt ein Haufen Laub, und der Coach hat den Laubbläser vergessen. Ob die Bitches dem Winter trotzen? Das wird auf jeden Fall spannend.\n\nDie Stirnlampen-Variante wäre einfach, aber hässlich. Man fragt sich, ob die Boschenie-Beleuchtung von Taxi-Samuel noch existiert — und ob man sich damit einen eigenen Winterwanderweg in den Ogi setzen sollte. Dann könnte man den Dicken nachts von der gegenüberliegenden Talseite aus beim Schwitzen zusehen. Die Tarnung des Waldes verlässt sie ja ohnehin bald.\n\nWegen eines Unfalls auf der Talstrasse herrschte bei der Schinti-Brücke reger Verkehr. Beinahe hätte man sich gegen die Lauferei entschieden und stattdessen 5 Fräichi Brückenzoll kassiert — oder das Ding niedergebrannt, sollten noch mehr Stauumfahrer auftauchen. Unterwegs klopfte Coach Lars auf den Busch, um eine riesige Maus zu verscheuchen. Er weiss: Seine Schützlinge haben nicht nur das Gewicht von Elefanten, sondern auch deren Angst vor Mäusen. Würden die zwei Dickhäuter in Panik geraten, wäre der Schattseitenwald kaum noch aufzuforsten. Himmuheiland."
+    },
+    {
+      date: "2026-10-22",
+      typ: "waage",
+      title: "Jo-Jo nach Lehrbuch",
+      text: "Nach dem desaströsen Italien-Abstecher beweist der verfressene Gordo weiterhin, wie dynamisch und abscheulich unvernünftig er is(s)t. Das Gewicht geht rauf und runter wie ein Bügel am Zügwegen: minus 3,0, neu 155,3. Damit sind die zehn Kilo seit Start wieder exakt beisammen. Rocket-Man legt mit minus 0,7 einen neuen Bestwert hin (146,3), Coach Lars verliert 0,2 (82,1) — das Erben will einfach nicht klappen. In Kilo Veritas."
     }
   ]
 };
