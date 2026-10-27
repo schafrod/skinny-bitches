@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-10-22",
+  lastUpdate: "2026-10-26",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -647,6 +647,17 @@ window.SKINNY = {
       typ: "waage",
       title: "Jo-Jo nach Lehrbuch",
       text: "Nach dem desaströsen Italien-Abstecher beweist der verfressene Gordo weiterhin, wie dynamisch und abscheulich unvernünftig er is(s)t. Das Gewicht geht rauf und runter wie ein Bügel am Zügwegen: minus 3,0, neu 155,3. Damit sind die zehn Kilo seit Start wieder exakt beisammen. Rocket-Man legt mit minus 0,7 einen neuen Bestwert hin (146,3), Coach Lars verliert 0,2 (82,1) — das Erben will einfach nicht klappen. In Kilo Veritas."
+    },
+    {
+      date: "2026-10-26",
+      typ: "lauf",
+      title: "Dornen-Krieg in der Hausmatte",
+      text: "Kein Ogi diesmal — in der Hausmatte wartete Arbeit. Das Memphis-Kings-Club-Lager war derart verwuchert, dass Handeln Pflicht war, bevor der Dschungel die Garagen ganz verschluckt. Nachbar Trikel hatte die Vorarbeit geleistet (Merci!), den Rest erledigten die Vollschlanken unter sich — alle anderen waren verhindert. Einzig die Kinder des Ältesten standen ihnen bei, als es darum ging, die verdammten Dornen (stacheliger als jede Schwiegermutter) in Rocket-Mans viel zu kleinen Anhänger zu murksen.\n\nDer Murks ging bei der Entsorgungsstelle weiter: Das Geäst musste auf die bereits gut gefüllte Grünmulde gehievt werden, wo jeder Ast zurückschlug. Die Schwammigen zogen sich diverse Verletzungen zu — Kratzer, Stiche, Schürfungen. Es war wie im Krieg. Den sie allerdings gewannen. Selbst die Natur musste merken, dass man sich nicht mit 600 Pfund Boltiger Schwungmasse anlegt.\n\nIn der Kilometer-Statistik gibt’s kein Update, pflätschnass waren sie trotzdem. Mission beendet. In Kilo Veritas.",
+      photoDir: "assets/runs/2026-10-26",
+      photos: [
+        { file: "hausmatte-garagen", caption: "Das Schlachtfeld: Die Garagen sind wieder sichtbar, der Dschungel liegt am Boden." },
+        { file: "gruenmulde", caption: "Die Kriegsbeute — Grünmulde bis über den Rand, nachts um halb Feierabend." }
+      ]
     }
   ]
 };

@@ -1,6 +1,6 @@
 # STAND — Skinny Bitches (skinny-bitches.ch)
 
-> **Stichtag: 22.10.2026.** Nur der gültige Stand, max. ~150 Zeilen. Überschreiben statt anhängen; Erledigtes und Überholtes raus. Technik, Aufbau und Herleitungen: `ENTWICKLUNG.md`. Bei Widerspruch gilt STAND.md.
+> **Stichtag: 27.10.2026.** Nur der gültige Stand, max. ~150 Zeilen. Überschreiben statt anhängen; Erledigtes und Überholtes raus. Technik, Aufbau und Herleitungen: `ENTWICKLUNG.md`. Bei Widerspruch gilt STAND.md.
 
 ## Eckdaten
 | Feld | Wert |
@@ -16,7 +16,7 @@
 - Im selben Commit nachführen: `STAND.md` (Zahlen unten) und `ENTWICKLUNG.md` («Stand der Zahlen», «Daten bis»).
 - Fotos/Flyer: `assets/runs/JJJJ-MM-TT/<slug>.jpg` + `<slug>-t.jpg`, im Log-Eintrag `photoDir` + `photos`.
 
-## Aktueller Stand (Daten bis Wägung 22.10.2026)
+## Aktueller Stand (Daten bis 26.10.2026)
 | Person | kg (Δ seit Start) | km total |
 |---|---|---|
 | Chrigu «El Gordo» | 155,3 (−10,0; Bestwert 155,1 am 1.10.) | 93,91 |
@@ -24,13 +24,14 @@
 | Lars «Mr. Sexybless» (Coach) | 82,1 (−2,4) | 22,61 |
 | Mika (Gedenk-Karte, vermisst) | ≈81,2 | 3,41 |
 
-- Logbuch: 43 Einträge (Juni 11 / Juli 10 / Aug 9 / Sep 8 / Okt 5). Ältere Monate klappen automatisch ins Archiv.
+- Logbuch: 44 Einträge (Juni 11 / Juli 10 / Aug 9 / Sep 8 / Okt 6).
+- 26.10.: statt Lauf Dornen-Rodung in der Hausmatte (keine km), Eintrag mit 2 Fotos. Ältere Monate klappen automatisch ins Archiv.
 - 12.10.: statt Ogi-Weg Gusti-Zügeln Bergblick → Beret (GPX 4,01 km, 315 hm abwärts), auch Lars gutgeschrieben; Eintrag mit 2 Fotos (`assets/runs/2026-10-12/`).
 - Woche 05.–09.10.: keine Daten (Ferien).
 - Versionen: `css/style.css?v=35`, `js/main.js?v=26` (bei CSS/JS-Änderung erhöhen).
 
 ## Pendenzen
-- [ ] Nächster Lauf Mo 26.10., Wägung Do 29.10.2026.
+- [ ] Nächste Wägung Do 29.10., Lauf Mo 02.11.2026.
 - [ ] Google Search Console: Indexierungs-Status prüfen (Domain-Property `skinny-bitches.ch`, Sitemap als volle URL).
 
 ## Offene Ideen (angeboten, nicht entschieden)
