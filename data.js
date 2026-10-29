@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-10-26",
+  lastUpdate: "2026-10-29",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -164,7 +164,8 @@ window.SKINNY = {
         // 19.10. Ogi-Weg inkl. Anaconda-Loop (Chrigu, Severin, Lars) -> +3.41
         { date: "2026-10-19", km: 93.91 },
         // 22.10. Wägung: Jo-Jo (−3.0), zehn Kilo wieder beisammen
-        { date: "2026-10-22", weightKg: 155.3, km: 93.91 }
+        { date: "2026-10-22", weightKg: 155.3, km: 93.91 },
+        { date: "2026-10-29", weightKg: 156.0, km: 93.91 }
       ]
     },
     {
@@ -255,7 +256,8 @@ window.SKINNY = {
         // 19.10. Ogi-Weg inkl. Anaconda-Loop (Chrigu, Severin, Lars) -> +3.41
         { date: "2026-10-19", km: 66.47 },
         // 22.10. Wägung: neuer Bestwert (−0.7)
-        { date: "2026-10-22", weightKg: 146.3, km: 66.47 }
+        { date: "2026-10-22", weightKg: 146.3, km: 66.47 },
+        { date: "2026-10-29", weightKg: 146.0, km: 66.47 }
       ]
     },
 
@@ -309,7 +311,8 @@ window.SKINNY = {
         // 19.10. Ogi-Weg inkl. Anaconda-Loop (Chrigu, Severin, Lars) -> +3.41
         { date: "2026-10-19", km: 22.61 },
         // 22.10. Wägung: Erben misslingt (−0.2)
-        { date: "2026-10-22", weightKg: 82.1, km: 22.61 }
+        { date: "2026-10-22", weightKg: 82.1, km: 22.61 },
+        { date: "2026-10-29", weightKg: 82.0, km: 22.61 }
       ]
     },
     /* ----- MISSED IN ACTION seit 20.7.2026 (Nachruf im Logbuch) -----
@@ -658,6 +661,12 @@ window.SKINNY = {
         { file: "hausmatte-garagen", caption: "Das Schlachtfeld: Die Garagen sind wieder sichtbar, der Dschungel liegt am Boden." },
         { file: "gruenmulde", caption: "Die Kriegsbeute — Grünmulde bis über den Rand, nachts um halb Feierabend." }
       ]
+    },
+    {
+      date: "2026-10-29",
+      typ: "waage",
+      title: "Die Hand in der Güetzi-Dose",
+      text: "Schlachtgewicht 156,0 — plus 0,7 für El Gordo. Die Ursache ist schnell gefunden: Vor zwei Wochen war er bei Kambly in Trubschachen, und seither steckt tagsüber stets eine Hand in der Güetzi-Dose. Bretzeli, Butterfly, Japonais. Von den zehn Kilo seit Start bleiben noch 9,3.\n\nChorberi-Hund Rocket-Man dagegen zieht stur seine Linie: minus 0,3, neu 146,0 — wieder ein Bestwert, drei Kilo seit Start. Und Coach Lars bringt 82,0 Kilo pure Erotik auf die Waage, minus 0,1. Erben misslingt, Verführen gelingt. In Kilo Veritas."
     }
   ]
 };
