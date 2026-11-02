@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-10-29",
+  lastUpdate: "2026-11-02",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -667,6 +667,18 @@ window.SKINNY = {
       typ: "waage",
       title: "Die Hand in der Güetzi-Dose",
       text: "Schlachtgewicht 156,0 — plus 0,7 für El Gordo. Die Ursache ist schnell gefunden: Vor zwei Wochen war er bei Kambly in Trubschachen, und seither steckt tagsüber stets eine Hand in der Güetzi-Dose. Bretzeli, Butterfly, Japonais. Von den zehn Kilo seit Start bleiben noch 9,3.\n\nChorberi-Hund Rocket-Man dagegen zieht stur seine Linie: minus 0,3, neu 146,0 — wieder ein Bestwert, drei Kilo seit Start. Und Coach Lars bringt 82,0 Kilo pure Erotik auf die Waage, minus 0,1. Erben misslingt, Verführen gelingt. In Kilo Veritas."
+    },
+    {
+      date: "2026-11-02",
+      typ: "lauf",
+      title: "Einen Bären aufbinden",
+      text: "Der Ogi-Weg blieb verwaist: El Gordo musste passen, der Dicke liegt schwer an Männergrippe darnieder. Schleifen lassen dürfe man es deswegen aber nicht, liess er vom Krankenlager ausrichten. Das nahmen zwei wörtlich: Mr. Sexybless und Rocket-Man secklten hurtig aufs Bäderhorn, obwohl es bereits stockdunkel war.\n\nWas dann geschah, ist nur durch Coach Lars überliefert und deshalb mit Vorsicht zu geniessen: Sevl geriet in einen Kampf mit einem Bären, es war grausam mitanzusehen. Nach zehn Minuten schweren Leidens erlag der Bär seinen Verletzungen. Das Handy hatte Sevl dem Verdammten mit solcher Wucht in die Fresslucke geschlagen, dass das Tier das Vibrieren im Enddarm spürte — weshalb der Sieger selbst für keine Stellungnahme erreichbar war. Lars hat noch immer Gänsehaut.\n\nDanach soll Sevl laut El Corto in einem Pferd geschlafen haben, <a href=\"https://www.youtube.com/watch?v=6_4iEFQcEhg\" target=\"_blank\" rel=\"noopener\">wie in The Revenant</a>. El Gordo hat die Szene vom Krankenbett aus mehrfach studiert und kommt zum Schluss: Ein Pferdekadaver würde nicht reichen, damit Rocket-Man darin schlafen könnte. El Corto hätte sich für einen solchen Stunt erst nach alter Bear-Grylls-Manier mit der eigenen Pisse Mut antrinken müssen. Und El Barbudo gesteht, alles heimlich aus sicherer Entfernung beobachtet zu haben; zu Hilfe geeilt wäre er wohl nicht.\n\nFür die Akten: Die Beweisfotos stammen aus der KI, Bär und der Raketenmann sind wohlauf. Kilometer gibt’s keine.",
+      photoDir: "assets/runs/2026-11-02",
+      photos: [
+        { file: "baederhorn-gipfel", caption: "Beweisstück 1: Gipfel, Abendrot, Daumen hoch. Noch ahnt der Bär nichts." },
+        { file: "baer-nahkampf", caption: "Beweisstück 2: Der Moment, in dem dem Bären dämmert, mit wem er sich angelegt hat." },
+        { file: "baer-zeuge", caption: "Beweisstück 3: Hinten rechts hinter dem Baum El Barbudo, der stille Zeuge." }
+      ]
     }
   ]
 };
