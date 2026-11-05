@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-11-02",
+  lastUpdate: "2026-11-05",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -165,7 +165,8 @@ window.SKINNY = {
         { date: "2026-10-19", km: 93.91 },
         // 22.10. Wägung: Jo-Jo (−3.0), zehn Kilo wieder beisammen
         { date: "2026-10-22", weightKg: 155.3, km: 93.91 },
-        { date: "2026-10-29", weightKg: 156.0, km: 93.91 }
+        { date: "2026-10-29", weightKg: 156.0, km: 93.91 },
+        { date: "2026-11-05", weightKg: 153.6, km: 93.91 }
       ]
     },
     {
@@ -257,7 +258,8 @@ window.SKINNY = {
         { date: "2026-10-19", km: 66.47 },
         // 22.10. Wägung: neuer Bestwert (−0.7)
         { date: "2026-10-22", weightKg: 146.3, km: 66.47 },
-        { date: "2026-10-29", weightKg: 146.0, km: 66.47 }
+        { date: "2026-10-29", weightKg: 146.0, km: 66.47 },
+        { date: "2026-11-05", weightKg: 146.0, km: 66.47 }
       ]
     },
 
@@ -312,7 +314,8 @@ window.SKINNY = {
         { date: "2026-10-19", km: 22.61 },
         // 22.10. Wägung: Erben misslingt (−0.2)
         { date: "2026-10-22", weightKg: 82.1, km: 22.61 },
-        { date: "2026-10-29", weightKg: 82.0, km: 22.61 }
+        { date: "2026-10-29", weightKg: 82.0, km: 22.61 },
+        { date: "2026-11-05", weightKg: 82.0, km: 22.61 }
       ]
     },
     /* ----- MISSED IN ACTION seit 20.7.2026 (Nachruf im Logbuch) -----
@@ -679,6 +682,12 @@ window.SKINNY = {
         { file: "baer-nahkampf", caption: "Beweisstück 2: Der Moment, in dem dem Bären dämmert, mit wem er sich angelegt hat." },
         { file: "baer-zeuge", caption: "Beweisstück 3: Hinten rechts hinter dem Baum El Barbudo, der stille Zeuge." }
       ]
+    },
+    {
+      date: "2026-11-05",
+      typ: "waage",
+      title: "Männergrippe-Diät",
+      text: "Die Männergrippe hat El Gordo niedergestreckt, und die Waage dankt es ihm: 153,6, minus 2,4 in einer Woche. Das ist ein neuer Bestwert, und mit 11,7 Kilo seit Start ist die Zehn-Kilo-Marke deutlich zurückerobert. Wer krank im Bett liegt, kommt eben nicht an die Güetzi-Büchse.\n\nRocket-Man und Coach Lars dagegen stehen wie in Stein gemeisselt: 146,0 und 82,0, auf das Gramm gleich wie letzte Woche. Ob der Bärenkampf zu viel Energie gekostet hat oder einfach zu wenig, bleibt offen. Offen bleibt auch, ob die beiden überhaupt eine Waage haben. Janu, In Kilo Veritas."
     }
   ]
 };

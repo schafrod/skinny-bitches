@@ -1,6 +1,6 @@
 # STAND — Skinny Bitches (skinny-bitches.ch)
 
-> **Stichtag: 02.11.2026.** Nur der gültige Stand, max. ~150 Zeilen. Überschreiben statt anhängen; Erledigtes und Überholtes raus. Technik, Aufbau und Herleitungen: `ENTWICKLUNG.md`. Bei Widerspruch gilt STAND.md.
+> **Stichtag: 05.11.2026.** Nur der gültige Stand, max. ~150 Zeilen. Überschreiben statt anhängen; Erledigtes und Überholtes raus. Technik, Aufbau und Herleitungen: `ENTWICKLUNG.md`. Bei Widerspruch gilt STAND.md.
 
 ## Eckdaten
 | Feld | Wert |
@@ -16,15 +16,15 @@
 - Im selben Commit nachführen: `STAND.md` (Zahlen unten) und `ENTWICKLUNG.md` («Stand der Zahlen», «Daten bis»).
 - Fotos/Flyer: `assets/runs/JJJJ-MM-TT/<slug>.jpg` + `<slug>-t.jpg`, im Log-Eintrag `photoDir` + `photos`.
 
-## Aktueller Stand (Daten bis 02.11.2026)
+## Aktueller Stand (Daten bis 05.11.2026)
 | Person | kg (Δ seit Start) | km total |
 |---|---|---|
-| Chrigu «El Gordo» | 156,0 (−9,3; Bestwert 155,1 am 1.10.) | 93,91 |
+| Chrigu «El Gordo» | 153,6 (−11,7, Bestwert) | 93,91 |
 | Severin «Rocket-Man» | 146,0 (−3,0, Bestwert) | 66,47 |
 | Lars «Mr. Sexybless» (Coach) | 82,0 (−2,5) | 22,61 |
 | Mika (Gedenk-Karte, vermisst) | ≈81,2 | 3,41 |
 
-- Logbuch: 46 Einträge (Juni 11 / Juli 10 / Aug 9 / Sep 8 / Okt 7 / Nov 1).
+- Logbuch: 47 Einträge (Juni 11 / Juli 10 / Aug 9 / Sep 8 / Okt 7 / Nov 2).
 - 02.11.: kein Lauf (El Gordo Männergrippe), Scherz-Eintrag «Einen Bären aufbinden» mit 3 KI-Fotos, keine km.
 - 26.10.: statt Lauf Dornen-Rodung in der Hausmatte (keine km), Eintrag mit 2 Fotos. Ältere Monate klappen automatisch ins Archiv.
 - 12.10.: statt Ogi-Weg Gusti-Zügeln Bergblick → Beret (GPX 4,01 km, 315 hm abwärts), auch Lars gutgeschrieben; Eintrag mit 2 Fotos (`assets/runs/2026-10-12/`).
@@ -32,7 +32,7 @@
 - Versionen: `css/style.css?v=35`, `js/main.js?v=26` (bei CSS/JS-Änderung erhöhen).
 
 ## Pendenzen
-- [ ] Nächste Wägung Do 05.11., Lauf Mo 09.11.2026.
+- [ ] Nächster Lauf Mo 09.11., Wägung Do 12.11.2026.
 - [ ] Google Search Console: Indexierungs-Status prüfen (Domain-Property `skinny-bitches.ch`, Sitemap als volle URL).
 
 ## Offene Ideen (angeboten, nicht entschieden)
