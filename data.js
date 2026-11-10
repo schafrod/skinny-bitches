@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-11-05",
+  lastUpdate: "2026-11-09",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -166,7 +166,8 @@ window.SKINNY = {
         // 22.10. Wägung: Jo-Jo (−3.0), zehn Kilo wieder beisammen
         { date: "2026-10-22", weightKg: 155.3, km: 93.91 },
         { date: "2026-10-29", weightKg: 156.0, km: 93.91 },
-        { date: "2026-11-05", weightKg: 153.6, km: 93.91 }
+        { date: "2026-11-05", weightKg: 153.6, km: 93.91 },
+        { date: "2026-11-09", km: 97.32 }
       ]
     },
     {
@@ -688,6 +689,12 @@ window.SKINNY = {
       typ: "waage",
       title: "Männergrippe-Diät",
       text: "Die Männergrippe hat El Gordo niedergestreckt, und die Waage dankt es ihm: 153,6, minus 2,4 in einer Woche. Das ist ein neuer Bestwert, und mit 11,7 Kilo seit Start ist die Zehn-Kilo-Marke deutlich zurückerobert. Wer krank im Bett liegt, kommt eben nicht an die Güetzi-Büchse.\n\nRocket-Man und Coach Lars dagegen stehen wie in Stein gemeisselt: 146,0 und 82,0, auf das Gramm gleich wie letzte Woche. Ob der Bärenkampf zu viel Energie gekostet hat oder einfach zu wenig, bleibt offen. Offen bleibt auch, ob die beiden überhaupt eine Waage haben. Janu, In Kilo Veritas."
+    },
+    {
+      date: "2026-11-09",
+      typ: "lauf",
+      title: "Das dicke Einzelkind",
+      text: "Der Ogi-Weg samt Anaconda-Loop sah diesmal nur einen: El Gordo, Einzelkind von drei Geschwistern, zog schon um 16 Uhr los, damit er noch sah, wo er seine Plattfüsse hinstellt.\n\nRocket-Man macht derweil bis in alle Nacht hinein Büsney. Irgendwer muss den Schnee für die Schönen und Reichen im Gstaad bereitstellen. Nicht diesen Schnee, um den kümmern sich die Los Kropfos bzw. deren bolivianische Verwandtschaft. Mr. Sexybless wäre eigentlich angriffig gewesen, aber um 16 Uhr Feierabend machen, das schafft nicht einmal ein Gemeindeangestellter. Das geht schon nur bei Kanton, Bund und der Cablex.\n\nDer Waldboden war derweil in allen erdenklichen Herbstfarben dekoriert, so als hätte jemand hingekotzt. Plus 3,41 km, total 97,32. Die Hunderter-Marke ist in Sichtweite. Nid nahlah Senftä."
     }
   ]
 };
