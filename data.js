@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-11-09",
+  lastUpdate: "2026-11-12",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -167,7 +167,8 @@ window.SKINNY = {
         { date: "2026-10-22", weightKg: 155.3, km: 93.91 },
         { date: "2026-10-29", weightKg: 156.0, km: 93.91 },
         { date: "2026-11-05", weightKg: 153.6, km: 93.91 },
-        { date: "2026-11-09", km: 97.32 }
+        { date: "2026-11-09", km: 97.32 },
+        { date: "2026-11-12", weightKg: 153.7, km: 97.32 }
       ]
     },
     {
@@ -260,7 +261,8 @@ window.SKINNY = {
         // 22.10. Wägung: neuer Bestwert (−0.7)
         { date: "2026-10-22", weightKg: 146.3, km: 66.47 },
         { date: "2026-10-29", weightKg: 146.0, km: 66.47 },
-        { date: "2026-11-05", weightKg: 146.0, km: 66.47 }
+        { date: "2026-11-05", weightKg: 146.0, km: 66.47 },
+        { date: "2026-11-12", weightKg: 145.5, km: 66.47 }
       ]
     },
 
@@ -316,7 +318,8 @@ window.SKINNY = {
         // 22.10. Wägung: Erben misslingt (−0.2)
         { date: "2026-10-22", weightKg: 82.1, km: 22.61 },
         { date: "2026-10-29", weightKg: 82.0, km: 22.61 },
-        { date: "2026-11-05", weightKg: 82.0, km: 22.61 }
+        { date: "2026-11-05", weightKg: 82.0, km: 22.61 },
+        { date: "2026-11-12", weightKg: 81.8, km: 22.61 }
       ]
     },
     /* ----- MISSED IN ACTION seit 20.7.2026 (Nachruf im Logbuch) -----
@@ -695,6 +698,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Das dicke Einzelkind",
       text: "Der Ogi-Weg samt Anaconda-Loop sah diesmal nur einen: El Gordo, Einzelkind von drei Geschwistern, zog schon um 16 Uhr los, damit er noch sah, wo er seine Plattfüsse hinstellt.\n\nRocket-Man macht derweil bis in alle Nacht hinein Büsney. Irgendwer muss den Schnee für die Schönen und Reichen im Gstaad bereitstellen. Nicht diesen Schnee, um den kümmern sich die Los Kropfos bzw. deren bolivianische Verwandtschaft. Mr. Sexybless wäre eigentlich angriffig gewesen, aber um 16 Uhr Feierabend machen, das schafft nicht einmal ein Gemeindeangestellter. Das geht schon nur bei Kanton, Bund und der Cablex.\n\nDer Waldboden war derweil in allen erdenklichen Herbstfarben dekoriert, so als hätte jemand hingekotzt. Plus 3,41 km, total 97,32. Die Hunderter-Marke ist in Sichtweite. Nid nahlah Senftä."
+    },
+    {
+      date: "2026-11-12",
+      typ: "waage",
+      title: "Rocket-Man zündet",
+      text: "Diesmal gehört die Bühne dem Raketenmann: minus 0,5, neu 145,5. Das ist ein Bestwert und macht 3,5 Kilo seit Start. Offenbar schmilzt bei ihm nicht nur der Kunstschnee, sondern auch die Fettreserven (die Frauenherzen sowieso).\n\nEl Gordo legt nach der Männergrippe-Diät 100 Gramm drauf, 153,7. Die Genesung zeigt sich zuerst am Appetit. Mit 11,6 Kilo seit Start bleibt er aber klar über der Zehner-Marke. Coach Lars verliert weitere 0,2 auf 81,8: Eine Magersucht kann nicht ausgeschlossen werden. In Kilo Veritas."
     }
   ]
 };
