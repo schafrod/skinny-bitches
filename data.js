@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-11-12",
+  lastUpdate: "2026-11-16",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -168,7 +168,8 @@ window.SKINNY = {
         { date: "2026-10-29", weightKg: 156.0, km: 93.91 },
         { date: "2026-11-05", weightKg: 153.6, km: 93.91 },
         { date: "2026-11-09", km: 97.32 },
-        { date: "2026-11-12", weightKg: 153.7, km: 97.32 }
+        { date: "2026-11-12", weightKg: 153.7, km: 97.32 },
+        { date: "2026-11-16", km: 101.34 }
       ]
     },
     {
@@ -262,7 +263,8 @@ window.SKINNY = {
         { date: "2026-10-22", weightKg: 146.3, km: 66.47 },
         { date: "2026-10-29", weightKg: 146.0, km: 66.47 },
         { date: "2026-11-05", weightKg: 146.0, km: 66.47 },
-        { date: "2026-11-12", weightKg: 145.5, km: 66.47 }
+        { date: "2026-11-12", weightKg: 145.5, km: 66.47 },
+        { date: "2026-11-15", km: 69.88 }
       ]
     },
 
@@ -704,6 +706,12 @@ window.SKINNY = {
       typ: "waage",
       title: "Rocket-Man zündet",
       text: "Diesmal gehört die Bühne dem Raketenmann: minus 0,5, neu 145,5. Das ist ein Bestwert und macht 3,5 Kilo seit Start. Offenbar schmilzt bei ihm nicht nur der Kunstschnee, sondern auch die Fettreserven (die Frauenherzen sowieso).\n\nEl Gordo legt nach der Männergrippe-Diät 100 Gramm drauf, 153,7. Die Genesung zeigt sich zuerst am Appetit. Mit 11,6 Kilo seit Start bleibt er aber klar über der Zehner-Marke. Coach Lars verliert weitere 0,2 auf 81,8: Eine Magersucht kann nicht ausgeschlossen werden. In Kilo Veritas."
+    },
+    {
+      date: "2026-11-16",
+      typ: "lauf",
+      title: "Auf 100 im Lehnwäldli",
+      text: "Es war schon stockdunkel, als sich El Gordo bei der Gryden-Brücke einfand, und er blieb allein. Die Los Kropfos waren verhindert. Mr. Sexybless meldete einen geschwollenen Fuss, wobei sich dieser kaum von den wässerigen Stampfern der Dicken unterschied. Rocket-Man hatte schon am Sonntag vorgeholt und den Ogi samt Anaconda-Loop am Nachmittag allein bestritten. Heute Abend hatte er Feuerwehrübung und war damit der einzige echt Entschuldigte.\n\nNach sorgfältiger Risikoabwägung verzichtete Gordo auf den laubglatten Ogi und lief der Simme entlang ins Lehnwäldli und zurück. Es sollte ja keine ernsthafte Bergungsaktion aus der Feuerwehrübung werden. Es bräuchte nämlich jeden Freiwilligen, um den Doppel-Whopper aus dem Wald zu Habeggern.\n\n4,02 km, flach wie ein Teller, und damit ist es geschafft: El Gordo knackt die 100-Kilometer-Marke, neu 101,34 km. In Kilometer Veritas."
     }
   ]
 };
