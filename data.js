@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-11-16",
+  lastUpdate: "2026-11-19",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -169,7 +169,8 @@ window.SKINNY = {
         { date: "2026-11-05", weightKg: 153.6, km: 93.91 },
         { date: "2026-11-09", km: 97.32 },
         { date: "2026-11-12", weightKg: 153.7, km: 97.32 },
-        { date: "2026-11-16", km: 101.34 }
+        { date: "2026-11-16", km: 101.34 },
+        { date: "2026-11-19", weightKg: 155.4, km: 101.34 }
       ]
     },
     {
@@ -264,7 +265,8 @@ window.SKINNY = {
         { date: "2026-10-29", weightKg: 146.0, km: 66.47 },
         { date: "2026-11-05", weightKg: 146.0, km: 66.47 },
         { date: "2026-11-12", weightKg: 145.5, km: 66.47 },
-        { date: "2026-11-15", km: 69.88 }
+        { date: "2026-11-15", km: 69.88 },
+        { date: "2026-11-19", weightKg: 145.9, km: 69.88 }
       ]
     },
 
@@ -321,7 +323,8 @@ window.SKINNY = {
         { date: "2026-10-22", weightKg: 82.1, km: 22.61 },
         { date: "2026-10-29", weightKg: 82.0, km: 22.61 },
         { date: "2026-11-05", weightKg: 82.0, km: 22.61 },
-        { date: "2026-11-12", weightKg: 81.8, km: 22.61 }
+        { date: "2026-11-12", weightKg: 81.8, km: 22.61 },
+        { date: "2026-11-19", weightKg: 82.1, km: 22.61 }
       ]
     },
     /* ----- MISSED IN ACTION seit 20.7.2026 (Nachruf im Logbuch) -----
@@ -712,6 +715,12 @@ window.SKINNY = {
       typ: "lauf",
       title: "Auf 100 im Lehnwäldli",
       text: "Es war schon stockdunkel, als sich El Gordo bei der Gryden-Brücke einfand, und er blieb allein. Die Los Kropfos waren verhindert. Mr. Sexybless meldete einen geschwollenen Fuss, wobei sich dieser kaum von den wässerigen Stampfern der Dicken unterschied. Rocket-Man hatte schon am Sonntag vorgeholt und den Ogi samt Anaconda-Loop am Nachmittag allein bestritten. Heute Abend hatte er Feuerwehrübung und war damit der einzige echt Entschuldigte.\n\nNach sorgfältiger Risikoabwägung verzichtete Gordo auf den laubglatten Ogi und lief der Simme entlang ins Lehnwäldli und zurück. Es sollte ja keine ernsthafte Bergungsaktion aus der Feuerwehrübung werden. Es bräuchte nämlich jeden Freiwilligen, um den Doppel-Whopper aus dem Wald zu Habeggern.\n\n4,02 km, flach wie ein Teller, und damit ist es geschafft: El Gordo knackt die 100-Kilometer-Marke, neu 101,34 km. In Kilometer Veritas."
+    },
+    {
+      date: "2026-11-19",
+      typ: "waage",
+      title: "Gut im Futter vor dem Advent",
+      text: "El Gordo hat die 100 Kilometer offenbar als Freipass verstanden: plus 1,7, neu 155,4. Das vorweihnachtliche Mast-Programm läuft auf Hochtouren. Die Mailänderli sind gefressen, noch bevor sie gebacken sind. Die Zehn-Kilo-Marke ist mit 9,9 seit Start wieder futsch, um 100 Gramm.\n\nGanz ohne Komplizen frisst aber auch der Dicke nicht. Rocket-Man legt 0,4 auf 145,9 zu, Coach Lars 0,3 auf 82,1. Endlich einmal gelingt dem Coach das Kilo-Erben, und zwar ausgerechnet jetzt, wo die Dicken nichts verloren haben. In Kilo Veritas."
     }
   ]
 };
