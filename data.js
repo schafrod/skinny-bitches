@@ -36,7 +36,7 @@
 window.SKINNY = {
 
   // Datum des letzten Updates (erscheint als "Stand: ...")
-  lastUpdate: "2026-11-19",
+  lastUpdate: "2026-11-26",
 
   // Die Teststrecke. Quelle: SchweizMobil-Track 372593981 ("Skinny-Bitch-Track").
   route: {
@@ -170,7 +170,8 @@ window.SKINNY = {
         { date: "2026-11-09", km: 97.32 },
         { date: "2026-11-12", weightKg: 153.7, km: 97.32 },
         { date: "2026-11-16", km: 101.34 },
-        { date: "2026-11-19", weightKg: 155.4, km: 101.34 }
+        { date: "2026-11-19", weightKg: 155.4, km: 101.34 },
+        { date: "2026-11-26", weightKg: 153.5, km: 101.34 }
       ]
     },
     {
@@ -266,7 +267,8 @@ window.SKINNY = {
         { date: "2026-11-05", weightKg: 146.0, km: 66.47 },
         { date: "2026-11-12", weightKg: 145.5, km: 66.47 },
         { date: "2026-11-15", km: 69.88 },
-        { date: "2026-11-19", weightKg: 145.9, km: 69.88 }
+        { date: "2026-11-19", weightKg: 145.9, km: 69.88 },
+        { date: "2026-11-26", weightKg: 145.7, km: 69.88 }
       ]
     },
 
@@ -324,7 +326,8 @@ window.SKINNY = {
         { date: "2026-10-29", weightKg: 82.0, km: 22.61 },
         { date: "2026-11-05", weightKg: 82.0, km: 22.61 },
         { date: "2026-11-12", weightKg: 81.8, km: 22.61 },
-        { date: "2026-11-19", weightKg: 82.1, km: 22.61 }
+        { date: "2026-11-19", weightKg: 82.1, km: 22.61 },
+        { date: "2026-11-26", weightKg: 82.5, km: 22.61 }
       ]
     },
     /* ----- MISSED IN ACTION seit 20.7.2026 (Nachruf im Logbuch) -----
@@ -721,6 +724,12 @@ window.SKINNY = {
       typ: "waage",
       title: "Gut im Futter vor dem Advent",
       text: "El Gordo hat die 100 Kilometer offenbar als Freipass verstanden: plus 1,7, neu 155,4. Das vorweihnachtliche Mast-Programm läuft auf Hochtouren. Die Mailänderli sind gefressen, noch bevor sie gebacken sind. Die Zehn-Kilo-Marke ist mit 9,9 seit Start wieder futsch, um 100 Gramm.\n\nGanz ohne Komplizen frisst aber auch der Dicke nicht. Rocket-Man legt 0,4 auf 145,9 zu, Coach Lars 0,3 auf 82,1. Endlich einmal gelingt dem Coach das Kilo-Erben, und zwar ausgerechnet jetzt, wo die Dicken nichts verloren haben. In Kilo Veritas."
+    },
+    {
+      date: "2026-11-26",
+      typ: "waage",
+      title: "Mast-Programm abgebrochen",
+      text: "Das vorweihnachtliche Mast-Programm wurde kurzfristig ausgesetzt: El Gordo minus 1,9, neu 153,5. Das ist ein neuer Bestwert um 100 Gramm, mit 11,8 Kilo seit Start ist die Zehn-Kilo-Marke wieder klar zurückerobert. Rocket-Man legt brav nach, minus 0,2 auf 145,7. Coach Lars erbt munter weiter, plus 0,4 auf 82,5. Zwei Wochen Erbfolge am Stück, langsam wird der Coach unheimlich.\n\nAusser Konkurrenz meldet sich El Corto mit 74 Kilo. Die Wertung beginnt allerdings erst bei 80, darunter gilt man hier als Chrüppi und zum Zuschauen verdammt. In Kilo Veritas."
     }
   ]
 };
