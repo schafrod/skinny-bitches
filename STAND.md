@@ -19,12 +19,13 @@
 ## Aktueller Stand (Daten bis 26.11.2026)
 | Person | kg (Δ seit Start) | km total |
 |---|---|---|
-| Chrigu «El Gordo» | 153,5 (−11,8, Bestwert) | 101,34 |
-| Severin «Rocket-Man» | 145,7 (−3,3; Bestwert 145,5 am 12.11.) | 69,88 |
+| Chrigu «El Gordo» | 153,5 (−11,8, Bestwert) | 105,36 |
+| Severin «Rocket-Man» | 145,7 (−3,3; Bestwert 145,5 am 12.11.) | 73,90 |
 | Lars «Mr. Sexybless» (Coach) | 82,5 (−2,0) | 22,61 |
 | Mika (Gedenk-Karte, vermisst) | ≈81,2 | 3,41 |
 
-- Logbuch: 52 Einträge (Juni 11 / Juli 10 / Aug 9 / Sep 8 / Okt 7 / Nov 7).
+- Logbuch: 53 Einträge (Juni 11 / Juli 10 / Aug 9 / Sep 8 / Okt 7 / Nov 8).
+- 23.11.: Ogi-Weg zu nass → Chrigu+Severin Simme–Lehnwäldli 4,02 km (nachgetragen 26.11.).
 - 02.11.: kein Lauf (El Gordo Männergrippe), Scherz-Eintrag «Einen Bären aufbinden» mit 3 KI-Fotos, keine km.
 - 26.10.: statt Lauf Dornen-Rodung in der Hausmatte (keine km), Eintrag mit 2 Fotos. Ältere Monate klappen automatisch ins Archiv.
 - 12.10.: statt Ogi-Weg Gusti-Zügeln Bergblick → Beret (GPX 4,01 km, 315 hm abwärts), auch Lars gutgeschrieben; Eintrag mit 2 Fotos (`assets/runs/2026-10-12/`).
@@ -32,7 +33,7 @@
 - Versionen: `css/style.css?v=35`, `js/main.js?v=26` (bei CSS/JS-Änderung erhöhen).
 
 ## Pendenzen
-- [ ] Nächster Lauf Mo 30.11., Wägung Do 03.12.2026. (Mo 23.11.: keine Laufdaten gemeldet.)
+- [ ] Nächster Lauf Mo 30.11., Wägung Do 03.12.2026.
 - [ ] Google Search Console: Indexierungs-Status prüfen (Domain-Property `skinny-bitches.ch`, Sitemap als volle URL).
 
 ## Offene Ideen (angeboten, nicht entschieden)

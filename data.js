@@ -171,7 +171,8 @@ window.SKINNY = {
         { date: "2026-11-12", weightKg: 153.7, km: 97.32 },
         { date: "2026-11-16", km: 101.34 },
         { date: "2026-11-19", weightKg: 155.4, km: 101.34 },
-        { date: "2026-11-26", weightKg: 153.5, km: 101.34 }
+        { date: "2026-11-23", km: 105.36 },
+        { date: "2026-11-26", weightKg: 153.5, km: 105.36 }
       ]
     },
     {
@@ -268,7 +269,8 @@ window.SKINNY = {
         { date: "2026-11-12", weightKg: 145.5, km: 66.47 },
         { date: "2026-11-15", km: 69.88 },
         { date: "2026-11-19", weightKg: 145.9, km: 69.88 },
-        { date: "2026-11-26", weightKg: 145.7, km: 69.88 }
+        { date: "2026-11-23", km: 73.90 },
+        { date: "2026-11-26", weightKg: 145.7, km: 73.90 }
       ]
     },
 
@@ -724,6 +726,12 @@ window.SKINNY = {
       typ: "waage",
       title: "Gut im Futter vor dem Advent",
       text: "El Gordo hat die 100 Kilometer offenbar als Freipass verstanden: plus 1,7, neu 155,4. Das vorweihnachtliche Mast-Programm läuft auf Hochtouren. Die Mailänderli sind gefressen, noch bevor sie gebacken sind. Die Zehn-Kilo-Marke ist mit 9,9 seit Start wieder futsch, um 100 Gramm.\n\nGanz ohne Komplizen frisst aber auch der Dicke nicht. Rocket-Man legt 0,4 auf 145,9 zu, Coach Lars 0,3 auf 82,1. Endlich einmal gelingt dem Coach das Kilo-Erben, und zwar ausgerechnet jetzt, wo die Dicken nichts verloren haben. In Kilo Veritas."
+    },
+    {
+      date: "2026-11-23",
+      typ: "lauf",
+      title: "Sperrzone Ogi-Weg",
+      text: "In eigener Sache: Dieser Eintrag kommt mit Verspätung. Die Redaktion bittet die grosse Gefolgschaft in aller Demut um Entschuldigung. Der Chronist war offenbar mit Güetzi backen beschäftigt.\n\nGelaufen wurde nämlich sehr wohl. Der Ogi-Weg allerdings ist derart pflätschnass, dass ihn die Hilfsorganisation Dicke ohne Grenzen vorsorglich zur Sperrzone erklärt hat. Zu gross die Gefahr, dass ein ausrutschender Schwergewichtler eine Mure auslöst, wobei sich die Simme stauen und eine Sturzflut halb Boltigen absaufen lassen würde. El Gordo und Rocket-Man wichen deshalb aus, der Simme entlang ins Lehnwäldli und zurück. Flach, sicher, humanitär vertretbar. Plus 4,02 km für beide. In Kilo Veritas."
     },
     {
       date: "2026-11-26",
